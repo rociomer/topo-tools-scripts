@@ -1,25 +1,17 @@
 #!/usr/bin/tclsh
 
-ATOMSPERMOF
-ATOMSPERGUEST
-LATTICEVECTORA
-LATTICEVECTORB
-LATTICEVECTORC
-REPLICASMOFX
-REPLICASMOFY
-REPLICASMOFZ
-REPLICASGUEST
-STRUCTURENAME
-
 # my variables
-set atomsPerMOF ATOMSPERMOF
+set atomsPerMOF 324
 set atomsPerGuest ATOMSPERGUEST
-set latticeVectorA LATTICEVECTORA
-set latticeVectorB LATTICEVECTORB
-set latticeVectorC LATTICEVECTORC
-set replicasMOFX REPLICASMOFX
-set replicasMOFY REPLICASMOFY 
-set replicasMOFZ REPLICASMOFZ
+set latticeVectorA 26.1136
+set latticeVectorB 45.23
+set latticeVectorC 6.91674
+set alpha 90.0
+set beta 90.0
+set gamma 90.0
+set replicasMOFX 1
+set replicasMOFY 1
+set replicasMOFZ 4
 set replicasGuest REPLICASGUEST
 
 
@@ -29,7 +21,7 @@ package require topotools
 package require pbctools
 
 # check for presence of coordinate file
-if {! [file exists STRUCTURENAME.pdb]} {
+if {! [file exists ortho_MgMOF74.pdb]} {
    vmdcon -error "Required file 'STRUCTURENAME.pdb' not available. Exiting..."
    quit
 }
@@ -43,60 +35,76 @@ set newmol [::TopoTools::replicatemol $mol $replicasMOFX $replicasMOFY $replicas
 mol delete $mol
 
 # set atom name/type and radius
+set sel [atomselect top {name Mof_Mg}]
+$sel set radius 1.39
+$sel set name Mof_Mg
+$sel set type Mof_Mg
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Oa}]
+$sel set radius 1.39
+$sel set name Mof_Oa
+$sel set type Mof_Oa
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Ob}]
+$sel set radius 1.39
+$sel set name Mof_Ob
+$sel set type Mof_Ob
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Oc}]
+$sel set radius 1.39
+$sel set name Mof_Oc
+$sel set type Mof_Oc
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Ca}]
+$sel set radius 1.39
+$sel set name Mof_Ca
+$sel set type Mof_Ca
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Cb}]
+$sel set radius 1.39
+$sel set name Mof_Cb
+$sel set type Mof_Cb
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Cc}]
+$sel set radius 1.39
+$sel set name Mof_Cc
+$sel set type Mof_Cc
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
+set sel [atomselect top {name Mof_Cd}]
+$sel set radius 1.39
+$sel set name Mof_Cd
+$sel set type Mof_Cd
+$sel set mass 65.382
+$sel set charge 1.275
+
+# set atom name/type and radius
 set sel [atomselect top {name Mof_H}]
 $sel set radius 1.2
 $sel set name Mof_H
 $sel set type Mof_H
 $sel set mass 1.008
 $sel set charge 0.15
-
-# set atom name/type and radius
-set sel [atomselect top {name Zn1}]
-$sel set radius 1.39
-$sel set name Zn1
-$sel set type Zn1
-$sel set mass 65.382
-$sel set charge 1.275
-
-# set atom name/type and radius
-set sel [atomselect top {name O1}]
-$sel set radius 1.52
-$sel set name O1
-$sel set type O1
-$sel set mass 15.999
-$sel set charge -1.5
-
-# set atom name/type and radius
-set sel [atomselect top {name O2}]
-$sel set radius 1.52
-$sel set name O2
-$sel set type O2
-$sel set mass 15.999
-$sel set charge -0.6
-
-# set atom name/type and radius
-set sel [atomselect top {name C1}]
-$sel set radius 1.7
-$sel set name C1
-$sel set type C1
-$sel set mass 12.011
-$sel set charge 0.475
-
-# set atom name/type and radius
-set sel [atomselect top {name C2}]
-$sel set radius 1.7
-$sel set name C2
-$sel set type C2
-$sel set mass 12.011
-$sel set charge 0.125
-
-# set atom name/type and radius
-set sel [atomselect top {name C3}]
-$sel set radius 1.7
-$sel set name C3
-$sel set type C3
-$sel set mass 12.011
-$sel set charge -0.15
 
 # bonds are computed based on distance criterion
 # bond if 0.6 * (r_A + r_B) > r_AB.
@@ -105,7 +113,7 @@ $sel set charge -0.15
 mol bondsrecalc top
 
 # set box dimensions
-pbc set "[expr $boxlen * $replicasMOFX] [expr $boxlen * $replicasMOFY] [expr $boxlen * $replicasMOFZ] 90.0 90.0 90.0"
+pbc set "[expr $boxlen * $replicasMOFX] [expr $boxlen * $replicasMOFY] [expr $boxlen * $replicasMOFZ] $alpha $beta $gamma"
 
 # add in PBC bonds
 set sel [atomselect top all]
@@ -161,7 +169,7 @@ if {[expr $replicasGuest % (4 * $replicasMOFX * $replicasMOFY)] > 0} {
     set extra 1
 }
 set replicasGuestZ [expr $replicasGuest / (4 * $replicasMOFX * $replicasMOFY) + $extra]
-pbc set "[expr $boxlen / 2] [expr $boxlen / 2] [expr $boxlen * $replicasMOFZ / $replicasGuestZ] 90.0 90.0 90.0"
+pbc set "[expr $boxlen / 2] [expr $boxlen / 2] [expr $boxlen * $replicasMOFZ / $replicasGuestZ] $alpha $beta $gamma"
 
 # replicate
 set newmolxyl [::TopoTools::replicatemol $mol [expr 2 * $replicasMOFX] [expr 2 * $replicasMOFY] $replicasGuestZ ]
