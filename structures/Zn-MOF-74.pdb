@@ -1,0 +1,1273 @@
+COMPND  Mof_Zn-MOF-74.cif
+AUTHOR  GENERATED      Mof_CdY      Mof_OaPEN   Mof_CdABEL  2.3.2
+CRYST1  52.191         45.198  6.882  90.00  90.00   90.00   P      1     1
+HETATM  1              Mof_Zn  LIG    1      5.331   7.994   4.365  1.00  0.00  Mof_Zn
+HETATM  2              Mof_Zn  LIG    1      18.378  30.594  4.365  1.00  0.00  Mof_Zn
+HETATM  3              Mof_Zn  LIG    1      31.426  7.994   4.365  1.00  0.00  Mof_Zn
+HETATM  4              Mof_Zn  LIG    1      44.474  30.594  4.365  1.00  0.00  Mof_Zn
+HETATM  5              Mof_Ca  LIG    1      5.724   9.170   1.784  1.00  0.00  Mof_Ca
+HETATM  6              Mof_Ca  LIG    1      18.772  31.769  1.784  1.00  0.00  Mof_Ca
+HETATM  7              Mof_Ca  LIG    1      31.819  9.170   1.784  1.00  0.00  Mof_Ca
+HETATM  8              Mof_Ca  LIG    1      44.867  31.769  1.784  1.00  0.00  Mof_Ca
+HETATM  9              Mof_Cb  LIG    1      6.104   10.244  0.836  1.00  0.00  Mof_Cb
+HETATM  10             Mof_Cb  LIG    1      19.151  32.843  0.836  1.00  0.00  Mof_Cb
+HETATM  11             Mof_Cb  LIG    1      32.199  10.244  0.836  1.00  0.00  Mof_Cb
+HETATM  12             Mof_Cb  LIG    1      45.247  32.843  0.836  1.00  0.00  Mof_Cb
+HETATM  13             Mof_Cd  LIG    1      6.937   11.262  1.316  1.00  0.00  Mof_Cd
+HETATM  14             Mof_Cd  LIG    1      19.984  33.861  1.316  1.00  0.00  Mof_Cd
+HETATM  15             Mof_Cd  LIG    1      33.032  11.262  1.316  1.00  0.00  Mof_Cd
+HETATM  16             Mof_Cd  LIG    1      46.080  33.861  1.316  1.00  0.00  Mof_Cd
+HETATM  17             Mof_H   LIG    1      7.258   11.221  2.354  1.00  0.00  Mof_H
+HETATM  18             Mof_H   LIG    1      20.306  33.820  2.354  1.00  0.00  Mof_H
+HETATM  19             Mof_H   LIG    1      33.353  11.221  2.354  1.00  0.00  Mof_H
+HETATM  20             Mof_H   LIG    1      46.401  33.820  2.354  1.00  0.00  Mof_H
+HETATM  21             Mof_Ob  LIG    1      6.191   9.168   2.972  1.00  0.00  Mof_Ob
+HETATM  22             Mof_Ob  LIG    1      19.238  31.767  2.972  1.00  0.00  Mof_Ob
+HETATM  23             Mof_Ob  LIG    1      32.286  9.168   2.972  1.00  0.00  Mof_Ob
+HETATM  24             Mof_Ob  LIG    1      45.334  31.767  2.972  1.00  0.00  Mof_Ob
+HETATM  25             Mof_Oa  LIG    1      4.915   8.263   1.363  1.00  0.00  Mof_Oa
+HETATM  26             Mof_Oa  LIG    1      17.963  30.862  1.363  1.00  0.00  Mof_Oa
+HETATM  27             Mof_Oa  LIG    1      31.010  8.263   1.363  1.00  0.00  Mof_Oa
+HETATM  28             Mof_Oa  LIG    1      44.058  30.862  1.363  1.00  0.00  Mof_Oa
+HETATM  29             Mof_Oc  LIG    1      8.191   13.251  1.102  1.00  0.00  Mof_Oc
+HETATM  30             Mof_Oc  LIG    1      21.238  35.850  1.102  1.00  0.00  Mof_Oc
+HETATM  31             Mof_Oc  LIG    1      34.286  13.251  1.102  1.00  0.00  Mof_Oc
+HETATM  32             Mof_Oc  LIG    1      47.334  35.850  1.102  1.00  0.00  Mof_Oc
+HETATM  33             Mof_Zn  LIG    1      4.258   6.452   2.071  1.00  0.00  Mof_Zn
+HETATM  34             Mof_Zn  LIG    1      17.306  29.052  2.071  1.00  0.00  Mof_Zn
+HETATM  35             Mof_Zn  LIG    1      30.353  6.452   2.071  1.00  0.00  Mof_Zn
+HETATM  36             Mof_Zn  LIG    1      43.401  29.052  2.071  1.00  0.00  Mof_Zn
+HETATM  37             Mof_Zn  LIG    1      3.459   8.152   6.659  1.00  0.00  Mof_Zn
+HETATM  38             Mof_Zn  LIG    1      16.507  30.751  6.659  1.00  0.00  Mof_Zn
+HETATM  39             Mof_Zn  LIG    1      29.554  8.152   6.659  1.00  0.00  Mof_Zn
+HETATM  40             Mof_Zn  LIG    1      42.602  30.751  6.659  1.00  0.00  Mof_Zn
+HETATM  41             Mof_Zn  LIG    1      7.717   14.605  2.517  1.00  0.00  Mof_Zn
+HETATM  42             Mof_Zn  LIG    1      20.765  37.204  2.517  1.00  0.00  Mof_Zn
+HETATM  43             Mof_Zn  LIG    1      33.812  14.605  2.517  1.00  0.00  Mof_Zn
+HETATM  44             Mof_Zn  LIG    1      46.860  37.204  2.517  1.00  0.00  Mof_Zn
+HETATM  45             Mof_Oa  LIG    1      4.698   6.678   5.951  1.00  0.00  Mof_Oa
+HETATM  46             Mof_Oa  LIG    1      17.746  29.277  5.951  1.00  0.00  Mof_Oa
+HETATM  47             Mof_Oa  LIG    1      30.794  6.678   5.951  1.00  0.00  Mof_Oa
+HETATM  48             Mof_Oa  LIG    1      43.841  29.277  5.951  1.00  0.00  Mof_Oa
+HETATM  49             Mof_Oa  LIG    1      3.434   7.658   3.657  1.00  0.00  Mof_Oa
+HETATM  50             Mof_Oa  LIG    1      16.482  30.257  3.657  1.00  0.00  Mof_Oa
+HETATM  51             Mof_Oa  LIG    1      29.530  7.658   3.657  1.00  0.00  Mof_Oa
+HETATM  52             Mof_Oa  LIG    1      42.577  30.257  3.657  1.00  0.00  Mof_Oa
+HETATM  53             Mof_Oc  LIG    1      4.857   9.348   5.780  1.00  0.00  Mof_Oc
+HETATM  54             Mof_Oc  LIG    1      17.905  31.947  5.780  1.00  0.00  Mof_Oc
+HETATM  55             Mof_Oc  LIG    1      30.952  9.348   5.780  1.00  0.00  Mof_Oc
+HETATM  56             Mof_Oc  LIG    1      44.000  31.947  5.780  1.00  0.00  Mof_Oc
+HETATM  57             Mof_Oc  LIG    1      5.667   6.186   3.486  1.00  0.00  Mof_Oc
+HETATM  58             Mof_Oc  LIG    1      18.715  28.785  3.486  1.00  0.00  Mof_Oc
+HETATM  59             Mof_Oc  LIG    1      31.763  6.186   3.486  1.00  0.00  Mof_Oc
+HETATM  60             Mof_Oc  LIG    1      44.810  28.785  3.486  1.00  0.00  Mof_Oc
+HETATM  61             Mof_Cc  LIG    1      5.670   10.272  6.355  1.00  0.00  Mof_Cc
+HETATM  62             Mof_Cc  LIG    1      18.718  32.871  6.355  1.00  0.00  Mof_Cc
+HETATM  63             Mof_Cc  LIG    1      31.765  10.272  6.355  1.00  0.00  Mof_Cc
+HETATM  64             Mof_Cc  LIG    1      44.813  32.871  6.355  1.00  0.00  Mof_Cc
+HETATM  65             Mof_Ca  LIG    1      7.324   13.429  5.098  1.00  0.00  Mof_Ca
+HETATM  66             Mof_Ca  LIG    1      20.371  36.028  5.098  1.00  0.00  Mof_Ca
+HETATM  67             Mof_Ca  LIG    1      33.419  13.429  5.098  1.00  0.00  Mof_Ca
+HETATM  68             Mof_Ca  LIG    1      46.467  36.028  5.098  1.00  0.00  Mof_Ca
+HETATM  69             Mof_Cb  LIG    1      6.944   12.355  6.046  1.00  0.00  Mof_Cb
+HETATM  70             Mof_Cb  LIG    1      19.992  34.954  6.046  1.00  0.00  Mof_Cb
+HETATM  71             Mof_Cb  LIG    1      33.039  12.355  6.046  1.00  0.00  Mof_Cb
+HETATM  72             Mof_Cb  LIG    1      46.087  34.954  6.046  1.00  0.00  Mof_Cb
+HETATM  73             Mof_Cc  LIG    1      7.378   12.327  0.526  1.00  0.00  Mof_Cc
+HETATM  74             Mof_Cc  LIG    1      20.425  34.926  0.526  1.00  0.00  Mof_Cc
+HETATM  75             Mof_Cc  LIG    1      33.473  12.327  0.526  1.00  0.00  Mof_Cc
+HETATM  76             Mof_Cc  LIG    1      46.521  34.926  0.526  1.00  0.00  Mof_Cc
+HETATM  77             Mof_Cd  LIG    1      6.111   11.337  5.566  1.00  0.00  Mof_Cd
+HETATM  78             Mof_Cd  LIG    1      19.159  33.936  5.566  1.00  0.00  Mof_Cd
+HETATM  79             Mof_Cd  LIG    1      32.206  11.337  5.566  1.00  0.00  Mof_Cd
+HETATM  80             Mof_Cd  LIG    1      45.254  33.936  5.566  1.00  0.00  Mof_Cd
+HETATM  81             Mof_H   LIG    1      5.790   11.379  4.528  1.00  0.00  Mof_H
+HETATM  82             Mof_H   LIG    1      18.837  33.978  4.528  1.00  0.00  Mof_H
+HETATM  83             Mof_H   LIG    1      31.885  11.379  4.528  1.00  0.00  Mof_H
+HETATM  84             Mof_H   LIG    1      44.933  33.978  4.528  1.00  0.00  Mof_H
+HETATM  85             Mof_Ob  LIG    1      6.857   13.431  3.909  1.00  0.00  Mof_Ob
+HETATM  86             Mof_Ob  LIG    1      19.905  36.030  3.909  1.00  0.00  Mof_Ob
+HETATM  87             Mof_Ob  LIG    1      32.952  13.431  3.909  1.00  0.00  Mof_Ob
+HETATM  88             Mof_Ob  LIG    1      46.000  36.030  3.909  1.00  0.00  Mof_Ob
+HETATM  89             Mof_Oa  LIG    1      8.133   14.336  5.519  1.00  0.00  Mof_Oa
+HETATM  90             Mof_Oa  LIG    1      21.180  36.936  5.519  1.00  0.00  Mof_Oa
+HETATM  91             Mof_Oa  LIG    1      34.228  14.336  5.519  1.00  0.00  Mof_Oa
+HETATM  92             Mof_Oa  LIG    1      47.276  36.936  5.519  1.00  0.00  Mof_Oa
+HETATM  93             Mof_Zn  LIG    1      8.790   16.147  4.811  1.00  0.00  Mof_Zn
+HETATM  94             Mof_Zn  LIG    1      21.837  38.746  4.811  1.00  0.00  Mof_Zn
+HETATM  95             Mof_Zn  LIG    1      34.885  16.147  4.811  1.00  0.00  Mof_Zn
+HETATM  96             Mof_Zn  LIG    1      47.933  38.746  4.811  1.00  0.00  Mof_Zn
+HETATM  97             Mof_Zn  LIG    1      9.589   14.447  0.223  1.00  0.00  Mof_Zn
+HETATM  98             Mof_Zn  LIG    1      22.636  37.046  0.223  1.00  0.00  Mof_Zn
+HETATM  99             Mof_Zn  LIG    1      35.684  14.447  0.223  1.00  0.00  Mof_Zn
+HETATM  100            Mof_Zn  LIG    1      48.732  37.046  0.223  1.00  0.00  Mof_Zn
+HETATM  101            Mof_Oa  LIG    1      8.349   15.921  0.931  1.00  0.00  Mof_Oa
+HETATM  102            Mof_Oa  LIG    1      21.397  38.520  0.931  1.00  0.00  Mof_Oa
+HETATM  103            Mof_Oa  LIG    1      34.445  15.921  0.931  1.00  0.00  Mof_Oa
+HETATM  104            Mof_Oa  LIG    1      47.492  38.520  0.931  1.00  0.00  Mof_Oa
+HETATM  105            Mof_Oa  LIG    1      9.613   14.941  3.225  1.00  0.00  Mof_Oa
+HETATM  106            Mof_Oa  LIG    1      22.661  37.540  3.225  1.00  0.00  Mof_Oa
+HETATM  107            Mof_Oa  LIG    1      35.709  14.941  3.225  1.00  0.00  Mof_Oa
+HETATM  108            Mof_Oa  LIG    1      48.756  37.540  3.225  1.00  0.00  Mof_Oa
+HETATM  109            Mof_Oc  LIG    1      7.380   16.413  3.396  1.00  0.00  Mof_Oc
+HETATM  110            Mof_Oc  LIG    1      20.428  39.013  3.396  1.00  0.00  Mof_Oc
+HETATM  111            Mof_Oc  LIG    1      33.476  16.413  3.396  1.00  0.00  Mof_Oc
+HETATM  112            Mof_Oc  LIG    1      46.523  39.013  3.396  1.00  0.00  Mof_Oc
+HETATM  113            Mof_Zn  LIG    1      8.790   31.213  2.517  1.00  0.00  Mof_Zn
+HETATM  114            Mof_Zn  LIG    1      21.837  8.614   2.517  1.00  0.00  Mof_Zn
+HETATM  115            Mof_Zn  LIG    1      34.885  31.213  2.517  1.00  0.00  Mof_Zn
+HETATM  116            Mof_Zn  LIG    1      47.933  8.614   2.517  1.00  0.00  Mof_Zn
+HETATM  117            Mof_Zn  LIG    1      9.589   29.513  4.811  1.00  0.00  Mof_Zn
+HETATM  118            Mof_Zn  LIG    1      22.636  6.914   4.811  1.00  0.00  Mof_Zn
+HETATM  119            Mof_Zn  LIG    1      35.684  29.513  4.811  1.00  0.00  Mof_Zn
+HETATM  120            Mof_Zn  LIG    1      48.732  6.914   4.811  1.00  0.00  Mof_Zn
+HETATM  121            Mof_Oa  LIG    1      9.613   30.007  0.931  1.00  0.00  Mof_Oa
+HETATM  122            Mof_Oa  LIG    1      22.661  7.408   0.931  1.00  0.00  Mof_Oa
+HETATM  123            Mof_Oa  LIG    1      35.709  30.007  0.931  1.00  0.00  Mof_Oa
+HETATM  124            Mof_Oa  LIG    1      48.756  7.408   0.931  1.00  0.00  Mof_Oa
+HETATM  125            Mof_Oa  LIG    1      8.349   30.987  5.519  1.00  0.00  Mof_Oa
+HETATM  126            Mof_Oa  LIG    1      21.397  8.388   5.519  1.00  0.00  Mof_Oa
+HETATM  127            Mof_Oa  LIG    1      34.445  30.987  5.519  1.00  0.00  Mof_Oa
+HETATM  128            Mof_Oa  LIG    1      47.492  8.388   5.519  1.00  0.00  Mof_Oa
+HETATM  129            Mof_Oa  LIG    1      4.698   21.744  3.657  1.00  0.00  Mof_Oa
+HETATM  130            Mof_Oa  LIG    1      17.746  44.343  3.657  1.00  0.00  Mof_Oa
+HETATM  131            Mof_Oa  LIG    1      30.794  21.744  3.657  1.00  0.00  Mof_Oa
+HETATM  132            Mof_Oa  LIG    1      43.841  44.343  3.657  1.00  0.00  Mof_Oa
+HETATM  133            Mof_Oc  LIG    1      5.667   21.252  1.192  1.00  0.00  Mof_Oc
+HETATM  134            Mof_Oc  LIG    1      18.715  43.851  1.192  1.00  0.00  Mof_Oc
+HETATM  135            Mof_Oc  LIG    1      31.763  21.252  1.192  1.00  0.00  Mof_Oc
+HETATM  136            Mof_Oc  LIG    1      44.810  43.851  1.192  1.00  0.00  Mof_Oc
+HETATM  137            Mof_Zn  LIG    1      4.258   21.518  6.659  1.00  0.00  Mof_Zn
+HETATM  138            Mof_Zn  LIG    1      17.306  44.118  6.659  1.00  0.00  Mof_Zn
+HETATM  139            Mof_Zn  LIG    1      30.353  21.518  6.659  1.00  0.00  Mof_Zn
+HETATM  140            Mof_Zn  LIG    1      43.401  44.118  6.659  1.00  0.00  Mof_Zn
+HETATM  141            Mof_Zn  LIG    1      8.790   1.081   0.223  1.00  0.00  Mof_Zn
+HETATM  142            Mof_Zn  LIG    1      21.837  23.680  0.223  1.00  0.00  Mof_Zn
+HETATM  143            Mof_Zn  LIG    1      34.885  1.081   0.223  1.00  0.00  Mof_Zn
+HETATM  144            Mof_Zn  LIG    1      47.933  23.680  0.223  1.00  0.00  Mof_Zn
+HETATM  145            Mof_Oa  LIG    1      8.349   0.855   3.225  1.00  0.00  Mof_Oa
+HETATM  146            Mof_Oa  LIG    1      21.397  23.454  3.225  1.00  0.00  Mof_Oa
+HETATM  147            Mof_Oa  LIG    1      34.445  0.855   3.225  1.00  0.00  Mof_Oa
+HETATM  148            Mof_Oa  LIG    1      47.492  23.454  3.225  1.00  0.00  Mof_Oa
+HETATM  149            Mof_Oc  LIG    1      7.380   1.347   5.690  1.00  0.00  Mof_Oc
+HETATM  150            Mof_Oc  LIG    1      20.428  23.947  5.690  1.00  0.00  Mof_Oc
+HETATM  151            Mof_Oc  LIG    1      33.476  1.347   5.690  1.00  0.00  Mof_Oc
+HETATM  152            Mof_Oc  LIG    1      46.523  23.947  5.690  1.00  0.00  Mof_Oc
+HETATM  153            Mof_Oc  LIG    1      4.857   39.480  1.192  1.00  0.00  Mof_Oc
+HETATM  154            Mof_Oc  LIG    1      17.905  16.881  1.192  1.00  0.00  Mof_Oc
+HETATM  155            Mof_Oc  LIG    1      30.953  39.480  1.192  1.00  0.00  Mof_Oc
+HETATM  156            Mof_Oc  LIG    1      44.000  16.881  1.192  1.00  0.00  Mof_Oc
+HETATM  157            Mof_Zn  LIG    1      5.331   38.127  6.659  1.00  0.00  Mof_Zn
+HETATM  158            Mof_Zn  LIG    1      18.378  15.527  6.659  1.00  0.00  Mof_Zn
+HETATM  159            Mof_Zn  LIG    1      31.426  38.127  6.659  1.00  0.00  Mof_Zn
+HETATM  160            Mof_Zn  LIG    1      44.474  15.527  6.659  1.00  0.00  Mof_Zn
+HETATM  161            Mof_Ca  LIG    1      5.724   39.302  4.078  1.00  0.00  Mof_Ca
+HETATM  162            Mof_Ca  LIG    1      18.772  16.703  4.078  1.00  0.00  Mof_Ca
+HETATM  163            Mof_Ca  LIG    1      31.819  39.302  4.078  1.00  0.00  Mof_Ca
+HETATM  164            Mof_Ca  LIG    1      44.867  16.703  4.078  1.00  0.00  Mof_Ca
+HETATM  165            Mof_Cb  LIG    1      6.104   40.376  3.130  1.00  0.00  Mof_Cb
+HETATM  166            Mof_Cb  LIG    1      19.151  17.777  3.130  1.00  0.00  Mof_Cb
+HETATM  167            Mof_Cb  LIG    1      32.199  40.376  3.130  1.00  0.00  Mof_Cb
+HETATM  168            Mof_Cb  LIG    1      45.247  17.777  3.130  1.00  0.00  Mof_Cb
+HETATM  169            Mof_Cc  LIG    1      5.670   40.404  1.768  1.00  0.00  Mof_Cc
+HETATM  170            Mof_Cc  LIG    1      18.718  17.805  1.768  1.00  0.00  Mof_Cc
+HETATM  171            Mof_Cc  LIG    1      31.765  40.404  1.768  1.00  0.00  Mof_Cc
+HETATM  172            Mof_Cc  LIG    1      44.813  17.805  1.768  1.00  0.00  Mof_Cc
+HETATM  173            Mof_Cd  LIG    1      6.937   41.394  3.610  1.00  0.00  Mof_Cd
+HETATM  174            Mof_Cd  LIG    1      19.984  18.795  3.610  1.00  0.00  Mof_Cd
+HETATM  175            Mof_Cd  LIG    1      33.032  41.394  3.610  1.00  0.00  Mof_Cd
+HETATM  176            Mof_Cd  LIG    1      46.080  18.795  3.610  1.00  0.00  Mof_Cd
+HETATM  177            Mof_H   LIG    1      7.258   41.353  4.648  1.00  0.00  Mof_H
+HETATM  178            Mof_H   LIG    1      20.306  18.754  4.648  1.00  0.00  Mof_H
+HETATM  179            Mof_H   LIG    1      33.353  41.353  4.648  1.00  0.00  Mof_H
+HETATM  180            Mof_H   LIG    1      46.401  18.754  4.648  1.00  0.00  Mof_H
+HETATM  181            Mof_Ob  LIG    1      6.191   39.300  5.266  1.00  0.00  Mof_Ob
+HETATM  182            Mof_Ob  LIG    1      19.238  16.701  5.266  1.00  0.00  Mof_Ob
+HETATM  183            Mof_Ob  LIG    1      32.286  39.300  5.266  1.00  0.00  Mof_Ob
+HETATM  184            Mof_Ob  LIG    1      45.334  16.701  5.266  1.00  0.00  Mof_Ob
+HETATM  185            Mof_Oa  LIG    1      4.915   38.395  3.657  1.00  0.00  Mof_Oa
+HETATM  186            Mof_Oa  LIG    1      17.963  15.796  3.657  1.00  0.00  Mof_Oa
+HETATM  187            Mof_Oa  LIG    1      31.010  38.395  3.657  1.00  0.00  Mof_Oa
+HETATM  188            Mof_Oa  LIG    1      44.058  15.796  3.657  1.00  0.00  Mof_Oa
+HETATM  189            Mof_Cb  LIG    1      6.944   42.487  1.458  1.00  0.00  Mof_Cb
+HETATM  190            Mof_Cb  LIG    1      19.992  19.888  1.458  1.00  0.00  Mof_Cb
+HETATM  191            Mof_Cb  LIG    1      33.039  42.487  1.458  1.00  0.00  Mof_Cb
+HETATM  192            Mof_Cb  LIG    1      46.087  19.888  1.458  1.00  0.00  Mof_Cb
+HETATM  193            Mof_Cc  LIG    1      7.378   42.459  2.820  1.00  0.00  Mof_Cc
+HETATM  194            Mof_Cc  LIG    1      20.425  19.860  2.820  1.00  0.00  Mof_Cc
+HETATM  195            Mof_Cc  LIG    1      33.473  42.459  2.820  1.00  0.00  Mof_Cc
+HETATM  196            Mof_Cc  LIG    1      46.521  19.860  2.820  1.00  0.00  Mof_Cc
+HETATM  197            Mof_Cd  LIG    1      6.111   41.469  0.978  1.00  0.00  Mof_Cd
+HETATM  198            Mof_Cd  LIG    1      19.159  18.870  0.978  1.00  0.00  Mof_Cd
+HETATM  199            Mof_Cd  LIG    1      32.206  41.469  0.978  1.00  0.00  Mof_Cd
+HETATM  200            Mof_Cd  LIG    1      45.254  18.870  0.978  1.00  0.00  Mof_Cd
+HETATM  201            Mof_Oa  LIG    1      8.133   44.469  0.931  1.00  0.00  Mof_Oa
+HETATM  202            Mof_Oa  LIG    1      21.180  21.869  0.931  1.00  0.00  Mof_Oa
+HETATM  203            Mof_Oa  LIG    1      34.228  44.469  0.931  1.00  0.00  Mof_Oa
+HETATM  204            Mof_Oa  LIG    1      47.276  21.869  0.931  1.00  0.00  Mof_Oa
+HETATM  205            Mof_Oc  LIG    1      8.191   43.383  3.396  1.00  0.00  Mof_Oc
+HETATM  206            Mof_Oc  LIG    1      21.238  20.784  3.396  1.00  0.00  Mof_Oc
+HETATM  207            Mof_Oc  LIG    1      34.286  43.383  3.396  1.00  0.00  Mof_Oc
+HETATM  208            Mof_Oc  LIG    1      47.334  20.784  3.396  1.00  0.00  Mof_Oc
+HETATM  209            Mof_Zn  LIG    1      7.717   44.737  4.811  1.00  0.00  Mof_Zn
+HETATM  210            Mof_Zn  LIG    1      20.765  22.138  4.811  1.00  0.00  Mof_Zn
+HETATM  211            Mof_Zn  LIG    1      33.812  44.737  4.811  1.00  0.00  Mof_Zn
+HETATM  212            Mof_Zn  LIG    1      46.860  22.138  4.811  1.00  0.00  Mof_Zn
+HETATM  213            Mof_Zn  LIG    1      9.589   44.579  2.517  1.00  0.00  Mof_Zn
+HETATM  214            Mof_Zn  LIG    1      22.636  21.980  2.517  1.00  0.00  Mof_Zn
+HETATM  215            Mof_Zn  LIG    1      35.684  44.579  2.517  1.00  0.00  Mof_Zn
+HETATM  216            Mof_Zn  LIG    1      48.732  21.980  2.517  1.00  0.00  Mof_Zn
+HETATM  217            Mof_Oc  LIG    1      5.667   36.318  5.780  1.00  0.00  Mof_Oc
+HETATM  218            Mof_Oc  LIG    1      18.715  13.719  5.780  1.00  0.00  Mof_Oc
+HETATM  219            Mof_Oc  LIG    1      31.763  36.318  5.780  1.00  0.00  Mof_Oc
+HETATM  220            Mof_Oc  LIG    1      44.810  13.719  5.780  1.00  0.00  Mof_Oc
+HETATM  221            Mof_Ca  LIG    1      7.324   43.561  0.510  1.00  0.00  Mof_Ca
+HETATM  222            Mof_Ca  LIG    1      20.371  20.962  0.510  1.00  0.00  Mof_Ca
+HETATM  223            Mof_Ca  LIG    1      33.419  43.561  0.510  1.00  0.00  Mof_Ca
+HETATM  224            Mof_Ca  LIG    1      46.467  20.962  0.510  1.00  0.00  Mof_Ca
+HETATM  225            Mof_Ob  LIG    1      6.857   43.564  6.203  1.00  0.00  Mof_Ob
+HETATM  226            Mof_Ob  LIG    1      19.905  20.964  6.203  1.00  0.00  Mof_Ob
+HETATM  227            Mof_Ob  LIG    1      32.952  43.564  6.203  1.00  0.00  Mof_Ob
+HETATM  228            Mof_Ob  LIG    1      46.000  20.964  6.203  1.00  0.00  Mof_Ob
+HETATM  229            Mof_Oa  LIG    1      9.613   45.073  5.519  1.00  0.00  Mof_Oa
+HETATM  230            Mof_Oa  LIG    1      22.661  22.474  5.519  1.00  0.00  Mof_Oa
+HETATM  231            Mof_Oa  LIG    1      35.709  45.073  5.519  1.00  0.00  Mof_Oa
+HETATM  232            Mof_Oa  LIG    1      48.756  22.474  5.519  1.00  0.00  Mof_Oa
+HETATM  233            Mof_Zn  LIG    1      3.459   38.285  2.071  1.00  0.00  Mof_Zn
+HETATM  234            Mof_Zn  LIG    1      16.507  15.685  2.071  1.00  0.00  Mof_Zn
+HETATM  235            Mof_Zn  LIG    1      29.554  38.285  2.071  1.00  0.00  Mof_Zn
+HETATM  236            Mof_Zn  LIG    1      42.602  15.685  2.071  1.00  0.00  Mof_Zn
+HETATM  237            Mof_Oa  LIG    1      4.698   36.810  1.363  1.00  0.00  Mof_Oa
+HETATM  238            Mof_Oa  LIG    1      17.746  14.211  1.363  1.00  0.00  Mof_Oa
+HETATM  239            Mof_Oa  LIG    1      30.794  36.810  1.363  1.00  0.00  Mof_Oa
+HETATM  240            Mof_Oa  LIG    1      43.841  14.211  1.363  1.00  0.00  Mof_Oa
+HETATM  241            Mof_Zn  LIG    1      4.258   36.585  4.365  1.00  0.00  Mof_Zn
+HETATM  242            Mof_Zn  LIG    1      17.306  13.985  4.365  1.00  0.00  Mof_Zn
+HETATM  243            Mof_Zn  LIG    1      30.353  36.585  4.365  1.00  0.00  Mof_Zn
+HETATM  244            Mof_Zn  LIG    1      43.401  13.985  4.365  1.00  0.00  Mof_Zn
+HETATM  245            Mof_Oa  LIG    1      3.434   37.790  5.951  1.00  0.00  Mof_Oa
+HETATM  246            Mof_Oa  LIG    1      16.482  15.191  5.951  1.00  0.00  Mof_Oa
+HETATM  247            Mof_Oa  LIG    1      29.530  37.790  5.951  1.00  0.00  Mof_Oa
+HETATM  248            Mof_Oa  LIG    1      42.577  15.191  5.951  1.00  0.00  Mof_Oa
+HETATM  249            Mof_Oc  LIG    1      2.523   22.131  5.780  1.00  0.00  Mof_Oc
+HETATM  250            Mof_Oc  LIG    1      15.571  44.731  5.780  1.00  0.00  Mof_Oc
+HETATM  251            Mof_Oc  LIG    1      28.619  22.131  5.780  1.00  0.00  Mof_Oc
+HETATM  252            Mof_Oc  LIG    1      41.666  44.731  5.780  1.00  0.00  Mof_Oc
+HETATM  253            Mof_Cc  LIG    1      1.317   22.373  6.355  1.00  0.00  Mof_Cc
+HETATM  254            Mof_Cc  LIG    1      14.364  44.972  6.355  1.00  0.00  Mof_Cc
+HETATM  255            Mof_Cc  LIG    1      27.412  22.373  6.355  1.00  0.00  Mof_Cc
+HETATM  256            Mof_Cc  LIG    1      40.460  44.972  6.355  1.00  0.00  Mof_Cc
+HETATM  257            Mof_Ca  LIG    1      10.803  44.826  5.098  1.00  0.00  Mof_Ca
+HETATM  258            Mof_Ca  LIG    1      23.851  22.227  5.098  1.00  0.00  Mof_Ca
+HETATM  259            Mof_Ca  LIG    1      36.899  44.826  5.098  1.00  0.00  Mof_Ca
+HETATM  260            Mof_Ca  LIG    1      49.946  22.227  5.098  1.00  0.00  Mof_Ca
+HETATM  261            Mof_Cb  LIG    1      11.923  45.034  6.046  1.00  0.00  Mof_Cb
+HETATM  262            Mof_Cb  LIG    1      24.971  22.435  6.046  1.00  0.00  Mof_Cb
+HETATM  263            Mof_Cb  LIG    1      38.019  45.034  6.046  1.00  0.00  Mof_Cb
+HETATM  264            Mof_Cb  LIG    1      51.066  22.435  6.046  1.00  0.00  Mof_Cb
+HETATM  265            Mof_Cd  LIG    1      0.174   22.223  5.566  1.00  0.00  Mof_Cd
+HETATM  266            Mof_Cd  LIG    1      13.222  44.822  5.566  1.00  0.00  Mof_Cd
+HETATM  267            Mof_Cd  LIG    1      26.269  22.223  5.566  1.00  0.00  Mof_Cd
+HETATM  268            Mof_Cd  LIG    1      39.317  44.822  5.566  1.00  0.00  Mof_Cd
+HETATM  269            Mof_H   LIG    1      0.299   21.924  4.528  1.00  0.00  Mof_H
+HETATM  270            Mof_H   LIG    1      13.346  44.523  4.528  1.00  0.00  Mof_H
+HETATM  271            Mof_H   LIG    1      26.394  21.924  4.528  1.00  0.00  Mof_H
+HETATM  272            Mof_H   LIG    1      39.442  44.523  4.528  1.00  0.00  Mof_H
+HETATM  273            Mof_Ob  LIG    1      11.035  44.421  3.909  1.00  0.00  Mof_Ob
+HETATM  274            Mof_Ob  LIG    1      24.083  21.822  3.909  1.00  0.00  Mof_Ob
+HETATM  275            Mof_Ob  LIG    1      37.130  44.421  3.909  1.00  0.00  Mof_Ob
+HETATM  276            Mof_Ob  LIG    1      50.178  21.822  3.909  1.00  0.00  Mof_Ob
+HETATM  277            Mof_Cc  LIG    1      6.061   35.152  6.355  1.00  0.00  Mof_Cc
+HETATM  278            Mof_Cc  LIG    1      19.109  12.553  6.355  1.00  0.00  Mof_Cc
+HETATM  279            Mof_Cc  LIG    1      32.156  35.152  6.355  1.00  0.00  Mof_Cc
+HETATM  280            Mof_Cc  LIG    1      45.204  12.553  6.355  1.00  0.00  Mof_Cc
+HETATM  281            Mof_Ca  LIG    1      7.968   32.141  5.098  1.00  0.00  Mof_Ca
+HETATM  282            Mof_Ca  LIG    1      21.016  9.542   5.098  1.00  0.00  Mof_Ca
+HETATM  283            Mof_Ca  LIG    1      34.064  32.141  5.098  1.00  0.00  Mof_Ca
+HETATM  284            Mof_Ca  LIG    1      47.111  9.542   5.098  1.00  0.00  Mof_Ca
+HETATM  285            Mof_Cb  LIG    1      7.228   33.007  6.046  1.00  0.00  Mof_Cb
+HETATM  286            Mof_Cb  LIG    1      20.276  10.408  6.046  1.00  0.00  Mof_Cb
+HETATM  287            Mof_Cb  LIG    1      33.323  33.007  6.046  1.00  0.00  Mof_Cb
+HETATM  288            Mof_Cb  LIG    1      46.371  10.408  6.046  1.00  0.00  Mof_Cb
+HETATM  289            Mof_Cd  LIG    1      6.763   34.237  5.566  1.00  0.00  Mof_Cd
+HETATM  290            Mof_Cd  LIG    1      19.810  11.638  5.566  1.00  0.00  Mof_Cd
+HETATM  291            Mof_Cd  LIG    1      32.858  34.237  5.566  1.00  0.00  Mof_Cd
+HETATM  292            Mof_Cd  LIG    1      45.906  11.638  5.566  1.00  0.00  Mof_Cd
+HETATM  293            Mof_H   LIG    1      6.959   34.495  4.528  1.00  0.00  Mof_H
+HETATM  294            Mof_H   LIG    1      20.007  11.896  4.528  1.00  0.00  Mof_H
+HETATM  295            Mof_H   LIG    1      33.055  34.495  4.528  1.00  0.00  Mof_H
+HETATM  296            Mof_H   LIG    1      46.102  11.896  4.528  1.00  0.00  Mof_H
+HETATM  297            Mof_Ob  LIG    1      8.203   32.544  3.909  1.00  0.00  Mof_Ob
+HETATM  298            Mof_Ob  LIG    1      21.251  9.945   3.909  1.00  0.00  Mof_Ob
+HETATM  299            Mof_Ob  LIG    1      34.299  32.544  3.909  1.00  0.00  Mof_Ob
+HETATM  300            Mof_Ob  LIG    1      47.346  9.945   3.909  1.00  0.00  Mof_Ob
+HETATM  301            Mof_Oc  LIG    1      10.524  30.600  3.396  1.00  0.00  Mof_Oc
+HETATM  302            Mof_Oc  LIG    1      23.572  8.001   3.396  1.00  0.00  Mof_Oc
+HETATM  303            Mof_Oc  LIG    1      36.620  30.600  3.396  1.00  0.00  Mof_Oc
+HETATM  304            Mof_Oc  LIG    1      49.667  8.001   3.396  1.00  0.00  Mof_Oc
+HETATM  305            Mof_Ca  LIG    1      5.079   35.656  1.784  1.00  0.00  Mof_Ca
+HETATM  306            Mof_Ca  LIG    1      18.127  13.057  1.784  1.00  0.00  Mof_Ca
+HETATM  307            Mof_Ca  LIG    1      31.175  35.656  1.784  1.00  0.00  Mof_Ca
+HETATM  308            Mof_Ca  LIG    1      44.222  13.057  1.784  1.00  0.00  Mof_Ca
+HETATM  309            Mof_Cb  LIG    1      5.820   34.790  0.836  1.00  0.00  Mof_Cb
+HETATM  310            Mof_Cb  LIG    1      18.867  12.191  0.836  1.00  0.00  Mof_Cb
+HETATM  311            Mof_Cb  LIG    1      31.915  34.790  0.836  1.00  0.00  Mof_Cb
+HETATM  312            Mof_Cb  LIG    1      44.963  12.191  0.836  1.00  0.00  Mof_Cb
+HETATM  313            Mof_Cd  LIG    1      6.285   33.560  1.316  1.00  0.00  Mof_Cd
+HETATM  314            Mof_Cd  LIG    1      19.333  10.961  1.316  1.00  0.00  Mof_Cd
+HETATM  315            Mof_Cd  LIG    1      32.380  33.560  1.316  1.00  0.00  Mof_Cd
+HETATM  316            Mof_Cd  LIG    1      45.428  10.961  1.316  1.00  0.00  Mof_Cd
+HETATM  317            Mof_H   LIG    1      6.088   33.302  2.354  1.00  0.00  Mof_H
+HETATM  318            Mof_H   LIG    1      19.136  10.703  2.354  1.00  0.00  Mof_H
+HETATM  319            Mof_H   LIG    1      32.184  33.302  2.354  1.00  0.00  Mof_H
+HETATM  320            Mof_H   LIG    1      45.231  10.703  2.354  1.00  0.00  Mof_H
+HETATM  321            Mof_Ob  LIG    1      4.844   35.253  2.972  1.00  0.00  Mof_Ob
+HETATM  322            Mof_Ob  LIG    1      17.892  12.654  2.972  1.00  0.00  Mof_Ob
+HETATM  323            Mof_Ob  LIG    1      30.940  35.253  2.972  1.00  0.00  Mof_Ob
+HETATM  324            Mof_Ob  LIG    1      43.987  12.654  2.972  1.00  0.00  Mof_Ob
+HETATM  325            Mof_Oc  LIG    1      2.523   37.198  3.486  1.00  0.00  Mof_Oc
+HETATM  326            Mof_Oc  LIG    1      15.571  14.598  3.486  1.00  0.00  Mof_Oc
+HETATM  327            Mof_Oc  LIG    1      28.619  37.198  3.486  1.00  0.00  Mof_Oc
+HETATM  328            Mof_Oc  LIG    1      41.666  14.598  3.486  1.00  0.00  Mof_Oc
+HETATM  329            Mof_Ob  LIG    1      2.013   38.443  0.678  1.00  0.00  Mof_Ob
+HETATM  330            Mof_Ob  LIG    1      15.060  15.843  0.678  1.00  0.00  Mof_Ob
+HETATM  331            Mof_Ob  LIG    1      28.108  38.443  0.678  1.00  0.00  Mof_Ob
+HETATM  332            Mof_Ob  LIG    1      41.156  15.843  0.678  1.00  0.00  Mof_Ob
+HETATM  333            Mof_Ca  LIG    1      2.244   38.037  6.372  1.00  0.00  Mof_Ca
+HETATM  334            Mof_Ca  LIG    1      15.292  15.438  6.372  1.00  0.00  Mof_Ca
+HETATM  335            Mof_Ca  LIG    1      28.340  38.037  6.372  1.00  0.00  Mof_Ca
+HETATM  336            Mof_Ca  LIG    1      41.387  15.438  6.372  1.00  0.00  Mof_Ca
+HETATM  337            Mof_Cb  LIG    1      1.124   37.829  5.424  1.00  0.00  Mof_Cb
+HETATM  338            Mof_Cb  LIG    1      14.172  15.230  5.424  1.00  0.00  Mof_Cb
+HETATM  339            Mof_Cb  LIG    1      27.220  37.829  5.424  1.00  0.00  Mof_Cb
+HETATM  340            Mof_Cb  LIG    1      40.267  15.230  5.424  1.00  0.00  Mof_Cb
+HETATM  341            Mof_Cc  LIG    1      1.317   37.439  4.061  1.00  0.00  Mof_Cc
+HETATM  342            Mof_Cc  LIG    1      14.364  14.840  4.061  1.00  0.00  Mof_Cc
+HETATM  343            Mof_Cc  LIG    1      27.412  37.439  4.061  1.00  0.00  Mof_Cc
+HETATM  344            Mof_Cc  LIG    1      40.460  14.840  4.061  1.00  0.00  Mof_Cc
+HETATM  345            Mof_Cd  LIG    1      12.874  15.442  5.904  1.00  0.00  Mof_Cd
+HETATM  346            Mof_Cd  LIG    1      25.921  38.041  5.904  1.00  0.00  Mof_Cd
+HETATM  347            Mof_Cd  LIG    1      38.969  15.442  5.904  1.00  0.00  Mof_Cd
+HETATM  348            Mof_Cd  LIG    1      52.017  38.041  5.904  1.00  0.00  Mof_Cd
+HETATM  349            Mof_H   LIG    1      12.749  15.741  0.060  1.00  0.00  Mof_H
+HETATM  350            Mof_H   LIG    1      25.797  38.341  0.060  1.00  0.00  Mof_H
+HETATM  351            Mof_H   LIG    1      38.844  15.741  0.060  1.00  0.00  Mof_H
+HETATM  352            Mof_H   LIG    1      51.892  38.341  0.060  1.00  0.00  Mof_H
+HETATM  353            Mof_Ca  LIG    1      10.803  14.694  2.804  1.00  0.00  Mof_Ca
+HETATM  354            Mof_Ca  LIG    1      23.851  37.293  2.804  1.00  0.00  Mof_Ca
+HETATM  355            Mof_Ca  LIG    1      36.899  14.694  2.804  1.00  0.00  Mof_Ca
+HETATM  356            Mof_Ca  LIG    1      49.946  37.293  2.804  1.00  0.00  Mof_Ca
+HETATM  357            Mof_Cb  LIG    1      11.923  14.902  3.752  1.00  0.00  Mof_Cb
+HETATM  358            Mof_Cb  LIG    1      24.971  37.501  3.752  1.00  0.00  Mof_Cb
+HETATM  359            Mof_Cb  LIG    1      38.019  14.902  3.752  1.00  0.00  Mof_Cb
+HETATM  360            Mof_Cb  LIG    1      51.066  37.501  3.752  1.00  0.00  Mof_Cb
+HETATM  361            Mof_Cc  LIG    1      11.731  15.292  5.114  1.00  0.00  Mof_Cc
+HETATM  362            Mof_Cc  LIG    1      24.778  37.891  5.114  1.00  0.00  Mof_Cc
+HETATM  363            Mof_Cc  LIG    1      37.826  15.292  5.114  1.00  0.00  Mof_Cc
+HETATM  364            Mof_Cc  LIG    1      50.874  37.891  5.114  1.00  0.00  Mof_Cc
+HETATM  365            Mof_Cd  LIG    1      0.174   37.289  3.272  1.00  0.00  Mof_Cd
+HETATM  366            Mof_Cd  LIG    1      13.222  14.690  3.272  1.00  0.00  Mof_Cd
+HETATM  367            Mof_Cd  LIG    1      26.269  37.289  3.272  1.00  0.00  Mof_Cd
+HETATM  368            Mof_Cd  LIG    1      39.317  14.690  3.272  1.00  0.00  Mof_Cd
+HETATM  369            Mof_H   LIG    1      0.299   36.990  2.234  1.00  0.00  Mof_H
+HETATM  370            Mof_H   LIG    1      13.346  14.391  2.234  1.00  0.00  Mof_H
+HETATM  371            Mof_H   LIG    1      26.394  36.990  2.234  1.00  0.00  Mof_H
+HETATM  372            Mof_H   LIG    1      39.442  14.391  2.234  1.00  0.00  Mof_H
+HETATM  373            Mof_Ob  LIG    1      11.035  14.289  1.615  1.00  0.00  Mof_Ob
+HETATM  374            Mof_Ob  LIG    1      24.083  36.888  1.615  1.00  0.00  Mof_Ob
+HETATM  375            Mof_Ob  LIG    1      37.130  14.289  1.615  1.00  0.00  Mof_Ob
+HETATM  376            Mof_Ob  LIG    1      50.178  36.888  1.615  1.00  0.00  Mof_Ob
+HETATM  377            Mof_Oc  LIG    1      10.524  15.534  5.690  1.00  0.00  Mof_Oc
+HETATM  378            Mof_Oc  LIG    1      23.572  38.133  5.690  1.00  0.00  Mof_Oc
+HETATM  379            Mof_Oc  LIG    1      36.620  15.534  5.690  1.00  0.00  Mof_Oc
+HETATM  380            Mof_Oc  LIG    1      49.667  38.133  5.690  1.00  0.00  Mof_Oc
+HETATM  381            Mof_Ob  LIG    1      4.844   5.121   0.678  1.00  0.00  Mof_Ob
+HETATM  382            Mof_Ob  LIG    1      17.892  27.720  0.678  1.00  0.00  Mof_Ob
+HETATM  383            Mof_Ob  LIG    1      30.940  5.121   0.678  1.00  0.00  Mof_Ob
+HETATM  384            Mof_Ob  LIG    1      43.987  27.720  0.678  1.00  0.00  Mof_Ob
+HETATM  385            Mof_Oc  LIG    1      2.523   7.065   1.192  1.00  0.00  Mof_Oc
+HETATM  386            Mof_Oc  LIG    1      15.571  29.664  1.192  1.00  0.00  Mof_Oc
+HETATM  387            Mof_Oc  LIG    1      28.619  7.065   1.192  1.00  0.00  Mof_Oc
+HETATM  388            Mof_Oc  LIG    1      41.666  29.664  1.192  1.00  0.00  Mof_Oc
+HETATM  389            Mof_Ca  LIG    1      5.079   5.524   6.372  1.00  0.00  Mof_Ca
+HETATM  390            Mof_Ca  LIG    1      18.127  28.123  6.372  1.00  0.00  Mof_Ca
+HETATM  391            Mof_Ca  LIG    1      31.175  5.524   6.372  1.00  0.00  Mof_Ca
+HETATM  392            Mof_Ca  LIG    1      44.222  28.123  6.372  1.00  0.00  Mof_Ca
+HETATM  393            Mof_Cb  LIG    1      5.820   4.658   5.424  1.00  0.00  Mof_Cb
+HETATM  394            Mof_Cb  LIG    1      18.867  27.257  5.424  1.00  0.00  Mof_Cb
+HETATM  395            Mof_Cb  LIG    1      31.915  4.658   5.424  1.00  0.00  Mof_Cb
+HETATM  396            Mof_Cb  LIG    1      44.963  27.257  5.424  1.00  0.00  Mof_Cb
+HETATM  397            Mof_Cc  LIG    1      6.061   5.020   4.061  1.00  0.00  Mof_Cc
+HETATM  398            Mof_Cc  LIG    1      19.109  27.619  4.061  1.00  0.00  Mof_Cc
+HETATM  399            Mof_Cc  LIG    1      32.156  5.020   4.061  1.00  0.00  Mof_Cc
+HETATM  400            Mof_Cc  LIG    1      45.204  27.619  4.061  1.00  0.00  Mof_Cc
+HETATM  401            Mof_Cd  LIG    1      6.285   3.428   5.904  1.00  0.00  Mof_Cd
+HETATM  402            Mof_Cd  LIG    1      19.333  26.027  5.904  1.00  0.00  Mof_Cd
+HETATM  403            Mof_Cd  LIG    1      32.380  3.428   5.904  1.00  0.00  Mof_Cd
+HETATM  404            Mof_Cd  LIG    1      45.428  26.027  5.904  1.00  0.00  Mof_Cd
+HETATM  405            Mof_H   LIG    1      6.088   3.170   0.060  1.00  0.00  Mof_H
+HETATM  406            Mof_H   LIG    1      19.136  25.769  0.060  1.00  0.00  Mof_H
+HETATM  407            Mof_H   LIG    1      32.184  3.170   0.060  1.00  0.00  Mof_H
+HETATM  408            Mof_H   LIG    1      45.231  25.769  0.060  1.00  0.00  Mof_H
+HETATM  409            Mof_Ca  LIG    1      7.968   2.009   2.804  1.00  0.00  Mof_Ca
+HETATM  410            Mof_Ca  LIG    1      21.016  24.608  2.804  1.00  0.00  Mof_Ca
+HETATM  411            Mof_Ca  LIG    1      34.064  2.009   2.804  1.00  0.00  Mof_Ca
+HETATM  412            Mof_Ca  LIG    1      47.111  24.608  2.804  1.00  0.00  Mof_Ca
+HETATM  413            Mof_Cb  LIG    1      7.228   2.875   3.752  1.00  0.00  Mof_Cb
+HETATM  414            Mof_Cb  LIG    1      20.276  25.474  3.752  1.00  0.00  Mof_Cb
+HETATM  415            Mof_Cb  LIG    1      33.323  2.875   3.752  1.00  0.00  Mof_Cb
+HETATM  416            Mof_Cb  LIG    1      46.371  25.474  3.752  1.00  0.00  Mof_Cb
+HETATM  417            Mof_Cc  LIG    1      6.987   2.513   5.114  1.00  0.00  Mof_Cc
+HETATM  418            Mof_Cc  LIG    1      20.034  25.112  5.114  1.00  0.00  Mof_Cc
+HETATM  419            Mof_Cc  LIG    1      33.082  2.513   5.114  1.00  0.00  Mof_Cc
+HETATM  420            Mof_Cc  LIG    1      46.130  25.112  5.114  1.00  0.00  Mof_Cc
+HETATM  421            Mof_Cd  LIG    1      6.763   4.105   3.272  1.00  0.00  Mof_Cd
+HETATM  422            Mof_Cd  LIG    1      19.810  26.704  3.272  1.00  0.00  Mof_Cd
+HETATM  423            Mof_Cd  LIG    1      32.858  4.105   3.272  1.00  0.00  Mof_Cd
+HETATM  424            Mof_Cd  LIG    1      45.906  26.704  3.272  1.00  0.00  Mof_Cd
+HETATM  425            Mof_H   LIG    1      6.959   4.363   2.234  1.00  0.00  Mof_H
+HETATM  426            Mof_H   LIG    1      20.007  26.962  2.234  1.00  0.00  Mof_H
+HETATM  427            Mof_H   LIG    1      33.055  4.363   2.234  1.00  0.00  Mof_H
+HETATM  428            Mof_H   LIG    1      46.102  26.962  2.234  1.00  0.00  Mof_H
+HETATM  429            Mof_Ob  LIG    1      8.203   2.412   1.615  1.00  0.00  Mof_Ob
+HETATM  430            Mof_Ob  LIG    1      21.251  25.011  1.615  1.00  0.00  Mof_Ob
+HETATM  431            Mof_Ob  LIG    1      34.299  2.412   1.615  1.00  0.00  Mof_Ob
+HETATM  432            Mof_Ob  LIG    1      47.346  25.011  1.615  1.00  0.00  Mof_Ob
+HETATM  433            Mof_Ca  LIG    1      2.244   7.905   4.078  1.00  0.00  Mof_Ca
+HETATM  434            Mof_Ca  LIG    1      15.292  30.504  4.078  1.00  0.00  Mof_Ca
+HETATM  435            Mof_Ca  LIG    1      28.340  7.905   4.078  1.00  0.00  Mof_Ca
+HETATM  436            Mof_Ca  LIG    1      41.387  30.504  4.078  1.00  0.00  Mof_Ca
+HETATM  437            Mof_Cb  LIG    1      1.124   7.697   3.130  1.00  0.00  Mof_Cb
+HETATM  438            Mof_Cb  LIG    1      14.172  30.296  3.130  1.00  0.00  Mof_Cb
+HETATM  439            Mof_Cb  LIG    1      27.220  7.697   3.130  1.00  0.00  Mof_Cb
+HETATM  440            Mof_Cb  LIG    1      40.267  30.296  3.130  1.00  0.00  Mof_Cb
+HETATM  441            Mof_Cc  LIG    1      1.317   7.307   1.768  1.00  0.00  Mof_Cc
+HETATM  442            Mof_Cc  LIG    1      14.364  29.906  1.768  1.00  0.00  Mof_Cc
+HETATM  443            Mof_Cc  LIG    1      27.412  7.307   1.768  1.00  0.00  Mof_Cc
+HETATM  444            Mof_Cc  LIG    1      40.460  29.906  1.768  1.00  0.00  Mof_Cc
+HETATM  445            Mof_Cd  LIG    1      12.874  30.508  3.610  1.00  0.00  Mof_Cd
+HETATM  446            Mof_Cd  LIG    1      25.921  7.909   3.610  1.00  0.00  Mof_Cd
+HETATM  447            Mof_Cd  LIG    1      38.969  30.508  3.610  1.00  0.00  Mof_Cd
+HETATM  448            Mof_Cd  LIG    1      52.017  7.909   3.610  1.00  0.00  Mof_Cd
+HETATM  449            Mof_H   LIG    1      12.749  30.808  4.648  1.00  0.00  Mof_H
+HETATM  450            Mof_H   LIG    1      25.797  8.208   4.648  1.00  0.00  Mof_H
+HETATM  451            Mof_H   LIG    1      38.844  30.808  4.648  1.00  0.00  Mof_H
+HETATM  452            Mof_H   LIG    1      51.892  8.208   4.648  1.00  0.00  Mof_H
+HETATM  453            Mof_Ob  LIG    1      2.013   8.310   5.266  1.00  0.00  Mof_Ob
+HETATM  454            Mof_Ob  LIG    1      15.060  30.910  5.266  1.00  0.00  Mof_Ob
+HETATM  455            Mof_Ob  LIG    1      28.108  8.310   5.266  1.00  0.00  Mof_Ob
+HETATM  456            Mof_Ob  LIG    1      41.156  30.910  5.266  1.00  0.00  Mof_Ob
+HETATM  457            Mof_Cb  LIG    1      11.923  29.968  1.458  1.00  0.00  Mof_Cb
+HETATM  458            Mof_Cb  LIG    1      24.971  7.369   1.458  1.00  0.00  Mof_Cb
+HETATM  459            Mof_Cb  LIG    1      38.019  29.968  1.458  1.00  0.00  Mof_Cb
+HETATM  460            Mof_Cb  LIG    1      51.066  7.369   1.458  1.00  0.00  Mof_Cb
+HETATM  461            Mof_Cc  LIG    1      11.731  30.358  2.820  1.00  0.00  Mof_Cc
+HETATM  462            Mof_Cc  LIG    1      24.779  7.759   2.820  1.00  0.00  Mof_Cc
+HETATM  463            Mof_Cc  LIG    1      37.826  30.358  2.820  1.00  0.00  Mof_Cc
+HETATM  464            Mof_Cc  LIG    1      50.874  7.759   2.820  1.00  0.00  Mof_Cc
+HETATM  465            Mof_Cd  LIG    1      0.174   7.157   0.978  1.00  0.00  Mof_Cd
+HETATM  466            Mof_Cd  LIG    1      13.222  29.756  0.978  1.00  0.00  Mof_Cd
+HETATM  467            Mof_Cd  LIG    1      26.269  7.157   0.978  1.00  0.00  Mof_Cd
+HETATM  468            Mof_Cd  LIG    1      39.317  29.756  0.978  1.00  0.00  Mof_Cd
+HETATM  469            Mof_Ca  LIG    1      10.803  29.760  0.510  1.00  0.00  Mof_Ca
+HETATM  470            Mof_Ca  LIG    1      23.851  7.161   0.510  1.00  0.00  Mof_Ca
+HETATM  471            Mof_Ca  LIG    1      36.899  29.760  0.510  1.00  0.00  Mof_Ca
+HETATM  472            Mof_Ca  LIG    1      49.946  7.161   0.510  1.00  0.00  Mof_Ca
+HETATM  473            Mof_Ob  LIG    1      11.035  29.355  6.203  1.00  0.00  Mof_Ob
+HETATM  474            Mof_Ob  LIG    1      24.083  6.756   6.203  1.00  0.00  Mof_Ob
+HETATM  475            Mof_Ob  LIG    1      37.130  29.355  6.203  1.00  0.00  Mof_Ob
+HETATM  476            Mof_Ob  LIG    1      50.178  6.756   6.203  1.00  0.00  Mof_Ob
+HETATM  477            Mof_Ca  LIG    1      5.079   20.590  4.078  1.00  0.00  Mof_Ca
+HETATM  478            Mof_Ca  LIG    1      18.127  43.189  4.078  1.00  0.00  Mof_Ca
+HETATM  479            Mof_Ca  LIG    1      31.175  20.590  4.078  1.00  0.00  Mof_Ca
+HETATM  480            Mof_Ca  LIG    1      44.222  43.189  4.078  1.00  0.00  Mof_Ca
+HETATM  481            Mof_Cb  LIG    1      5.820   19.724  3.130  1.00  0.00  Mof_Cb
+HETATM  482            Mof_Cb  LIG    1      18.867  42.323  3.130  1.00  0.00  Mof_Cb
+HETATM  483            Mof_Cb  LIG    1      31.915  19.724  3.130  1.00  0.00  Mof_Cb
+HETATM  484            Mof_Cb  LIG    1      44.963  42.323  3.130  1.00  0.00  Mof_Cb
+HETATM  485            Mof_Cc  LIG    1      6.061   20.086  1.768  1.00  0.00  Mof_Cc
+HETATM  486            Mof_Cc  LIG    1      19.109  42.685  1.768  1.00  0.00  Mof_Cc
+HETATM  487            Mof_Cc  LIG    1      32.156  20.086  1.768  1.00  0.00  Mof_Cc
+HETATM  488            Mof_Cc  LIG    1      45.204  42.685  1.768  1.00  0.00  Mof_Cc
+HETATM  489            Mof_Cd  LIG    1      6.285   18.494  3.610  1.00  0.00  Mof_Cd
+HETATM  490            Mof_Cd  LIG    1      19.333  41.093  3.610  1.00  0.00  Mof_Cd
+HETATM  491            Mof_Cd  LIG    1      32.380  18.494  3.610  1.00  0.00  Mof_Cd
+HETATM  492            Mof_Cd  LIG    1      45.428  41.093  3.610  1.00  0.00  Mof_Cd
+HETATM  493            Mof_H   LIG    1      6.088   18.236  4.648  1.00  0.00  Mof_H
+HETATM  494            Mof_H   LIG    1      19.136  40.835  4.648  1.00  0.00  Mof_H
+HETATM  495            Mof_H   LIG    1      32.184  18.236  4.648  1.00  0.00  Mof_H
+HETATM  496            Mof_H   LIG    1      45.231  40.835  4.648  1.00  0.00  Mof_H
+HETATM  497            Mof_Ob  LIG    1      4.844   20.187  5.266  1.00  0.00  Mof_Ob
+HETATM  498            Mof_Ob  LIG    1      17.892  42.786  5.266  1.00  0.00  Mof_Ob
+HETATM  499            Mof_Ob  LIG    1      30.940  20.187  5.266  1.00  0.00  Mof_Ob
+HETATM  500            Mof_Ob  LIG    1      43.987  42.786  5.266  1.00  0.00  Mof_Ob
+HETATM  501            Mof_Cb  LIG    1      7.228   17.941  1.458  1.00  0.00  Mof_Cb
+HETATM  502            Mof_Cb  LIG    1      20.276  40.540  1.458  1.00  0.00  Mof_Cb
+HETATM  503            Mof_Cb  LIG    1      33.323  17.941  1.458  1.00  0.00  Mof_Cb
+HETATM  504            Mof_Cb  LIG    1      46.371  40.540  1.458  1.00  0.00  Mof_Cb
+HETATM  505            Mof_Cc  LIG    1      6.987   17.579  2.820  1.00  0.00  Mof_Cc
+HETATM  506            Mof_Cc  LIG    1      20.034  40.179  2.820  1.00  0.00  Mof_Cc
+HETATM  507            Mof_Cc  LIG    1      33.082  17.579  2.820  1.00  0.00  Mof_Cc
+HETATM  508            Mof_Cc  LIG    1      46.130  40.179  2.820  1.00  0.00  Mof_Cc
+HETATM  509            Mof_Cd  LIG    1      6.763   19.171  0.978  1.00  0.00  Mof_Cd
+HETATM  510            Mof_Cd  LIG    1      19.810  41.771  0.978  1.00  0.00  Mof_Cd
+HETATM  511            Mof_Cd  LIG    1      32.858  19.171  0.978  1.00  0.00  Mof_Cd
+HETATM  512            Mof_Cd  LIG    1      45.906  41.771  0.978  1.00  0.00  Mof_Cd
+HETATM  513            Mof_Ca  LIG    1      7.968   17.075  0.510  1.00  0.00  Mof_Ca
+HETATM  514            Mof_Ca  LIG    1      21.016  39.674  0.510  1.00  0.00  Mof_Ca
+HETATM  515            Mof_Ca  LIG    1      34.064  17.075  0.510  1.00  0.00  Mof_Ca
+HETATM  516            Mof_Ca  LIG    1      47.111  39.674  0.510  1.00  0.00  Mof_Ca
+HETATM  517            Mof_Ob  LIG    1      8.203   17.478  6.203  1.00  0.00  Mof_Ob
+HETATM  518            Mof_Ob  LIG    1      21.251  40.077  6.203  1.00  0.00  Mof_Ob
+HETATM  519            Mof_Ob  LIG    1      34.299  17.478  6.203  1.00  0.00  Mof_Ob
+HETATM  520            Mof_Ob  LIG    1      47.346  40.077  6.203  1.00  0.00  Mof_Ob
+HETATM  521            Mof_Zn  LIG    1      5.331   23.061  2.071  1.00  0.00  Mof_Zn
+HETATM  522            Mof_Zn  LIG    1      18.378  0.461   2.071  1.00  0.00  Mof_Zn
+HETATM  523            Mof_Zn  LIG    1      31.426  23.061  2.071  1.00  0.00  Mof_Zn
+HETATM  524            Mof_Zn  LIG    1      44.474  0.461   2.071  1.00  0.00  Mof_Zn
+HETATM  525            Mof_Ob  LIG    1      6.191   24.234  0.678  1.00  0.00  Mof_Ob
+HETATM  526            Mof_Ob  LIG    1      19.238  1.635   0.678  1.00  0.00  Mof_Ob
+HETATM  527            Mof_Ob  LIG    1      32.286  24.234  0.678  1.00  0.00  Mof_Ob
+HETATM  528            Mof_Ob  LIG    1      45.334  1.635   0.678  1.00  0.00  Mof_Ob
+HETATM  529            Mof_Zn  LIG    1      3.459   23.218  4.365  1.00  0.00  Mof_Zn
+HETATM  530            Mof_Zn  LIG    1      16.507  0.619   4.365  1.00  0.00  Mof_Zn
+HETATM  531            Mof_Zn  LIG    1      29.554  23.218  4.365  1.00  0.00  Mof_Zn
+HETATM  532            Mof_Zn  LIG    1      42.602  0.619   4.365  1.00  0.00  Mof_Zn
+HETATM  533            Mof_Oa  LIG    1      3.434   22.724  1.363  1.00  0.00  Mof_Oa
+HETATM  534            Mof_Oa  LIG    1      16.482  0.125   1.363  1.00  0.00  Mof_Oa
+HETATM  535            Mof_Oa  LIG    1      29.530  22.724  1.363  1.00  0.00  Mof_Oa
+HETATM  536            Mof_Oa  LIG    1      42.577  0.125   1.363  1.00  0.00  Mof_Oa
+HETATM  537            Mof_Oc  LIG    1      4.857   24.414  3.486  1.00  0.00  Mof_Oc
+HETATM  538            Mof_Oc  LIG    1      17.905  1.815   3.486  1.00  0.00  Mof_Oc
+HETATM  539            Mof_Oc  LIG    1      30.952  24.414  3.486  1.00  0.00  Mof_Oc
+HETATM  540            Mof_Oc  LIG    1      44.000  1.815   3.486  1.00  0.00  Mof_Oc
+HETATM  541            Mof_Ca  LIG    1      5.724   24.236  6.372  1.00  0.00  Mof_Ca
+HETATM  542            Mof_Ca  LIG    1      18.771  1.637   6.372  1.00  0.00  Mof_Ca
+HETATM  543            Mof_Ca  LIG    1      31.819  24.236  6.372  1.00  0.00  Mof_Ca
+HETATM  544            Mof_Ca  LIG    1      44.867  1.637   6.372  1.00  0.00  Mof_Ca
+HETATM  545            Mof_Cb  LIG    1      6.104   25.310  5.424  1.00  0.00  Mof_Cb
+HETATM  546            Mof_Cb  LIG    1      19.151  2.711   5.424  1.00  0.00  Mof_Cb
+HETATM  547            Mof_Cb  LIG    1      32.199  25.310  5.424  1.00  0.00  Mof_Cb
+HETATM  548            Mof_Cb  LIG    1      45.247  2.711   5.424  1.00  0.00  Mof_Cb
+HETATM  549            Mof_Cc  LIG    1      5.670   25.338  4.061  1.00  0.00  Mof_Cc
+HETATM  550            Mof_Cc  LIG    1      18.718  2.739   4.061  1.00  0.00  Mof_Cc
+HETATM  551            Mof_Cc  LIG    1      31.765  25.338  4.061  1.00  0.00  Mof_Cc
+HETATM  552            Mof_Cc  LIG    1      44.813  2.739   4.061  1.00  0.00  Mof_Cc
+HETATM  553            Mof_Cd  LIG    1      6.937   26.328  5.904  1.00  0.00  Mof_Cd
+HETATM  554            Mof_Cd  LIG    1      19.984  3.729   5.904  1.00  0.00  Mof_Cd
+HETATM  555            Mof_Cd  LIG    1      33.032  26.328  5.904  1.00  0.00  Mof_Cd
+HETATM  556            Mof_Cd  LIG    1      46.080  3.729   5.904  1.00  0.00  Mof_Cd
+HETATM  557            Mof_H   LIG    1      7.258   26.287  0.060  1.00  0.00  Mof_H
+HETATM  558            Mof_H   LIG    1      20.306  3.688   0.060  1.00  0.00  Mof_H
+HETATM  559            Mof_H   LIG    1      33.353  26.287  0.060  1.00  0.00  Mof_H
+HETATM  560            Mof_H   LIG    1      46.401  3.688   0.060  1.00  0.00  Mof_H
+HETATM  561            Mof_Oa  LIG    1      4.915   23.329  5.951  1.00  0.00  Mof_Oa
+HETATM  562            Mof_Oa  LIG    1      17.963  0.730   5.951  1.00  0.00  Mof_Oa
+HETATM  563            Mof_Oa  LIG    1      31.010  23.329  5.951  1.00  0.00  Mof_Oa
+HETATM  564            Mof_Oa  LIG    1      44.058  0.730   5.951  1.00  0.00  Mof_Oa
+HETATM  565            Mof_Ca  LIG    1      7.324   28.495  2.804  1.00  0.00  Mof_Ca
+HETATM  566            Mof_Ca  LIG    1      20.371  5.896   2.804  1.00  0.00  Mof_Ca
+HETATM  567            Mof_Ca  LIG    1      33.419  28.495  2.804  1.00  0.00  Mof_Ca
+HETATM  568            Mof_Ca  LIG    1      46.467  5.896   2.804  1.00  0.00  Mof_Ca
+HETATM  569            Mof_Cb  LIG    1      6.944   27.421  3.752  1.00  0.00  Mof_Cb
+HETATM  570            Mof_Cb  LIG    1      19.992  4.822   3.752  1.00  0.00  Mof_Cb
+HETATM  571            Mof_Cb  LIG    1      33.039  27.421  3.752  1.00  0.00  Mof_Cb
+HETATM  572            Mof_Cb  LIG    1      46.087  4.822   3.752  1.00  0.00  Mof_Cb
+HETATM  573            Mof_Cc  LIG    1      7.378   27.393  5.114  1.00  0.00  Mof_Cc
+HETATM  574            Mof_Cc  LIG    1      20.425  4.794   5.114  1.00  0.00  Mof_Cc
+HETATM  575            Mof_Cc  LIG    1      33.473  27.393  5.114  1.00  0.00  Mof_Cc
+HETATM  576            Mof_Cc  LIG    1      46.521  4.794   5.114  1.00  0.00  Mof_Cc
+HETATM  577            Mof_Cd  LIG    1      6.111   26.403  3.272  1.00  0.00  Mof_Cd
+HETATM  578            Mof_Cd  LIG    1      19.159  3.804   3.272  1.00  0.00  Mof_Cd
+HETATM  579            Mof_Cd  LIG    1      32.206  26.403  3.272  1.00  0.00  Mof_Cd
+HETATM  580            Mof_Cd  LIG    1      45.254  3.804   3.272  1.00  0.00  Mof_Cd
+HETATM  581            Mof_H   LIG    1      5.790   26.445  2.234  1.00  0.00  Mof_H
+HETATM  582            Mof_H   LIG    1      18.837  3.845   2.234  1.00  0.00  Mof_H
+HETATM  583            Mof_H   LIG    1      31.885  26.445  2.234  1.00  0.00  Mof_H
+HETATM  584            Mof_H   LIG    1      44.933  3.845   2.234  1.00  0.00  Mof_H
+HETATM  585            Mof_Ob  LIG    1      6.857   28.497  1.615  1.00  0.00  Mof_Ob
+HETATM  586            Mof_Ob  LIG    1      19.905  5.898   1.615  1.00  0.00  Mof_Ob
+HETATM  587            Mof_Ob  LIG    1      32.952  28.497  1.615  1.00  0.00  Mof_Ob
+HETATM  588            Mof_Ob  LIG    1      46.000  5.898   1.615  1.00  0.00  Mof_Ob
+HETATM  589            Mof_Oa  LIG    1      8.133   29.403  3.225  1.00  0.00  Mof_Oa
+HETATM  590            Mof_Oa  LIG    1      21.180  6.803   3.225  1.00  0.00  Mof_Oa
+HETATM  591            Mof_Oa  LIG    1      34.228  29.403  3.225  1.00  0.00  Mof_Oa
+HETATM  592            Mof_Oa  LIG    1      47.276  6.803   3.225  1.00  0.00  Mof_Oa
+HETATM  593            Mof_Oc  LIG    1      8.190   28.317  5.690  1.00  0.00  Mof_Oc
+HETATM  594            Mof_Oc  LIG    1      21.238  5.718   5.690  1.00  0.00  Mof_Oc
+HETATM  595            Mof_Oc  LIG    1      34.286  28.317  5.690  1.00  0.00  Mof_Oc
+HETATM  596            Mof_Oc  LIG    1      47.333  5.718   5.690  1.00  0.00  Mof_Oc
+HETATM  597            Mof_Zn  LIG    1      7.717   29.671  0.223  1.00  0.00  Mof_Zn
+HETATM  598            Mof_Zn  LIG    1      20.765  7.072   0.223  1.00  0.00  Mof_Zn
+HETATM  599            Mof_Zn  LIG    1      33.812  29.671  0.223  1.00  0.00  Mof_Zn
+HETATM  600            Mof_Zn  LIG    1      46.860  7.072   0.223  1.00  0.00  Mof_Zn
+HETATM  601            Mof_Ca  LIG    1      2.244   22.971  1.784  1.00  0.00  Mof_Ca
+HETATM  602            Mof_Ca  LIG    1      15.292  0.372   1.784  1.00  0.00  Mof_Ca
+HETATM  603            Mof_Ca  LIG    1      28.340  22.971  1.784  1.00  0.00  Mof_Ca
+HETATM  604            Mof_Ca  LIG    1      41.387  0.372   1.784  1.00  0.00  Mof_Ca
+HETATM  605            Mof_Cb  LIG    1      1.124   22.763  0.836  1.00  0.00  Mof_Cb
+HETATM  606            Mof_Cb  LIG    1      14.172  0.164   0.836  1.00  0.00  Mof_Cb
+HETATM  607            Mof_Cb  LIG    1      27.220  22.763  0.836  1.00  0.00  Mof_Cb
+HETATM  608            Mof_Cb  LIG    1      40.267  0.164   0.836  1.00  0.00  Mof_Cb
+HETATM  609            Mof_Cd  LIG    1      12.874  0.376   1.316  1.00  0.00  Mof_Cd
+HETATM  610            Mof_Cd  LIG    1      25.921  22.975  1.316  1.00  0.00  Mof_Cd
+HETATM  611            Mof_Cd  LIG    1      38.969  0.376   1.316  1.00  0.00  Mof_Cd
+HETATM  612            Mof_Cd  LIG    1      52.017  22.975  1.316  1.00  0.00  Mof_Cd
+HETATM  613            Mof_H   LIG    1      12.749  0.675   2.354  1.00  0.00  Mof_H
+HETATM  614            Mof_H   LIG    1      25.797  23.275  2.354  1.00  0.00  Mof_H
+HETATM  615            Mof_H   LIG    1      38.844  0.675   2.354  1.00  0.00  Mof_H
+HETATM  616            Mof_H   LIG    1      51.892  23.275  2.354  1.00  0.00  Mof_H
+HETATM  617            Mof_Ob  LIG    1      2.013   23.377  2.972  1.00  0.00  Mof_Ob
+HETATM  618            Mof_Ob  LIG    1      15.060  0.777   2.972  1.00  0.00  Mof_Ob
+HETATM  619            Mof_Ob  LIG    1      28.108  23.377  2.972  1.00  0.00  Mof_Ob
+HETATM  620            Mof_Ob  LIG    1      41.156  0.777   2.972  1.00  0.00  Mof_Ob
+HETATM  621            Mof_Oc  LIG    1      7.380   31.480  1.102  1.00  0.00  Mof_Oc
+HETATM  622            Mof_Oc  LIG    1      20.428  8.880   1.102  1.00  0.00  Mof_Oc
+HETATM  623            Mof_Oc  LIG    1      33.476  31.480  1.102  1.00  0.00  Mof_Oc
+HETATM  624            Mof_Oc  LIG    1      46.523  8.880   1.102  1.00  0.00  Mof_Oc
+HETATM  625            Mof_H   LIG    1      5.790   41.511  6.822  1.00  0.00  Mof_H
+HETATM  626            Mof_H   LIG    1      18.837  18.912  6.822  1.00  0.00  Mof_H
+HETATM  627            Mof_H   LIG    1      31.885  41.511  6.822  1.00  0.00  Mof_H
+HETATM  628            Mof_H   LIG    1      44.933  18.912  6.822  1.00  0.00  Mof_H
+HETATM  629            Mof_Oc  LIG    1      10.524  0.468   1.102  1.00  0.00  Mof_Oc
+HETATM  630            Mof_Oc  LIG    1      23.572  23.067  1.102  1.00  0.00  Mof_Oc
+HETATM  631            Mof_Oc  LIG    1      36.620  0.468   1.102  1.00  0.00  Mof_Oc
+HETATM  632            Mof_Oc  LIG    1      49.667  23.067  1.102  1.00  0.00  Mof_Oc
+HETATM  633            Mof_Cc  LIG    1      11.731  0.226   0.526  1.00  0.00  Mof_Cc
+HETATM  634            Mof_Cc  LIG    1      24.778  22.825  0.526  1.00  0.00  Mof_Cc
+HETATM  635            Mof_Cc  LIG    1      37.826  0.226   0.526  1.00  0.00  Mof_Cc
+HETATM  636            Mof_Cc  LIG    1      50.874  22.825  0.526  1.00  0.00  Mof_Cc
+HETATM  637            Mof_Cc  LIG    1      6.987   32.645  0.526  1.00  0.00  Mof_Cc
+HETATM  638            Mof_Cc  LIG    1      20.034  10.046  0.526  1.00  0.00  Mof_Cc
+HETATM  639            Mof_Cc  LIG    1      33.082  32.645  0.526  1.00  0.00  Mof_Cc
+HETATM  640            Mof_Cc  LIG    1      46.130  10.046  0.526  1.00  0.00  Mof_Cc
+HETATM  641            Mof_H   LIG    1      0.299   6.858   6.822  1.00  0.00  Mof_H
+HETATM  642            Mof_H   LIG    1      13.346  29.457  6.822  1.00  0.00  Mof_H
+HETATM  643            Mof_H   LIG    1      26.394  6.858   6.822  1.00  0.00  Mof_H
+HETATM  644            Mof_H   LIG    1      39.442  29.457  6.822  1.00  0.00  Mof_H
+HETATM  645            Mof_H   LIG    1      6.959   19.429  6.822  1.00  0.00  Mof_H
+HETATM  646            Mof_H   LIG    1      20.007  42.028  6.822  1.00  0.00  Mof_H
+HETATM  647            Mof_H   LIG    1      33.055  19.429  6.822  1.00  0.00  Mof_H
+HETATM  648            Mof_H   LIG    1      46.102  42.028  6.822  1.00  0.00  Mof_H
+CONECT  1              49
+CONECT  2              50
+CONECT  3              51
+CONECT  4              52
+CONECT  5              25      21
+CONECT  6              26      22
+CONECT  7              27      23
+CONECT  8              28      24
+CONECT  9              13
+CONECT  10             14
+CONECT  11             15
+CONECT  12             16
+CONECT  13             73      9      17
+CONECT  14             74      10     18
+CONECT  15             75      11     19
+CONECT  16             76      12     20
+CONECT  17             13
+CONECT  18             14
+CONECT  19             15
+CONECT  20             16
+CONECT  21             5
+CONECT  22             6
+CONECT  23             7
+CONECT  24             8
+CONECT  25             5       33
+CONECT  26             6       34
+CONECT  27             7       35
+CONECT  28             8       36
+CONECT  29             73
+CONECT  30             74
+CONECT  31             75
+CONECT  32             76
+CONECT  33             381     25
+CONECT  34             382     26
+CONECT  35             383     27
+CONECT  36             384     28
+CONECT  37             45
+CONECT  38             46
+CONECT  39             47
+CONECT  40             48
+CONECT  41             105
+CONECT  42             106
+CONECT  43             107
+CONECT  44             108
+CONECT  45             389     37
+CONECT  46             390     38
+CONECT  47             391     39
+CONECT  48             392     40
+CONECT  49             433     1
+CONECT  50             434     2
+CONECT  51             435     3
+CONECT  52             436     4
+CONECT  53             61
+CONECT  54             62
+CONECT  55             63
+CONECT  56             64
+CONECT  57             397
+CONECT  58             398
+CONECT  59             399
+CONECT  60             400
+CONECT  61             77      53
+CONECT  62             78      54
+CONECT  63             79      55
+CONECT  64             80      56
+CONECT  65             85      89
+CONECT  66             86      90
+CONECT  67             87      91
+CONECT  68             88      92
+CONECT  69             77
+CONECT  70             78
+CONECT  71             79
+CONECT  72             80
+CONECT  73             29      13
+CONECT  74             30      14
+CONECT  75             31      15
+CONECT  76             32      16
+CONECT  77             81      69     61
+CONECT  78             82      70     62
+CONECT  79             83      71     63
+CONECT  80             84      72     64
+CONECT  81             77
+CONECT  82             78
+CONECT  83             79
+CONECT  84             80
+CONECT  85             65
+CONECT  86             66
+CONECT  87             67
+CONECT  88             68
+CONECT  89             93      65
+CONECT  90             94      66
+CONECT  91             95      67
+CONECT  92             96      68
+CONECT  93             89      517
+CONECT  94             90      518
+CONECT  95             91      519
+CONECT  96             92      520
+CONECT  97             101
+CONECT  98             102
+CONECT  99             103
+CONECT  100            104
+CONECT  101            97      513
+CONECT  102            98      514
+CONECT  103            99      515
+CONECT  104            100     516
+CONECT  105            41      353
+CONECT  106            42      354
+CONECT  107            43      355
+CONECT  108            44      356
+CONECT  109            505
+CONECT  110            506
+CONECT  111            507
+CONECT  112            508
+CONECT  113            589
+CONECT  114            590
+CONECT  115            591
+CONECT  116            592
+CONECT  117            125     473
+CONECT  118            126     474
+CONECT  119            127     475
+CONECT  120            128     476
+CONECT  121            597     469
+CONECT  122            598     470
+CONECT  123            599     471
+CONECT  124            600     472
+CONECT  125            117     281
+CONECT  126            118     282
+CONECT  127            119     283
+CONECT  128            120     284
+CONECT  129            477     529
+CONECT  130            478
+CONECT  131            479     531
+CONECT  132            480
+CONECT  133            485
+CONECT  134            486
+CONECT  135            487
+CONECT  136            488
+CONECT  137            561
+CONECT  139            563
+CONECT  142            202
+CONECT  144            204
+CONECT  145            409
+CONECT  146            214     410
+CONECT  147            411
+CONECT  148            216     412
+CONECT  149            417
+CONECT  150            418
+CONECT  151            419
+CONECT  152            420
+CONECT  153            169
+CONECT  154            170
+CONECT  155            171
+CONECT  156            172
+CONECT  157            245
+CONECT  158            246
+CONECT  159            247
+CONECT  160            248
+CONECT  161            185     181
+CONECT  162            186     182
+CONECT  163            187     183
+CONECT  164            188     184
+CONECT  165            173
+CONECT  166            174
+CONECT  167            175
+CONECT  168            176
+CONECT  169            197     153
+CONECT  170            198     154
+CONECT  171            199     155
+CONECT  172            200     156
+CONECT  173            193     165    177
+CONECT  174            194     166    178
+CONECT  175            195     167    179
+CONECT  176            196     168    180
+CONECT  177            173
+CONECT  178            174
+CONECT  179            175
+CONECT  180            176
+CONECT  181            161
+CONECT  182            162
+CONECT  183            163
+CONECT  184            164
+CONECT  185            161     241
+CONECT  186            162     242
+CONECT  187            163     243
+CONECT  188            164     244
+CONECT  189            197
+CONECT  190            198
+CONECT  191            199
+CONECT  192            200
+CONECT  193            205     173
+CONECT  194            206     174
+CONECT  195            207     175
+CONECT  196            208     176
+CONECT  197            189     169
+CONECT  198            190     170
+CONECT  199            191     171
+CONECT  200            192     172
+CONECT  201            221     213
+CONECT  202            142     222
+CONECT  203            223     215
+CONECT  204            144     224
+CONECT  205            193
+CONECT  206            194
+CONECT  207            195
+CONECT  208            196
+CONECT  209            229     225
+CONECT  210            230     226
+CONECT  211            231     227
+CONECT  212            232     228
+CONECT  213            201
+CONECT  214            146
+CONECT  215            203
+CONECT  216            148
+CONECT  217            277
+CONECT  218            278
+CONECT  219            279
+CONECT  220            280
+CONECT  221            201
+CONECT  222            202
+CONECT  223            203
+CONECT  224            204
+CONECT  225            209
+CONECT  226            210
+CONECT  227            211
+CONECT  228            212
+CONECT  229            209     257
+CONECT  230            210     258
+CONECT  231            211     259
+CONECT  232            212     260
+CONECT  233            329     237
+CONECT  234            330     238
+CONECT  235            331     239
+CONECT  236            332     240
+CONECT  237            305     233
+CONECT  238            306     234
+CONECT  239            307     235
+CONECT  240            308     236
+CONECT  241            185
+CONECT  242            186
+CONECT  243            187
+CONECT  244            188
+CONECT  245            333     157
+CONECT  246            334     158
+CONECT  247            335     159
+CONECT  248            336     160
+CONECT  249            253
+CONECT  250            254
+CONECT  251            255
+CONECT  252            256
+CONECT  253            265     249
+CONECT  254            266     250
+CONECT  255            267     251
+CONECT  256            268     252
+CONECT  257            273     229
+CONECT  258            274     230
+CONECT  259            275     231
+CONECT  260            276     232    264
+CONECT  261            266
+CONECT  262            267
+CONECT  263            268
+CONECT  264            260
+CONECT  265            269     253
+CONECT  266            270     261    254
+CONECT  267            271     262    255
+CONECT  268            272     263    256
+CONECT  269            265
+CONECT  270            266
+CONECT  271            267
+CONECT  272            268
+CONECT  273            257
+CONECT  274            258
+CONECT  275            259
+CONECT  276            260
+CONECT  277            289     217
+CONECT  278            290     218
+CONECT  279            291     219
+CONECT  280            292     220
+CONECT  281            297     125
+CONECT  282            298     126
+CONECT  283            299     127
+CONECT  284            300     128
+CONECT  285            289
+CONECT  286            290
+CONECT  287            291
+CONECT  288            292
+CONECT  289            293     285    277
+CONECT  290            294     286    278
+CONECT  291            295     287    279
+CONECT  292            296     288    280
+CONECT  293            289
+CONECT  294            290
+CONECT  295            291
+CONECT  296            292
+CONECT  297            281
+CONECT  298            282
+CONECT  299            283
+CONECT  300            284
+CONECT  301            461
+CONECT  302            462
+CONECT  303            463
+CONECT  304            464
+CONECT  305            237     321
+CONECT  306            238     322
+CONECT  307            239     323
+CONECT  308            240     324
+CONECT  309            313
+CONECT  310            314
+CONECT  311            315
+CONECT  312            316
+CONECT  313            637     309    317
+CONECT  314            638     310    318
+CONECT  315            639     311    319
+CONECT  316            640     312    320
+CONECT  317            313
+CONECT  318            314
+CONECT  319            315
+CONECT  320            316
+CONECT  321            305
+CONECT  322            306
+CONECT  323            307
+CONECT  324            308
+CONECT  325            341
+CONECT  326            342
+CONECT  327            343
+CONECT  328            344
+CONECT  329            233
+CONECT  330            234
+CONECT  331            235
+CONECT  332            236
+CONECT  333            245
+CONECT  334            246
+CONECT  335            247
+CONECT  336            248
+CONECT  337            341
+CONECT  338            345
+CONECT  339            346
+CONECT  340            347
+CONECT  341            365     325    337
+CONECT  342            366     326
+CONECT  343            367     327
+CONECT  344            368     328
+CONECT  345            361     338
+CONECT  346            362     339
+CONECT  347            363     340
+CONECT  348            364
+CONECT  353            373     105
+CONECT  354            374     106
+CONECT  355            375     107
+CONECT  356            376     108
+CONECT  357            366
+CONECT  358            367
+CONECT  359            368
+CONECT  360            364
+CONECT  361            377     345
+CONECT  362            378     346
+CONECT  363            379     347
+CONECT  364            360     380    348
+CONECT  365            369     341
+CONECT  366            370     357    342
+CONECT  367            371     358    343
+CONECT  368            372     359    344
+CONECT  369            365
+CONECT  370            366
+CONECT  371            367
+CONECT  372            368
+CONECT  373            353
+CONECT  374            354
+CONECT  375            355
+CONECT  376            356
+CONECT  377            361
+CONECT  378            362
+CONECT  379            363
+CONECT  380            364
+CONECT  381            33
+CONECT  382            34
+CONECT  383            35
+CONECT  384            36
+CONECT  385            441
+CONECT  386            442
+CONECT  387            443
+CONECT  388            444
+CONECT  389            45
+CONECT  390            46
+CONECT  391            47
+CONECT  392            48
+CONECT  393            401
+CONECT  394            402
+CONECT  395            403
+CONECT  396            404
+CONECT  397            421     57
+CONECT  398            422     58
+CONECT  399            423     59
+CONECT  400            424     60
+CONECT  401            417     393
+CONECT  402            418     394
+CONECT  403            419     395
+CONECT  404            420     396
+CONECT  409            429     145
+CONECT  410            430     146
+CONECT  411            431     147
+CONECT  412            432     148
+CONECT  413            421
+CONECT  414            422
+CONECT  415            423
+CONECT  416            424
+CONECT  417            149     401
+CONECT  418            150     402
+CONECT  419            151     403
+CONECT  420            152     404
+CONECT  421            425     413    397
+CONECT  422            426     414    398
+CONECT  423            427     415    399
+CONECT  424            428     416    400
+CONECT  425            421
+CONECT  426            422
+CONECT  427            423
+CONECT  428            424
+CONECT  429            409
+CONECT  430            410
+CONECT  431            411
+CONECT  432            412
+CONECT  433            49      453
+CONECT  434            50      454
+CONECT  435            51      455
+CONECT  436            52      456
+CONECT  437            441
+CONECT  438            445
+CONECT  439            446
+CONECT  440            447
+CONECT  441            465     385    437
+CONECT  442            466     386
+CONECT  443            467     387
+CONECT  444            468     388
+CONECT  445            461     438    449
+CONECT  446            462     439    450
+CONECT  447            463     440    451
+CONECT  448            464     452
+CONECT  449            445
+CONECT  450            446
+CONECT  451            447
+CONECT  452            448
+CONECT  453            433
+CONECT  454            434
+CONECT  455            435
+CONECT  456            436
+CONECT  457            466
+CONECT  458            467
+CONECT  459            468
+CONECT  460            464
+CONECT  461            301     445
+CONECT  462            302     446
+CONECT  463            303     447
+CONECT  464            460     304    448
+CONECT  465            441
+CONECT  466            457     442
+CONECT  467            458     443
+CONECT  468            459     444
+CONECT  469            121
+CONECT  470            122
+CONECT  471            123
+CONECT  472            124
+CONECT  473            117
+CONECT  474            118
+CONECT  475            119
+CONECT  476            120
+CONECT  477            129     497
+CONECT  478            130     498
+CONECT  479            131     499
+CONECT  480            132     500
+CONECT  481            489
+CONECT  482            490
+CONECT  483            491
+CONECT  484            492
+CONECT  485            509     133
+CONECT  486            510     134
+CONECT  487            511     135
+CONECT  488            512     136
+CONECT  489            505     481    493
+CONECT  490            506     482    494
+CONECT  491            507     483    495
+CONECT  492            508     484    496
+CONECT  493            489
+CONECT  494            490
+CONECT  495            491
+CONECT  496            492
+CONECT  497            477
+CONECT  498            478
+CONECT  499            479
+CONECT  500            480
+CONECT  501            509
+CONECT  502            510
+CONECT  503            511
+CONECT  504            512
+CONECT  505            109     489
+CONECT  506            110     490
+CONECT  507            111     491
+CONECT  508            112     492
+CONECT  509            501     485
+CONECT  510            502     486
+CONECT  511            503     487
+CONECT  512            504     488
+CONECT  513            101
+CONECT  514            102
+CONECT  515            103
+CONECT  516            104
+CONECT  517            93
+CONECT  518            94
+CONECT  519            95
+CONECT  520            96
+CONECT  521            525     533
+CONECT  522            526     534
+CONECT  523            527     535
+CONECT  524            528     536
+CONECT  525            521
+CONECT  526            522
+CONECT  527            523
+CONECT  528            524
+CONECT  529            129
+CONECT  530            562
+CONECT  531            131
+CONECT  532            564
+CONECT  533            601     521
+CONECT  534            602     522
+CONECT  535            603     523
+CONECT  536            604     524
+CONECT  537            549
+CONECT  538            550
+CONECT  539            551
+CONECT  540            552
+CONECT  541            561
+CONECT  542            562
+CONECT  543            563
+CONECT  544            564
+CONECT  545            553
+CONECT  546            554
+CONECT  547            555
+CONECT  548            556
+CONECT  549            577     537
+CONECT  550            578     538
+CONECT  551            579     539
+CONECT  552            580     540
+CONECT  553            573     545
+CONECT  554            574     546
+CONECT  555            575     547
+CONECT  556            576     548
+CONECT  561            541     137
+CONECT  562            530     542
+CONECT  563            543     139
+CONECT  564            532     544
+CONECT  565            585     589
+CONECT  566            586     590
+CONECT  567            587     591
+CONECT  568            588     592
+CONECT  569            577
+CONECT  570            578
+CONECT  571            579
+CONECT  572            580
+CONECT  573            593     553
+CONECT  574            594     554
+CONECT  575            595     555
+CONECT  576            596     556
+CONECT  577            581     569    549
+CONECT  578            582     570    550
+CONECT  579            583     571    551
+CONECT  580            584     572    552
+CONECT  581            577
+CONECT  582            578
+CONECT  583            579
+CONECT  584            580
+CONECT  585            565
+CONECT  586            566
+CONECT  587            567
+CONECT  588            568
+CONECT  589            113     565
+CONECT  590            114     566
+CONECT  591            115     567
+CONECT  592            116     568
+CONECT  593            573
+CONECT  594            574
+CONECT  595            575
+CONECT  596            576
+CONECT  597            121
+CONECT  598            122
+CONECT  599            123
+CONECT  600            124
+CONECT  601            605     533    617
+CONECT  602            534     618
+CONECT  603            535     619
+CONECT  604            536     620
+CONECT  605            601
+CONECT  606            609
+CONECT  607            610
+CONECT  608            611
+CONECT  609            633     606    613
+CONECT  610            634     607    614
+CONECT  611            635     608    615
+CONECT  612            636     616
+CONECT  613            609
+CONECT  614            610
+CONECT  615            611
+CONECT  616            612
+CONECT  617            601
+CONECT  618            602
+CONECT  619            603
+CONECT  620            604
+CONECT  621            637
+CONECT  622            638
+CONECT  623            639
+CONECT  624            640
+CONECT  629            633
+CONECT  630            634
+CONECT  631            635
+CONECT  632            636
+CONECT  633            629     609
+CONECT  634            630     610
+CONECT  635            631     611
+CONECT  636            632     612
+CONECT  637            621     313
+CONECT  638            622     314
+CONECT  639            623     315
+CONECT  640            624     316
+MASTER  0              0       0      0      0       0       0      0     648   0   648  0
+END

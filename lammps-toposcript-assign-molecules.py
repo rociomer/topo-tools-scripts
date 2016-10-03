@@ -4,8 +4,8 @@ import sys
 import os
 
 filename = sys.argv[1]
-atoms_MOF = int(sys.argv[2])
-atoms_Xyl = int(sys.argv[3])
+atomsMOF = int(sys.argv[2])
+atomsGuest = int(sys.argv[3])
 
 with open (filename, 'r') as f_in, open(filename + 'temp', 'w') as f_out:
     line = f_in.readline()
@@ -16,16 +16,16 @@ with open (filename, 'r') as f_in, open(filename + 'temp', 'w') as f_out:
             f_out.write(line)
             line = f_in.readline()
             f_out.write(line)
-            for i in range(atoms_Xyl):
+            for i in range(atomsGuest):
                 line = f_in.readline()
                 line_split = line.split(' ')
                 line_split[1] = str(i//8+1)
                 line = ' '.join(line_split)
                 f_out.write(line)
-            for i in range(atoms_MOF):
+            for i in range(atomsMOF):
                 line = f_in.readline()
                 line_split = line.split(' ')
-                line_split[1] = str(atoms_Xyl//8+1)
+                line_split[1] = str(atomsGuest//8+1)
                 line = ' '.join(line_split)
                 f_out.write(line)
         else:
