@@ -3,9 +3,9 @@
 
 # my variables
 set structure Mg-MOF-74.pdb
-set guest GUESTFILE
+set guest CH4.xyz
 set atomsPerMOF 324
-set atomsPerGuest ATOMSPERGUEST
+set atomsPerGuest 1
 set latticeVectorA 26.1136
 set latticeVectorB 45.23
 set latticeVectorC 6.91674
@@ -15,7 +15,7 @@ set gamma 90.0
 set replicasMOFX 1
 set replicasMOFY 1
 set replicasMOFZ 4
-set replicasGuest REPLICASGUEST
+set replicasGuest 49
 
 
 # explicitly load topotools and pbctools packages since
