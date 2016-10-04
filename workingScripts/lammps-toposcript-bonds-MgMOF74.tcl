@@ -2,8 +2,10 @@
 # To run from terminal: vmd -dispdev text -e SCRIPT.tcl
 
 # my variables
+set structure Mg-MOF-74.pdb
+set guest water.xyz
 set atomsPerMOF 324
-set atomsPerGuest 1
+set atomsPerGuest 4
 set latticeVectorA 26.1136
 set latticeVectorB 45.23
 set latticeVectorC 6.91674
@@ -22,88 +24,90 @@ package require topotools
 package require pbctools
 
 # check for presence of coordinate file
-if {! [file exists Mg-MOF-74.pdb]} {
-   vmdcon -error "Required file 'Mg-MOF-74.pdb' not available. Exiting..."
+if {! [file exists $structure]} {
+   vmdcon -error "Required file '$structure' not available. Exiting..."
    quit
 }
 
+
 # load coordinates but don't automatically compute bonds
-set mol [mol new Mg-MOF-74.pdb autobonds no waitfor all]
+set mol [mol new $structure autobonds no]
 
 # replicate
 set newmol [::TopoTools::replicatemol $mol $replicasMOFX $replicasMOFY $replicasMOFZ ]
+
 # delete old mol
-mol delete $mol
+#mol delete $mol
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Mg}]
+set sel [atomselect top {name Mg1}]
 $sel set radius 1.3
-$sel set name Mof_Mg
-$sel set type Mof_Mg
+$sel set name Mg1
+$sel set type Mg1
 $sel set mass 24.305 
 $sel set charge 1.56
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Oa}]
+set sel [atomselect top {name O1}]
 $sel set radius 0.73
-$sel set name Mof_Oa
-$sel set type Mof_Oa
+$sel set name O1
+$sel set type O1
 $sel set mass 15.999
 $sel set charge -0.899
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Ob}]
+set sel [atomselect top {name O2}]
 $sel set radius 0.73
-$sel set name Mof_Ob
-$sel set type Mof_Ob
+$sel set name O2
+$sel set type O2
 $sel set mass 15.999
 $sel set charge -0.752
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Oc}]
+set sel [atomselect top {name O3}]
 $sel set radius 0.73
-$sel set name Mof_Oc
-$sel set type Mof_Oc
+$sel set name O3
+$sel set type O3
 $sel set mass 15.999
 $sel set charge -0.903
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Ca}]
+set sel [atomselect top {name C1}]
 $sel set radius 0.77
-$sel set name Mof_Ca
-$sel set type Mof_Ca
+$sel set name C1
+$sel set type C1
 $sel set mass 12.011
 $sel set charge 0.9
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Cb}]
+set sel [atomselect top {name C2}]
 $sel set radius 0.77
-$sel set name Mof_Cb
-$sel set type Mof_Cb
+$sel set name C2
+$sel set type C2
 $sel set mass 12.011
 $sel set charge -0.314
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Cc}]
+set sel [atomselect top {name C3}]
 $sel set radius 0.77
-$sel set name Mof_Cc
-$sel set type Mof_Cc
+$sel set name C3
+$sel set type C3
 $sel set mass 12.011
 $sel set charge 0.456
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_Cd}]
+set sel [atomselect top {name C4}]
 $sel set radius 0.77
-$sel set name Mof_Cd
-$sel set type Mof_Cd
+$sel set name C4
+$sel set type C4
 $sel set mass 12.011
 $sel set charge -0.234
 
 # set atom name/type and radius
-set sel [atomselect top {name Mof_H}]
+set sel [atomselect top {name H1}]
 $sel set radius 0.37
-$sel set name Mof_H
-$sel set type Mof_H
+$sel set name H1
+$sel set type H1
 $sel set mass 0.008
 $sel set charge 0.186
 
@@ -118,54 +122,6 @@ pbc set "[expr $latticeVectorA * $replicasMOFX] [expr $latticeVectorB * $replica
 
 # add in PBC bonds
 set sel [atomselect top all]
-set lastindex [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ]
-for {set i 0} {$i < $lastindex} {incr i} {
-    set atomid [atomselect top "index $i"]
-    if {[$atomid get name] == "Mof_Mg" && [$atomid get numbonds] == 4} {
-        set connector [atomselect top "(name Mof_Mg and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Oa" && [$atomid get numbonds] == 1} {
-        set connector [atomselect top "(name Mof_Oa and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Ob" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Ob and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Oc" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Oc and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Ca" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Ca and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Cb" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Cb and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Cc" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Cc and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_Cd" && [$atomid get numbonds] == 2} {
-        set connector [atomselect top "(name Mof_Cd and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "Mof_H" && [$atomid get numbonds] == 0} {
-        set connector [atomselect top "(name Mof_H and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "C_co2" && [$atomid get numbonds] == 1} {
-        set connector [atomselect top "(name C_co2 and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-    if {[$atomid get name] == "O_co2" && [$atomid get numbonds] == 0} {
-        set connector [atomselect top "(name O_co2 and pbwithin 2 of index [$atomid get index]) and not index [$atomid get index]"]
-        topo addbond [$atomid get index] [$connector get index]
-    }
-}
 
 # now recompute bond types. 
 # by default a string label: <atom type 1>-<atom type 2>
@@ -202,7 +158,7 @@ mol reanalyze top
 pbc wrap -orthorhombic 
 
 # guest
-set mol [mol new methane.xyz autobonds no waitfor all]
+set mol [mol new $guest autobonds no waitfor all]
 
 # set box dimensions
 set extra 0
@@ -225,28 +181,46 @@ set mol [mol new temp.pdb autobonds no waitfor all]
 exec rm temp.pdb
 
 # set atom name/type and radius
-set sel [atomselect top {name CH4_sp3}]
-#$sel set radius 1.087
-$sel set name CH4_sp3
-$sel set type CH4_sp3
+set sel [atomselect top {name CH4}]
+$sel set name CH4
+$sel set type CH4
 $sel set mass 16.04
 $sel set charge 0.0
 
 # set atom name/type and radius
-set sel [atomselect top {name C_co2}]
-$sel set radius 0.77
-$sel set name C_co2
-$sel set type C_co2
+set sel [atomselect top {name Cg}]
+$sel set name Cg
+$sel set type Cg
 $sel set mass 12.011
 $sel set charge 0.6512
 
 # set atom name/type and radius
-set sel [atomselect top {name O_co2}]
-$sel set radius 0.73
-$sel set name O_co2
-$sel set type O_co2
+set sel [atomselect top {name Og}]
+$sel set name Og
+$sel set type Og
 $sel set mass 15.999
 $sel set charge -0.3256
+
+# set atom name/type and radius
+set sel [atomselect top {name Hw}]
+$sel set name Hw
+$sel set type Hw
+$sel set mass 1.008
+$sel set charge 0.52422
+
+# set atom name/type and radius
+set sel [atomselect top {name Ow}]
+$sel set name Ow
+$sel set type Ow
+$sel set mass 15.999
+$sel set charge 0.0
+
+# set atom name/type and radius
+set sel [atomselect top {name M}]
+$sel set name M
+$sel set type M
+$sel set mass 0.0
+$sel set charge -1.04844
 
 # wrap to PBC
 set sel [atomselect top all]
@@ -264,7 +238,7 @@ set mol [::TopoTools::mergemols $midlist]
 topo writelammpsdata system.data full
 
 # do some post-processing to label molecules
-exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest]
+#exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest]
 
 # make non-bonded guest molecules easier to see
 mol modstyle 0 4 VDW 1.000000 12.000000
