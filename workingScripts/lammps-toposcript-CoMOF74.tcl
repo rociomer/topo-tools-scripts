@@ -3,9 +3,9 @@
 
 # my variables
 set structure Mg-MOF-74.pdb
-set guest water.xyz
+set guest GUESTFILE
 set atomsPerMOF 324
-set atomsPerGuest 4
+set atomsPerGuest ATOMSPERGUEST
 set latticeVectorA 26.1136
 set latticeVectorB 45.23
 set latticeVectorC 6.91674
@@ -15,7 +15,7 @@ set gamma 90.0
 set replicasMOFX 1
 set replicasMOFY 1
 set replicasMOFZ 4
-set replicasGuest 50
+set replicasGuest REPLICASGUEST
 
 
 # explicitly load topotools and pbctools packages since
@@ -108,7 +108,7 @@ set sel [atomselect top {name H1}]
 $sel set radius 0.37
 $sel set name H1
 $sel set type H1
-$sel set mass 0.008
+$sel set mass 1.008
 $sel set charge 0.186
 
 # bonds are computed based on distance criterion
