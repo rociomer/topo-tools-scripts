@@ -2,13 +2,13 @@
 # To run from terminal: vmd -dispdev text -e SCRIPT.tcl
 
 # my variables
-set structure Mg-MOF-74.pdb
+set structure Zn-MOF-74.pdb
 set guest GUESTFILE
-set atomsPerMOF 324
+set atomsPerMOF 648
 set atomsPerGuest ATOMSPERGUEST
-set latticeVectorA 26.1136
-set latticeVectorB 45.23
-set latticeVectorC 6.91674
+set latticeVectorA 52.1907
+set latticeVectorB 45.1984
+set latticeVectorC 6.88181
 set alpha 90.0
 set beta 90.0
 set gamma 90.0
@@ -40,12 +40,12 @@ set newmol [::TopoTools::replicatemol $mol $replicasMOFX $replicasMOFY $replicas
 #mol delete $mol
 
 # set atom name/type and radius
-set sel [atomselect top {name Mg1}]
-$sel set radius 1.3
-$sel set name Mg1
-$sel set type Mg1
+set sel [atomselect top {name Zn1}]
+$sel set radius 1.31
+$sel set name Zn1
+$sel set type Zn1
 $sel set mass 24.305 
-$sel set charge 1.56
+$sel set charge 1.209
 
 # set atom name/type and radius
 set sel [atomselect top {name O1}]
@@ -53,7 +53,7 @@ $sel set radius 0.73
 $sel set name O1
 $sel set type O1
 $sel set mass 15.999
-$sel set charge -0.899
+$sel set charge -0.719
 
 # set atom name/type and radius
 set sel [atomselect top {name O2}]
@@ -61,7 +61,7 @@ $sel set radius 0.73
 $sel set name O2
 $sel set type O2
 $sel set mass 15.999
-$sel set charge -0.752
+$sel set charge -0.671
 
 # set atom name/type and radius
 set sel [atomselect top {name O3}]
@@ -69,7 +69,7 @@ $sel set radius 0.73
 $sel set name O3
 $sel set type O3
 $sel set mass 15.999
-$sel set charge -0.903
+$sel set charge -0.74
 
 # set atom name/type and radius
 set sel [atomselect top {name C1}]
@@ -77,7 +77,7 @@ $sel set radius 0.77
 $sel set name C1
 $sel set type C1
 $sel set mass 12.011
-$sel set charge 0.9
+$sel set charge 0.841
 
 # set atom name/type and radius
 set sel [atomselect top {name C2}]
@@ -85,7 +85,7 @@ $sel set radius 0.77
 $sel set name C2
 $sel set type C2
 $sel set mass 12.011
-$sel set charge -0.314
+$sel set charge -0.298
 
 # set atom name/type and radius
 set sel [atomselect top {name C3}]
@@ -93,7 +93,7 @@ $sel set radius 0.77
 $sel set name C3
 $sel set type C3
 $sel set mass 12.011
-$sel set charge 0.456
+$sel set charge 0.376
 
 # set atom name/type and radius
 set sel [atomselect top {name C4}]
@@ -101,7 +101,7 @@ $sel set radius 0.77
 $sel set name C4
 $sel set type C4
 $sel set mass 12.011
-$sel set charge -0.234
+$sel set charge -0.17
 
 # set atom name/type and radius
 set sel [atomselect top {name H1}]
@@ -109,7 +109,7 @@ $sel set radius 0.37
 $sel set name H1
 $sel set type H1
 $sel set mass 1.008
-$sel set charge 0.186
+$sel set charge 0.172
 
 # bonds are computed based on distance criterion
 # bond if 0.6 * (r_A + r_B) > r_AB.
