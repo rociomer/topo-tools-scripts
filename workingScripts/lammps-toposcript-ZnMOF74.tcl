@@ -44,7 +44,7 @@ set sel [atomselect top {name Zn1}]
 $sel set radius 1.31
 $sel set name Zn1
 $sel set type Zn1
-$sel set mass 24.305 
+$sel set mass 65.38
 $sel set charge 1.209
 
 # set atom name/type and radius
