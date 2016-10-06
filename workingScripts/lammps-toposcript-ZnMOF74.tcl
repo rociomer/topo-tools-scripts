@@ -40,74 +40,74 @@ set newmol [::TopoTools::replicatemol $mol $replicasMOFX $replicasMOFY $replicas
 #mol delete $mol
 
 # set atom name/type and radius
-set sel [atomselect top {name Zn1}]
+set sel [atomselect top {name Zn}]
 $sel set radius 1.31
-$sel set name Zn1
-$sel set type Zn1
+$sel set name Zn
+$sel set type Zn
 $sel set mass 65.38
 $sel set charge 1.209
 
 # set atom name/type and radius
-set sel [atomselect top {name O1}]
+set sel [atomselect top {name Oa}]
 $sel set radius 0.73
-$sel set name O1
-$sel set type O1
+$sel set name Oa
+$sel set type Oa
 $sel set mass 15.999
 $sel set charge -0.719
 
 # set atom name/type and radius
-set sel [atomselect top {name O2}]
+set sel [atomselect top {name Ob}]
 $sel set radius 0.73
-$sel set name O2
-$sel set type O2
+$sel set name Ob
+$sel set type Ob
 $sel set mass 15.999
 $sel set charge -0.671
 
 # set atom name/type and radius
-set sel [atomselect top {name O3}]
+set sel [atomselect top {name Oc}]
 $sel set radius 0.73
-$sel set name O3
-$sel set type O3
+$sel set name Oc
+$sel set type Oc
 $sel set mass 15.999
 $sel set charge -0.74
 
 # set atom name/type and radius
-set sel [atomselect top {name C1}]
+set sel [atomselect top {name Ca}]
 $sel set radius 0.77
-$sel set name C1
-$sel set type C1
+$sel set name Ca
+$sel set type Ca
 $sel set mass 12.011
 $sel set charge 0.841
 
 # set atom name/type and radius
-set sel [atomselect top {name C2}]
+set sel [atomselect top {name Cb}]
 $sel set radius 0.77
-$sel set name C2
-$sel set type C2
+$sel set name Cb
+$sel set type Cb
 $sel set mass 12.011
 $sel set charge -0.298
 
 # set atom name/type and radius
-set sel [atomselect top {name C3}]
+set sel [atomselect top {name Cc}]
 $sel set radius 0.77
-$sel set name C3
-$sel set type C3
+$sel set name Cc
+$sel set type Cc
 $sel set mass 12.011
 $sel set charge 0.376
 
 # set atom name/type and radius
-set sel [atomselect top {name C4}]
+set sel [atomselect top {name Cd}]
 $sel set radius 0.77
-$sel set name C4
-$sel set type C4
+$sel set name Cd
+$sel set type Cd
 $sel set mass 12.011
 $sel set charge -0.17
 
 # set atom name/type and radius
-set sel [atomselect top {name H1}]
+set sel [atomselect top {name H}]
 $sel set radius 0.37
-$sel set name H1
-$sel set type H1
+$sel set name H
+$sel set type H
 $sel set mass 1.008
 $sel set charge 0.172
 
@@ -235,7 +235,7 @@ lappend midlist $newmol
 set mol [::TopoTools::mergemols $midlist]
 
 # write out the result as a lammps data file
-topo writelammpsdata system.data atomic
+topo writelammpsdata system.data charge
 
 # do some post-processing to label molecules
 #exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest]
