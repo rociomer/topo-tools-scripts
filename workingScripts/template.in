@@ -37,8 +37,8 @@ write_data         data_changebox.data
 
 #get rid of overlapping atoms
 run                0
-velocity           GUEST create 300 38564
-fix                1 GUEST rigid/nvt molecule temp 300 300 100.0
+velocity           GUEST create 313 1738
+fix                1 GUEST rigid/nvt molecule temp 313 313 100.0
 pair_style         soft 5.0
 pair_coeff         * * 0.0 5.0
 kspace_style       none
@@ -49,10 +49,7 @@ unfix              2
 write_data         data_overlap.data
 
 #reset force field
-pair_style         lj/cut/coul/long 12.8
-pair_modify        mix arithmetic shift yes
-special_bonds      lj/coul 0.0 0.0 1.0
-kspace_style       pppm 1.0e-6
+FORCEFIELDPARAMS
 include "system.in.settings"
 
 #melt crystalline benzene

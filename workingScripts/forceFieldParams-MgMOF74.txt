@@ -1,0 +1,10 @@
+# Insert into template.in file in place of FORCEFIELDPARAMS
+pair_style         lj/cut/coul/long 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff
+
+pair_style         buck/long/coul/long cut long 12.8 
+pair_coeff
+
+special_bonds      lj/coul 0.0 0.0 0.0
+kspace_style       pppm 1.0e-6
