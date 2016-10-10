@@ -17,18 +17,18 @@ include "system.in.settings"
 # ----------------- Run Section -----------------
 
 #define groups
-group GUEST type guestAtoms
-group MOF type mofAtoms
+group Xylene type 1 5 6
+group MOF type 2 3 4 7 8 9 10
 
 #define computes
 compute comT all com
-compute comG GUEST com
+compute comB Xylene com
 compute comM MOF com
 
 #settings
 timestep           0.5
 thermo             200
-thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
+thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comB[1] c_comB[2] c_comB[3] c_comM[1] c_comM[2] c_comM[3]
 restart            2000000 sim.restart
 
 #reset box to start at 0
@@ -37,8 +37,8 @@ write_data         data_changebox.data
 
 #get rid of overlapping atoms
 run                0
-velocity           GUEST create 313 1738
-fix                1 GUEST rigid/nvt molecule temp 313 313 100.0
+velocity           Xylene create 300 38564
+fix                1 Xylene rigid/nvt molecule temp 300 300 100.0
 pair_style         soft 5.0
 pair_coeff         * * 0.0 5.0
 kspace_style       none
@@ -49,34 +49,37 @@ unfix              2
 write_data         data_overlap.data
 
 #reset force field
-FORCEFIELDPARAMS
+pair_style         lj/cut/coul/long 12.0
+pair_modify        mix arithmetic shift yes
+special_bonds      lj/coul 0.0 0.0 1.0
+kspace_style       pppm 1.0e-6
 include "system.in.settings"
 
 #melt crystalline benzene
 unfix              1
 run                0
-velocity           GUEST create 1000 38564
-fix                3 GUEST rigid/nvt molecule temp 1000 1000 100.0
+velocity           Xylene create 1000 38564
+fix                3 Xylene rigid/nvt molecule temp 1000 1000 100.0
 run                400000
 write_data         data_melt.data
 unfix              3
-fix                4 GUEST rigid/nvt molecule temp 300 300 100.0
+fix                4 Xylene rigid/nvt molecule temp 300 300 100.0
 
 #get MOF COM
 compute            MOFCOM MOF com
 variable           MOFCOM1 equal c_MOFCOM[1]
 variable           MOFCOM2 equal c_MOFCOM[2]
 variable           MOFCOM3 equal c_MOFCOM[3]
-thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3] c_MOFCOM[1] c_MOFCOM[2] c_MOFCOM[3]
+thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comB[1] c_comB[2] c_comB[3] c_comM[1] c_comM[2] c_comM[3] c_MOFCOM[1] c_MOFCOM[2] c_MOFCOM[3]
 
 #make MOF flexible
 run                0
-velocity           GUEST create 300 38564
+velocity           Xylene create 300 38564
 velocity           MOF create 300 38564
 fix                5 MOF nvt temp 300 300 100.0
 fix                6 MOF spring tether 10.0 ${MOFCOM1} ${MOFCOM2} ${MOFCOM3} 0.0
 uncompute          MOFCOM
-thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
+thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comB[1] c_comB[2] c_comB[3] c_comM[1] c_comM[2] c_comM[3]
 #fix                8 MOF recenter INIT INIT INIT shift all # technically I should do this to get the diffusion coefficient correct, but I'm not sure it works properly on the rigid benzene molecules, and it doesn't make a difference in practice because the drift is so small
 
 #equilibration
@@ -85,7 +88,7 @@ write_data         data_nvt_eq.data
 
 #data collection
 reset_timestep     0
-fix                7 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] f_4[13] f_4[14] f_4[15] file traj.CofMs mode vector
+fix                7 Xylene ave/time 1 1 10 f_4[1] f_4[2] f_4[3] f_4[13] f_4[14] f_4[15] file traj.CofMs mode vector
 dump               3 all  custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000
 write_data         data_nvt.data

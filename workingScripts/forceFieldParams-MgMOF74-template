@@ -1,0 +1,26 @@
+# Insert into template.in file in place of FORCEFIELDPARAMS
+pair_style         lj/cut/coul/long 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff         mofAtomMg mofAtomMg 55.919 2.691
+pair_coeff         mofAtomCa mofAtomCa 52.8734 3.430851
+pair_coeff         mofAtomCb mofAtomCb 52.8734 3.430851
+pair_coeff         mofAtomCc mofAtomCc 52.8734 3.430851
+pair_coeff         mofAtomCd mofAtomCd 52.8734 3.430851
+pair_coeff         mofAtomH mofAtomH 22.1662 2.571134
+pair_coeff         mofAtomOa mofAtomOa 30.2267 3.118145
+pair_coeff         mofAtomOb mofAtomOb 30.2267 3.118145
+pair_coeff         mofAtomOc mofAtomOc 30.2267 3.118145
+pair_coeff         guestAtomCH4 guestAtomCH4 148.0 3.73
+pair_coeff         guestAtomCg guestAtomCg 28.129 2.757
+pair_coeff         guestAtomOg guestAtomOg 80.507 3.033
+pair_style         lj/cut/tip4p/long
+pair_coeff         guestAtomHw guestAtomHw 22.1662 2.571134
+pair_coeff         guestAtomMw guestAtomMw
+pair_coeff         guestAtomOw guestAtomOw 81.90 3.1643
+
+
+pair_style         buck/long/coul/long cut long 12.8 
+pair_coeff
+
+special_bonds      lj/coul 0.0 0.0 0.0
+kspace_style       pppm 1.0e-6

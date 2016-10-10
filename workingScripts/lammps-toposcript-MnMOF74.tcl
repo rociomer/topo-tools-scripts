@@ -216,10 +216,10 @@ $sel set mass 15.999
 $sel set charge 0.0
 
 # set atom name/type and radius
-set sel [atomselect top {name M}]
-$sel set name M
-$sel set type M
-$sel set mass 0.0
+set sel [atomselect top {name Mw}]
+$sel set name Mw
+$sel set type Mw
+$sel set mass 0.0000000001
 $sel set charge -1.04844
 
 # wrap to PBC
@@ -238,7 +238,7 @@ set mol [::TopoTools::mergemols $midlist]
 topo writelammpsdata system.data charge
 
 # do some post-processing to label molecules
-#exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest]
+exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest] $atomsPerGuest
 
 # make non-bonded guest molecules easier to see
 mol modstyle 0 4 VDW 1.000000 12.000000

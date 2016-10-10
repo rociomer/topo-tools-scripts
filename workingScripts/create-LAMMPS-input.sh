@@ -27,29 +27,29 @@ do
     mv system.data ${metal}MOF74-Pressure${pressure}.data
     cp template.in ${metal}MOF74-Pressure${pressure}.in
     if [ $guest = "CH4" ]; then
-      guestMoleculeAtom1=($(grep " CH4" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtoms=$(echo "$guestMoleculeAtom1[1]") 
+      guestAtomCH4=($(grep " CH4" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtoms=$(echo "$guestAtomCH4[1]") 
     elif [ $guest = "CO2" ]; then
-      guestMoleculeAtom1=($(grep " Cg" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtom2=($(grep " Og" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtoms=$(echo "$guestMoleculeAtom1[1] $guestMoleculeAtom2[1]") 
+      guestAtomCg=($(grep " Cg" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtomOg=($(grep " Og" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtoms=$(echo "$guestAtomCg[1] $guestAtomOg[1]") 
     elif [ $guest = "H2O" ]; then
-      guestMoleculeAtom1=($(grep " Hw" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtom2=($(grep " M" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtom3=($(grep " Ow" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      guestMoleculeAtoms=$(echo "$guestMoleculeAtom1[1] $guestMoleculeAtom2[1] $guestMoleculeAtom3[1]") 
+      guestAtomHw=($(grep " Hw" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtomM=($(grep " Mw" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtomOw=($(grep " Ow" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      guestAtoms=$(echo "$guestAtomHw[1] $guestAtomM[1] $guestAtomOw[1]") 
     fi
-    sed -i "s/GUESTMOLECULEATOMS/${guestMoleculeAtoms}/g" ${metal}MOF740-Pressure${pressure}.in
-      mofAtom1=($(grep " ${metal}" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom2=($(grep " Ca" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom3=($(grep " Cb" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom3=($(grep " Cc" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom4=($(grep " Cd" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom5=($(grep " H" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom6=($(grep " Oa" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom7=($(grep " Ob" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtom8=($(grep " Oc" ${metal}MOF74-Pressure${pressure}.data | head -1))
-      mofAtoms=$(echo "$mofAtom1[1] $mofAtom2[1] $mofAtom3[1] $mofAtom4[1] $mofAtom5[1] $mofAtom6[1] $mofAtom7[1] $mofAtom8[1]") 
-    sed -i "s/MOFATOMS/${mofAtoms}/g" ${metal}MOF740-Pressure${pressure}.in
+    sed -i "s/guestAtoms/${guestAtoms}/g" ${metal}MOF740-Pressure${pressure}.in
+      mofAtomM=($(grep " ${metal}" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomCa=($(grep " Ca" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomCb=($(grep " Cb" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomCc=($(grep " Cc" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomCd=($(grep " Cd" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomH=($(grep " H" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomOa=($(grep " Oa" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomOb=($(grep " Ob" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtomOc=($(grep " Oc" ${metal}MOF74-Pressure${pressure}.data | head -1))
+      mofAtoms=$(echo "$mofAtomM[1] $mofAtomCa[1] $mofAtomCb[1] $mofAtomCc[1] $mofAtomH[1] $mofAtomOa[1] $mofAtomOb[1] $mofAtomOc[1]") 
+    sed -i "s/mofAtoms/${mofAtoms}/g" ${metal}MOF740-Pressure${pressure}.in
   done
 done
