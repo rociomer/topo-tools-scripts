@@ -8,7 +8,8 @@ elif [ $guest = "CO2" ]; then
 elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
 fi
-for metal in Mg Ni Zn
+for metal in Mg
+#for metal in Mg Ni Zn
 do
   framework=$(echo "${metal}-MOF-74")
   echo "Framework: $framework"
