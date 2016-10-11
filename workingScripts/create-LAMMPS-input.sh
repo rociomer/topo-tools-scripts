@@ -77,6 +77,7 @@ do
     # set temperature
     sed -i "s/TEMP/${temp}/g" ${metal}MOF74-Pressure${pressure}.in
     sed -i '/guestAtom/d' ${metal}MOF74-Pressure${pressure}-template
+    # insert force field parameters into *.in file in place of FORCEFIELDPARAMS
     sed -i "/FORCEFIELDPARAMS/r ${metal}MOF74-Pressure${pressure}-template" ${metal}MOF74-Pressure${pressure}.in
     sed -i '/FORCEFIELDPARAMS/d' ${metal}MOF74-Pressure${pressure}.in
   done
