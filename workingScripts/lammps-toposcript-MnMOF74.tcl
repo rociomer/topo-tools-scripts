@@ -235,7 +235,7 @@ lappend midlist $newmol
 set mol [::TopoTools::mergemols $midlist]
 
 # write out the result as a lammps data file
-topo writelammpsdata system.data charge
+topo writelammpsdata system.data full
 
 # do some post-processing to label molecules
 exec python lammps-toposcript-assign-molecules.py system.data [expr $atomsPerMOF * $replicasMOFX * $replicasMOFY * $replicasMOFZ] [expr $atomsPerGuest * $replicasGuest] $atomsPerGuest

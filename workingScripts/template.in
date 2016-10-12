@@ -1,18 +1,18 @@
 
 # ----------------- Init Section -----------------
-#
-#include "system.in.init"
-#
-#
+
+units real
+newton off
+atom_style full
+
 # ----------------- Atom Definition Section -----------------
 
 read_data "system.data"
 
 # ----------------- Settings Section -----------------
-#
+
 #include "system.in.settings"
-#
-#
+
 # ----------------- Run Section -----------------
 
 # define groups
@@ -48,8 +48,10 @@ unfix              2
 write_data         data_overlap.data
 
 # reset force field parameters
-FORCEFIELDPARAMS
-#include "system.in.settings"
+include "system.in.settings"
+# Set 1-2, 1-3, and 1-4 pairwise interactions to zero; not needed if no bonded terms
+#special_bonds      lj/coul 0.0 0.0 0.0
+kspace_style       ewald 1.0e-6
 
 # melt crystalline guest molecules
 unfix              1
@@ -59,7 +61,7 @@ fix                3 GUEST rigid/nvt molecule temp 1000 1000 100.0
 run                400000
 write_data         data_melt.data
 unfix              3
-fix                4 GUEST rigid/nvt molecule temp 300 300 100.0
+fix                4 GUEST rigid/nvt molecule temp TEMP TEMP 100.0
 
 # get MOF COM
 compute            MOFCOM MOF com

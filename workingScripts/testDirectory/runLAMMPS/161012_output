@@ -1,6 +1,0 @@
-LAMMPS (30 Jul 2016)
-Reading data file ...
-  orthogonal box = (0.4447 0.31425 -0.401771) to (26.5587 45.5442 27.2652)
-  1 by 1 by 1 MPI processor grid
-  reading atoms ...
-ERROR: Incorrect atom format in data file (../atom.cpp:815)

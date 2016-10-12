@@ -1,23 +1,23 @@
 
 # ----------------- Init Section -----------------
 
-include "system.in.init"
-
+units real
+newton off
+atom_style full
 
 # ----------------- Atom Definition Section -----------------
 
-read_data "system.data"
+read_data "MgMOF74-Pressure50000.data"
 
 # ----------------- Settings Section -----------------
 
-include "system.in.settings"
-
+#include "MgMOF74-Pressure50000.in.settings"
 
 # ----------------- Run Section -----------------
 
 # define groups
-group GUEST type #[1]
-group MOF type #[1] #[1] #[1] #[1] #[1] #[1] #[1] #[1]
+group GUEST type 1
+group MOF type 2 3 4 5 6 7 8 9 10 
 
 # define computes
 compute comT all com
@@ -48,36 +48,10 @@ unfix              2
 write_data         data_overlap.data
 
 # reset force field parameters
-# UFF parameters for all atoms not defined by force field
-pair_style         lj/cut/coul/long 12.8
-pair_modify        mix arithmetic shift yes
-pair_coeff         7 7 55.919 2.691
-pair_coeff         2 2 52.8734 3.430851
-pair_coeff         3 3 52.8734 3.430851
-pair_coeff         4 4 52.8734 3.430851
-pair_coeff         5 5 52.8734 3.430851
-pair_coeff         6 6 22.1662 2.571134
-pair_coeff         8 8 30.2267 3.118145
-pair_coeff         9 9 30.2267 3.118145
-pair_coeff         10 10 30.2267 3.118145
-pair_coeff         1 1 148.0 3.73
-# Lennard-Jones parameters from force field
-pair_style         lj/cut/coul/long 12.8
-pair_coeff         6 1 57.242641 3.15
-# Buckingham parameters from force field
-pair_style         buck/long/coul/long cut long 12.8 
-pair_coeff         7 1 437687.550998677 253493890.949595 4.915
-pair_coeff         8 1 474764.836775231 18427418.1646751 2.965
-pair_coeff         9 1 474764.836775231 20298567.6591117 3.265
-pair_coeff         10 1 474764.836775231 10069809.8255734 2.79
-pair_coeff         2 1 819149.36422564 76229282.723786 3.995
-pair_coeff         3 1 819149.36422564 35513432.4787367 3.28
-pair_coeff         4 1 819149.36422564 231595395.497581 4.37
-pair_coeff         5 1 819149.36422564 2559350.2565099 2.315
+include "MgMOF74-Pressure50000.in.settings"
 # Set 1-2, 1-3, and 1-4 pairwise interactions to zero; not needed if no bonded terms
 #special_bonds      lj/coul 0.0 0.0 0.0
-kspace_style       pppm 1.0e-6
-include "system.in.settings"
+kspace_style       ewald 1.0e-6
 
 # melt crystalline guest molecules
 unfix              1
@@ -87,7 +61,7 @@ fix                3 GUEST rigid/nvt molecule temp 1000 1000 100.0
 run                400000
 write_data         data_melt.data
 unfix              3
-fix                4 GUEST rigid/nvt molecule temp 300 300 100.0
+fix                4 GUEST rigid/nvt molecule temp 313 313 100.0
 
 # get MOF COM
 compute            MOFCOM MOF com
