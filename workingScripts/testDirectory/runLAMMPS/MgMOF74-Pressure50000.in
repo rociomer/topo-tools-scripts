@@ -44,25 +44,25 @@ pair_coeff         * * 0.0 5.0
 kspace_style       none
 variable           prefactor equal ramp(1.0,20.0)
 fix                2 all adapt 1 pair soft a * * v_prefactor
-run                200000
+run                1000
 unfix              2
 write_data         data_overlap.data
 
 # reset force field parameters
 # Set 1-2, 1-3, and 1-4 pairwise interactions to zero; not needed if no bonded terms
 #special_bonds      lj/coul 0.0 0.0 0.0
-kspace_style       ewald 1.0e-6
+#kspace_style       ewald 1.0e-6
 include "MgMOF74-Pressure50000.in.settings"
 
 # melt crystalline guest molecules
 unfix              1
 run                0
 velocity           GUEST create 1000 1738
-fix                3 GUEST rigid/nvt molecule temp 1000 1000 100.0
+fix                3 GUEST nvt temp 1000 1000 100.0
 run                400000
 write_data         data_melt.data
 unfix              3
-fix                4 GUEST rigid/nvt molecule temp 313 313 100.0
+fix                4 GUEST nvt temp 313 313 100.0
 
 # get MOF COM
 compute            MOFCOM MOF com
