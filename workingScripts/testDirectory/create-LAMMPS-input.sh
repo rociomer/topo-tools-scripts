@@ -4,10 +4,13 @@ guest="CH4"
 temp="313"
 if [ $guest = "CH4" ]; then
   atomsPerGuest=1
+  fixstyle="nvt"
 elif [ $guest = "CO2" ]; then
   atomsPerGuest=3
+  fixstyle="rigid/nvt molecule"
 elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
+  fixstyle="rigid/nvt molecule"
 fi
 for metal in Mg
 #for metal in Mg Ni Zn
@@ -75,8 +78,9 @@ do
     sed -i "s/mofAtomOb/${mofAtomOb[1]}/g" ${metal}MOF74-Pressure${pressure}.in.settings
     sed -i "s/mofAtomOc/${mofAtomOc[1]}/g" ${metal}MOF74-Pressure${pressure}.in.settings
     sed -i "s/mofAtoms/${mofAtoms}/g" ${metal}MOF74-Pressure${pressure}.in
-    # set temperature and name of data file
+    # set temperature and, fixstyle, and name of data file
     sed -i "s/TEMP/${temp}/g" ${metal}MOF74-Pressure${pressure}.in
+    sed -i "s/FIXSTYLE/${fixstyle}/g" ${metal}MOF74-Pressure${pressure}.in
     sed -i "s/system.data/${metal}MOF74-Pressure${pressure}.data/g" ${metal}MOF74-Pressure${pressure}.in
     sed -i "s/system.in.settings/${metal}MOF74-Pressure${pressure}.in.settings/g" ${metal}MOF74-Pressure${pressure}.in
     # delete unnecessary force field parameters and insert force field parameters into *.in file in place of FORCEFIELDPARAMS

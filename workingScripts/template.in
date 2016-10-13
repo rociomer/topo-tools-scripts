@@ -4,6 +4,7 @@
 units real
 newton off
 atom_style full
+atom_modify sort 0 10.0
 
 # ----------------- Atom Definition Section -----------------
 
@@ -37,7 +38,7 @@ write_data         data_changebox.data
 # get rid of overlapping atoms
 run                0
 velocity           GUEST create TEMP 1738
-fix                1 GUEST rigid/nvt molecule temp TEMP TEMP 100.0
+fix                1 GUEST FIXSTYLE temp TEMP TEMP 100.0
 pair_style         soft 5.0
 pair_coeff         * * 0.0 5.0
 kspace_style       none
@@ -48,20 +49,20 @@ unfix              2
 write_data         data_overlap.data
 
 # reset force field parameters
-include "system.in.settings"
 # Set 1-2, 1-3, and 1-4 pairwise interactions to zero; not needed if no bonded terms
 #special_bonds      lj/coul 0.0 0.0 0.0
 kspace_style       ewald 1.0e-6
+include "system.in.settings"
 
 # melt crystalline guest molecules
 unfix              1
 run                0
 velocity           GUEST create 1000 1738
-fix                3 GUEST rigid/nvt molecule temp 1000 1000 100.0
+fix                3 GUEST FIXSTYLE temp 1000 1000 100.0
 run                400000
 write_data         data_melt.data
 unfix              3
-fix                4 GUEST rigid/nvt molecule temp TEMP TEMP 100.0
+fix                4 GUEST FIXSTYLE temp TEMP TEMP 100.0
 
 # get MOF COM
 compute            MOFCOM MOF com
