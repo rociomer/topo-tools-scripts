@@ -35,7 +35,7 @@ do
     # prepare in file
     cp template.in ${metal}MOF74-Pressure${pressure}.in
     # prepare force fields parameters
-    cp forceFieldParams-MgMOF74-template ${metal}MOF74-Pressure${pressure}.in.settings
+    cp forceFieldParams-MgMOF74-template-kcalpermol-A ${metal}MOF74-Pressure${pressure}.in.settings
     # set guest atoms
     if [ $guest = "CH4" ]; then
       guestAtomCH4=($(grep "\s\sCH4" ${metal}MOF74-Pressure${pressure}.data | head -1))
