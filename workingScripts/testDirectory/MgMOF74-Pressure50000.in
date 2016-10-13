@@ -51,7 +51,7 @@ write_data         data_overlap.data
 # reset force field parameters
 # Set 1-2, 1-3, and 1-4 pairwise interactions to zero; not needed if no bonded terms
 #special_bonds      lj/coul 0.0 0.0 0.0
-kspace_style       ewald 1.0e-6
+#kspace_style       ewald/disp 1.0e-6
 include "MgMOF74-Pressure50000.in.settings"
 
 # melt crystalline guest molecules

@@ -89,7 +89,7 @@ do
     do
       lineArr=($line)
       if [ ${lineArr[0]} = "pair_coeff" ]; then
-        echo "${lineArr[0]}         $(echo "${lineArr[1]} ${lineArr[2]}" | tr " " "\n" | sort -g | tr "\n" " " )${lineArr[3]} ${lineArr[4]} ${lineArr[5]}" >> ${metal}MOF74-Pressure${pressure}.in.settings.tmp
+        echo "${lineArr[0]}         $(echo "${lineArr[1]} ${lineArr[2]}" | tr " " "\n" | sort -g | tr "\n" " " )${lineArr[3]} ${lineArr[4]} ${lineArr[5]} ${lineArr[6]}" >> ${metal}MOF74-Pressure${pressure}.in.settings.tmp
       else echo "$line" >> ${metal}MOF74-Pressure${pressure}.in.settings.tmp
       fi 
     done
