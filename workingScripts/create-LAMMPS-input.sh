@@ -1,7 +1,7 @@
 #!/bin/bash
 
 guest="CH4"
-temp="313"
+temp="313.0"
 if [ $guest = "CH4" ]; then
   atomsPerGuest=1
   fixstyle="nvt"
