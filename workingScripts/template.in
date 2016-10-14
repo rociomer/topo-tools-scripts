@@ -85,7 +85,7 @@ write_data         data_nvt_eq.data
 
 # data collection
 reset_timestep     0
-fix                5 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] f_4[13] f_4[14] f_4[15] file traj.CofMs mode vector
+fix                5 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] file traj.CofMs
 dump               3 all custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000
 write_data         data_nvt.data
