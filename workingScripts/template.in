@@ -27,7 +27,7 @@ compute comG GUEST com
 compute comM MOF com
 
 # settings
-timestep           0.5
+timestep           0.1
 thermo             200
 thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
 restart            2000000 sim.restart
@@ -39,15 +39,17 @@ write_data         data_changebox.data
 # get rid of overlapping atoms
 run                0
 velocity           GUEST create TEMP 1738
-fix                1 GUEST FIXSTYLE temp TEMP TEMP 50.0
+fix                1 GUEST FIXSTYLE temp TEMP TEMP 5.0 tchain 3
 compute            allTemp all temp
 fix_modify         1 temp allTemp
+neigh_modify       exclude molecule MOF
+neigh_modify       exclude molecule GUEST
 pair_style         soft 5.0
 pair_coeff         * * 0.0 5.0
 kspace_style       none
 variable           prefactor equal ramp(1.0,20.0)
 fix                2 all adapt 1 pair soft a * * v_prefactor
-dump               1 all custom 200 dump-1.lammpstrj element x y z
+dump               1 all custom 500 dump-1.lammpstrj element x y z
 dump_modify        1 element guestAtoms mofAtoms
 run                100000
 undump             1
@@ -57,20 +59,15 @@ write_data         data_overlap.data
 # reset force field parameters
 kspace_style       pppm/disp 1.0e-6
 neigh_modify       delay 0 every 1 check yes
-include "system.in.settings"
 neigh_modify       exclude molecule MOF
 neigh_modify       exclude molecule GUEST
+include "system.in.settings"
 
-# get MOF COM
-#compute            MOFCOM MOF com
-#variable           MOFCOM1 equal c_MOFCOM[1]
-#variable           MOFCOM2 equal c_MOFCOM[2]
-#variable           MOFCOM3 equal c_MOFCOM[3]
-#thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3] c_MOFCOM[1] c_MOFCOM[2] c_MOFCOM[3]
+# specify new quantities to output
+thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
 
 # equilibration
-thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke etotal 
-dump               2 all custom 200 dump-2.lammpstrj element x y z
+dump               2 all custom 500 dump-2.lammpstrj element x y z
 dump_modify        2 element guestAtoms mofAtoms
 run                10000000
 undump             2
@@ -78,7 +75,7 @@ write_data         data_nvt_eq.data
 
 # data collection
 reset_timestep     0
-fix                3 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] file traj.CofMs
+fix                3 GUEST ave/time 1 1 10 f_1[*] file traj.CofMs mode vector
 fix_modify         3 temp allTemp
 dump               3 all custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000

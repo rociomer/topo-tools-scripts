@@ -1,0 +1,40 @@
+SimulationType                   MC
+NumberOfCycles                   1
+InitializationSteps              0
+PrintEvery                       1
+
+RestartFile                      yes
+RestartStyle                     cota
+
+CutOff                           12.8
+ForceField                       Buck_MOF74Mg
+
+Charge                           Ewald 
+EwaldPrecision                   1e-6
+
+Movies                           no
+WriteMoviesEvery                 1000
+
+NumberOfSystems                  1
+Framework                        SNAPSHOT_energy_273pt72946_frameworkonly
+UnitCells                        1 1 1
+
+UseTabularGrid                   no 
+NumberOfGrids                    2 
+GridTypes                        Ow Hw
+SpacingVDWGrid                   0.1
+SpacingCoulombGrid               0.1
+
+ExternalTemperature system 0:    313
+
+ExternalPressure system 0:       50000
+
+component 0 MoleculeName                     methane
+            MoleculeDefinition               TraPPE
+            HeliumVoidFraction               0.726314
+            TranslationProbability           0.0
+            RotationProbability              0.0
+            RegrowProbability                0.0
+            SwapProbability                  0.0
+            BlockPockets                     no 
+            CreateNumberOfMolecules          0
