@@ -45,7 +45,7 @@ $sel set radius 1.3
 $sel set name Mg
 $sel set type Mg
 $sel set mass 24.305 
-$sel set charge 1.56
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Oa}]
@@ -53,7 +53,7 @@ $sel set radius 0.73
 $sel set name Oa
 $sel set type Oa
 $sel set mass 15.999
-$sel set charge -0.899
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Ob}]
@@ -61,7 +61,7 @@ $sel set radius 0.73
 $sel set name Ob
 $sel set type Ob
 $sel set mass 15.999
-$sel set charge -0.752
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Oc}]
@@ -69,7 +69,7 @@ $sel set radius 0.73
 $sel set name Oc
 $sel set type Oc
 $sel set mass 15.999
-$sel set charge -0.903
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Ca}]
@@ -77,7 +77,7 @@ $sel set radius 0.77
 $sel set name Ca
 $sel set type Ca
 $sel set mass 12.011
-$sel set charge 0.9
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Cb}]
@@ -85,7 +85,7 @@ $sel set radius 0.77
 $sel set name Cb
 $sel set type Cb
 $sel set mass 12.011
-$sel set charge -0.314
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Cc}]
@@ -93,7 +93,7 @@ $sel set radius 0.77
 $sel set name Cc
 $sel set type Cc
 $sel set mass 12.011
-$sel set charge 0.456
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name Cd}]
@@ -101,7 +101,7 @@ $sel set radius 0.77
 $sel set name Cd
 $sel set type Cd
 $sel set mass 12.011
-$sel set charge -0.234
+$sel set charge 0.0
 
 # set atom name/type and radius
 set sel [atomselect top {name H}]
@@ -109,7 +109,7 @@ $sel set radius 0.37
 $sel set name H
 $sel set type H
 $sel set mass 1.008
-$sel set charge 0.186
+$sel set charge 0.0
 
 # bonds are computed based on distance criterion
 # bond if 0.6 * (r_A + r_B) > r_AB.

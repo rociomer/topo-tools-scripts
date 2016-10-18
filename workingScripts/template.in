@@ -48,7 +48,7 @@ kspace_style       none
 variable           prefactor equal ramp(1.0,20.0)
 fix                2 all adapt 1 pair soft a * * v_prefactor
 dump               1 all custom 200 dump-1.lammpstrj element x y z
-dump_modify        1 element 1 2 3 4 5 6 7 8 9 10
+dump_modify        1 element guestAtoms mofAtoms
 run                100000
 undump             1
 unfix              2
@@ -58,6 +58,8 @@ write_data         data_overlap.data
 kspace_style       pppm/disp 1.0e-6
 neigh_modify       delay 0 every 1 check yes
 include "system.in.settings"
+neigh_modify       exclude molecule MOF
+neigh_modify       exclude molecule GUEST
 
 # get MOF COM
 #compute            MOFCOM MOF com
@@ -69,7 +71,7 @@ include "system.in.settings"
 # equilibration
 thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke etotal 
 dump               2 all custom 200 dump-2.lammpstrj element x y z
-dump_modify        2 element 1 2 3 4 5 6 7 8 9 10
+dump_modify        2 element guestAtoms mofAtoms
 run                10000000
 undump             2
 write_data         data_nvt_eq.data

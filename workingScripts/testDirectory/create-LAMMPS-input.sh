@@ -17,7 +17,7 @@ for metal in Mg
 do
   framework=$(echo "${metal}-MOF-74")
   echo "Framework: $framework"
-  for pressure in 50000
+  for pressure in 500000
   #for pressure in $(seq 50000 50000 500000)
   do
     echo "Pressure: $pressure"
