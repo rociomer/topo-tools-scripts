@@ -45,7 +45,7 @@ pair_coeff         * * 0.0 5.0
 kspace_style       none
 variable           prefactor equal ramp(1.0,20.0)
 fix                2 all adapt 1 pair soft a * * v_prefactor
-run                20000
+run                2000
 unfix              2
 write_data         data_overlap.data
 
@@ -60,7 +60,7 @@ unfix              1
 run                0
 velocity           GUEST create 1000 1738
 fix                3 GUEST nvt temp 1000 1000 100.0
-run                40000
+run                4000
 write_data         data_melt.data
 unfix              3
 fix                4 GUEST nvt temp 313 313 100.0
@@ -80,12 +80,12 @@ thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT
 # fix                8 MOF recenter INIT INIT INIT shift all # Efrem says: technically should do this to get the diffusion coefficient correct, but not sure it works properly on rigid molecules, and it doesn't make a difference in practice because the drift is so small
 
 # equilibration
-run                1000000
+run                100000
 write_data         data_nvt_eq.data
 
 # data collection
 reset_timestep     0
-fix                5 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] f_4[13] f_4[14] f_4[15] file traj.CofMs mode vector
+fix                5 GUEST ave/time 1 1 10 f_4[1] f_4[2] f_4[3] f_4[13] f_4[14] f_4[15] file traj.CofMs
 dump               3 all custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000
 write_data         data_nvt.data

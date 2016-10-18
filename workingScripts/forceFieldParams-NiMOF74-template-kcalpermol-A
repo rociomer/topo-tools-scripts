@@ -1,0 +1,63 @@
+# UFF parameters for all atoms not defined by force field
+pair_style         hybrid lj/long/coul/long cut long 12.8 buck/long/coul/long cut long 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff         mofAtomMg mofAtomMg lj/long/coul/long 0.111 2.691
+pair_coeff         mofAtomCa mofAtomCa lj/long/coul/long 0.105 3.431
+pair_coeff         mofAtomCb mofAtomCb lj/long/coul/long 0.105 3.431
+pair_coeff         mofAtomCc mofAtomCc lj/long/coul/long 0.105 3.431
+pair_coeff         mofAtomCd mofAtomCd lj/long/coul/long 0.105 3.431
+pair_coeff         mofAtomH mofAtomH lj/long/coul/long 0.044 2.571
+pair_coeff         mofAtomOa mofAtomOa lj/long/coul/long 0.060 3.118
+pair_coeff         mofAtomOb mofAtomOb lj/long/coul/long 0.060 3.118
+pair_coeff         mofAtomOc mofAtomOc lj/long/coul/long 0.060 3.118
+pair_coeff         guestAtomCH4 guestAtomCH4 lj/long/coul/long 0.294 3.730
+pair_coeff         guestAtomCg guestAtomCg lj/long/coul/long 0.056 2.757
+pair_coeff         guestAtomOg guestAtomOg lj/long/coul/long 0.160 3.033
+pair_coeff         guestAtomHw guestAtomHw lj/long/coul/long 0.044 2.571
+pair_coeff         guestAtomMw guestAtomMw lj/long/coul/long 0.000 0.000
+pair_coeff         guestAtomOw guestAtomOw lj/long/coul/long 0.163 3.1643
+# Lennard-Jones parameters from force field
+pair_coeff         mofAtomH guestAtomOg lj/long/coul/long 0.113 2.343
+pair_coeff         mofAtomMg guestAtomCg lj/long/coul/long 0.379 2.816
+pair_coeff         mofAtomOa guestAtomCg lj/long/coul/long 0.139 2.794
+pair_coeff         mofAtomOb guestAtomCg lj/long/coul/long 0.139 2.794
+pair_coeff         mofAtomOc guestAtomCg lj/long/coul/long 0.139 2.794
+pair_coeff         mofAtomCa guestAtomCg lj/long/coul/long 0.174 2.904
+pair_coeff         mofAtomCb guestAtomCg lj/long/coul/long 0.174 2.904
+pair_coeff         mofAtomCc guestAtomCg lj/long/coul/long 0.174 2.904
+pair_coeff         mofAtomCd guestAtomCg lj/long/coul/long 0.174 2.904
+pair_coeff         mofAtomH guestAtomCg lj/long/coul/long 0.136 2.453
+pair_coeff         mofAtomH guestAtomCH4 lj/long/coul/long 0.114 3.15
+# Buckingham parameters from force field
+pair_coeff         mofAtomMg guestAtomOw buck/long/coul/long 43580.823 0.253 338.05140
+pair_coeff         mofAtomOb guestAtomOw buck/long/coul/long 69395.802 0.258 380.05898
+pair_coeff         mofAtomOc guestAtomOw buck/long/coul/long 31727.725 0.295 380.05898
+pair_coeff         mofAtomCa guestAtomOw buck/long/coul/long 49847.117 0.268 672.24517
+pair_coeff         mofAtomCb guestAtomOw buck/long/coul/long 36073.467 0.298 672.24517
+pair_coeff         mofAtomCc guestAtomOw buck/long/coul/long 237767.50 0.228 672.24517
+pair_coeff         mofAtomCd guestAtomOw buck/long/coul/long 11607.133 0.329 672.24517
+pair_coeff         mofAtomOa guestAtomHw buck/long/coul/long 8018.0697 0.251 109.04689
+pair_coeff         mofAtomOb guestAtomHw buck/long/coul/long 8018.0697 0.251 109.04689
+pair_coeff         mofAtomOc guestAtomHw buck/long/coul/long 8018.0697 0.251 109.04689
+pair_coeff         mofAtomCa guestAtomHw buck/long/coul/long 6021.6753 0.284 198.65503
+pair_coeff         mofAtomCb guestAtomHw buck/long/coul/long 6021.6753 0.284 198.65503
+pair_coeff         mofAtomCc guestAtomHw buck/long/coul/long 6021.6753 0.284 198.65503
+pair_coeff         mofAtomCd guestAtomHw buck/long/coul/long 6021.6753 0.284 198.65503
+pair_coeff         guestAtomOw guestAtomHw buck/long/coul/long 0.0000000 0.000 0.0000000
+pair_coeff         guestAtomHw guestAtomHw buck/long/coul/long 0.0000000 0.000 0.0000000
+pair_coeff         mofAtomMg guestAtomOg buck/long/coul/long 49146.688 0.252 812.34516
+pair_coeff         mofAtomOa guestAtomOg buck/long/coul/long 67143.006 0.263 284.42775
+pair_coeff         mofAtomOb guestAtomOg buck/long/coul/long 53213.733 0.265 284.42775
+pair_coeff         mofAtomOc guestAtomOg buck/long/coul/long 52348.500 0.270 284.42775
+pair_coeff         mofAtomCa guestAtomOg buck/long/coul/long 54945.273 0.260 449.71976
+pair_coeff         mofAtomCb guestAtomOg buck/long/coul/long 42691.600 0.284 449.71976
+pair_coeff         mofAtomCc guestAtomOg buck/long/coul/long 59459.481 0.260 449.71976
+pair_coeff         mofAtomCd guestAtomOg buck/long/coul/long 26125.204 0.302 449.71976
+pair_coeff         mofAtomMg guestAtomCH4 buck/long/coul/long 503735.46 0.203 869.75957
+pair_coeff         mofAtomOa guestAtomCH4 buck/long/coul/long 36618.413 0.337 943.43844
+pair_coeff         mofAtomOb guestAtomCH4 buck/long/coul/long 40336.705 0.306 943.43844
+pair_coeff         mofAtomOc guestAtomCH4 buck/long/coul/long 20010.424 0.358 943.43844
+pair_coeff         mofAtomCa guestAtomCH4 buck/long/coul/long 151480.54 0.250 1627.7890
+pair_coeff         mofAtomCb guestAtomCH4 buck/long/coul/long 70571.228 0.305 1627.7890
+pair_coeff         mofAtomCc guestAtomCH4 buck/long/coul/long 460219.42 0.229 1627.7890
+pair_coeff         mofAtomCd guestAtomCH4 buck/long/coul/long 5085.8640 0.432 1627.7890
