@@ -39,7 +39,7 @@ write_data         data_changebox.data
 # get rid of overlapping atoms
 run                0
 velocity           GUEST create TEMP 1738
-fix                1 GUEST FIXSTYLE temp TEMP TEMP 5.0 tchain 3
+fix                1 GUEST FIXSTYLE temp TEMP TEMP 1.0 tchain 3
 compute            allTemp all temp
 fix_modify         1 temp allTemp
 neigh_modify       exclude molecule MOF
@@ -76,7 +76,6 @@ write_data         data_nvt_eq.data
 # data collection
 reset_timestep     0
 fix                3 GUEST ave/time 1 1 10 f_1[*] file traj.CofMs mode vector
-fix_modify         3 temp allTemp
 dump               3 all custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000
 write_data         data_nvt.data

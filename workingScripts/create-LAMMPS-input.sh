@@ -20,22 +20,38 @@ do
   for pressure in 50000
   #for pressure in $(seq 50000 50000 500000)
   do
+    # create .tcl topos script
+    if [ $guest = "CH4" ]; then
+      cp toposcript-${metal}MOF74-uncharged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    elif [ $guest = "CO2" ]; then
+      cp toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    elif [ $guest = "H2O" ]; then
+      cp toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    fi
+    # find the molecules/uc at a particular pressure (read GCMC output)
     echo "Pressure: $pressure"
     uptake=($(awk '$1 == "'"$pressure"'"' isotherms/${metal}_${guest}_313_absolute.txt))
     echo "Uptake in molec/UC: ${uptake[1]}"
     replicasGuest=$(echo "(${uptake[1]} * 4)/1" | bc )
     echo "Replicas of guest per supercell at this pressure: $replicasGuest"
-    cp lammps-toposcript-${metal}MOF74.tcl lammps-toposcript-${metal}MOF74-Pressure${pressure}.tcl
-    sed -i "s/GUESTFILE/${guest}.xyz/g" lammps-toposcript-${metal}MOF74-Pressure${pressure}.tcl
-    sed -i "s/ATOMSPERGUEST/${atomsPerGuest}/g" lammps-toposcript-${metal}MOF74-Pressure${pressure}.tcl
-    sed -i "s/REPLICASGUEST/${replicasGuest}/g" lammps-toposcript-${metal}MOF74-Pressure${pressure}.tcl
-    vmd -dispdev text -e lammps-toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    # replace important parameters in the topos script
+    sed -i "s/GUESTFILE/${guest}.xyz/g" toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    sed -i "s/ATOMSPERGUEST/${atomsPerGuest}/g" toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    sed -i "s/REPLICASGUEST/${replicasGuest}/g" toposcript-${metal}MOF74-Pressure${pressure}.tcl
+    vmd -dispdev text -e toposcript-${metal}MOF74-Pressure${pressure}.tcl
     # rename data file
     mv system.data ${metal}MOF74-Pressure${pressure}.data
     # prepare in file
     cp template.in ${metal}MOF74-Pressure${pressure}.in
-    # prepare force fields parameters
-    cp forceFieldParams-MgMOF74-template-kcalpermol-A ${metal}MOF74-Pressure${pressure}.in.settings
+    # create force fields parameter files
+    if [ $guest = "CH4" ]; then
+      cp forceFieldParams-MgMOF74-uncharged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      sed -i "s/kspace_style       pppm\/disp 1.0e-6/#kspace_style       pppm\/disp 1.0e-6/g" ${metal}MOF74-Pressure${pressure}.in
+    elif [ $guest = "CO2" ]; then
+      cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+    elif [ $guest = "H2O" ]; then
+      cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+    fi
     # set guest atoms
     if [ $guest = "CH4" ]; then
       guestAtomCH4=($(grep "\s\sCH4" ${metal}MOF74-Pressure${pressure}.data | head -1))
