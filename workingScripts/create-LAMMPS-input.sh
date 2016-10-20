@@ -47,10 +47,19 @@ do
     if [ $guest = "CH4" ]; then
       cp forceFieldParams-MgMOF74-uncharged-template ${metal}MOF74-Pressure${pressure}.in.settings
       sed -i "s/kspace_style       pppm\/disp 1.0e-6/#kspace_style       pppm\/disp 1.0e-6/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/fix                5/#fix                5/g" ${metal}MOF74-Pressure${pressure}.in
     elif [ $guest = "CO2" ]; then
       cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      sed -i "s/compute            ChunkGuest/#compute            ChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/compute            comChunkGuest/#compute            comChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/fix                3/#fix                3/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/fix                4/#fix                4/g" ${metal}MOF74-Pressure${pressure}.in
     elif [ $guest = "H2O" ]; then
       cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      sed -i "s/compute            ChunkGuest/#compute            ChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/compute            comChunkGuest/#compute            comChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/fix                3/#fix                3/g" ${metal}MOF74-Pressure${pressure}.in
+      sed -i "s/fix                4/#fix                4/g" ${metal}MOF74-Pressure${pressure}.in
     fi
     # set guest atoms
     if [ $guest = "CH4" ]; then
