@@ -82,6 +82,5 @@ reset_timestep     0
 fix                3 GUEST ave/time 1 1 10 c_comChunkGuest[*] file traj.COMGUEST mode vector
 fix                4 GUEST ave/time 1 1 10 c_comM[*] file traj.COMMOF mode vector
 fix                5 GUEST ave/time 1 1 10 f_1[1] f_1[2] f_1[3] f_1[13] f_1[14] f_1[15] file traj.CofMs mode vector
-dump               3 all custom 200 traj.all.100.dump id mol type x y z ix iy iz
 run                100000000
 write_data         data_nvt.data

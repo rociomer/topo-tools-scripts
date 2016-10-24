@@ -7,10 +7,10 @@ if [ $guest = "CH4" ]; then
   fixstyle="nvt"
 elif [ $guest = "CO2" ]; then
   atomsPerGuest=3
-  fixstyle="rigid/nvt molecule"
+  fixstyle="rigid\/nvt molecule"
 elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
-  fixstyle="rigid/nvt molecule"
+  fixstyle="rigid\/nvt molecule"
 fi
 for metal in Mg
 #for metal in Mg Ni Zn
