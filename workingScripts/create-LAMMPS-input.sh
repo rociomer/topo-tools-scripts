@@ -12,7 +12,7 @@ elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
   fixstyle="rigid\/nvt molecule"
 fi
-for metal in Zn
+for metal in Ni
 #for metal in Mg Ni Zn
 do
   framework=$(echo "${metal}-MOF-74")

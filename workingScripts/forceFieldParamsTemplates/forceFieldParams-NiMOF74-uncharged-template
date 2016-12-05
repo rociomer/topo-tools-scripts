@@ -15,10 +15,10 @@ pair_coeff         guestAtomCH4 guestAtomCH4 lj/cut 0.294 3.730
 pair_coeff         mofAtomH guestAtomCH4 lj/cut 0.114 3.15
 # Buckingham parameters from force field
 pair_coeff         mofAtomNi guestAtomCH4 buck 1244732.7 0.180 297.14481
-pair_coeff         mofAtomOa guestAtomCH4 buck 
-pair_coeff         mofAtomOb guestAtomCH4 buck 
-pair_coeff         mofAtomOc guestAtomCH4 buck 
-pair_coeff         mofAtomCa guestAtomCH4 buck 
-pair_coeff         mofAtomCb guestAtomCH4 buck 
-pair_coeff         mofAtomCc guestAtomCH4 buck 
-pair_coeff         mofAtomCd guestAtomCH4 buck 
+pair_coeff         mofAtomOa guestAtomCH4 buck 140222.90 0.287 1029.2056
+pair_coeff         mofAtomOb guestAtomCH4 buck 46848.353 0.300 1029.2056
+pair_coeff         mofAtomOc guestAtomCH4 buck 22187.324 0.345 1029.2056
+pair_coeff         mofAtomCa guestAtomCH4 buck 40409.472 0.303 1775.7699
+pair_coeff         mofAtomCb guestAtomCH4 buck 40489.879 0.323 1775.7699
+pair_coeff         mofAtomCc guestAtomCH4 buck 210155.13 0.253 1775.7699
+pair_coeff         mofAtomCd guestAtomCH4 buck 5635.9868 0.429 1775.7699
