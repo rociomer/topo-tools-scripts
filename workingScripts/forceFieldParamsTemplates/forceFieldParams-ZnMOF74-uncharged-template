@@ -1,0 +1,24 @@
+# UFF parameters for all atoms not defined by force field
+pair_style         hybrid lj/cut 12.8 buck 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff         mofAtomZn mofAtomZn lj/cut 0.124 2.462
+pair_coeff         mofAtomCa mofAtomCa lj/cut 0.105 3.431
+pair_coeff         mofAtomCb mofAtomCb lj/cut 0.105 3.431
+pair_coeff         mofAtomCc mofAtomCc lj/cut 0.105 3.431
+pair_coeff         mofAtomCd mofAtomCd lj/cut 0.105 3.431
+pair_coeff         mofAtomH mofAtomH lj/cut 0.044 2.571
+pair_coeff         mofAtomOa mofAtomOa lj/cut 0.060 3.118
+pair_coeff         mofAtomOb mofAtomOb lj/cut 0.060 3.118
+pair_coeff         mofAtomOc mofAtomOc lj/cut 0.060 3.118
+pair_coeff         guestAtomCH4 guestAtomCH4 lj/cut 0.294 3.730
+# Lennard-Jones parameters from force field
+pair_coeff         mofAtomH guestAtomCH4 lj/cut 0.114 3.15
+# Buckingham parameters from force field
+pair_coeff         mofAtomZn guestAtomCH4 buck 141203.48 0.242 671.40116
+pair_coeff         mofAtomOa guestAtomCH4 buck 62535.218 0.307 857.67131
+pair_coeff         mofAtomOb guestAtomCH4 buck 49083.273 0.295 857.67131 
+pair_coeff         mofAtomOc guestAtomCH4 buck 16411.461 0.363 857.67131  
+pair_coeff         mofAtomCa guestAtomCH4 buck 108250.51 0.266 1479.8082
+pair_coeff         mofAtomCb guestAtomCH4 buck 58561.340 0.305 1479.8082
+pair_coeff         mofAtomCc guestAtomCH4 buck 303371.28 0.247 1479.8082
+pair_coeff         mofAtomCd guestAtomCH4 buck 5360.2754 0.418 1479.8082

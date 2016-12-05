@@ -2,7 +2,7 @@
 # ----------------- Init Section -----------------
 
 units real
-processors 1 1 1
+processors * * *
 newton off
 atom_style full
 atom_modify sort 0 10.0
@@ -71,9 +71,9 @@ thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke eto
 #compute            comChunkGuest GUEST com/chunk chunkGuest
 
 # equilibration
-dump               2 all custom 500 dump-2.lammpstrj element x y z
+dump               2 all custom 5000 dump-2.lammpstrj element x y z
 dump_modify        2 element guestAtoms mofAtoms
-run                10000000
+run                1000000
 undump             2
 write_data         data_nvt_eq.data
 

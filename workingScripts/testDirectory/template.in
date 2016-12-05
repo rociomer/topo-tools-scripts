@@ -71,7 +71,7 @@ thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke eto
 #compute            comChunkGuest GUEST com/chunk chunkGuest
 
 # equilibration
-dump               2 all custom 500 dump-2.lammpstrj element x y z
+dump               2 all custom 1000 dump-2.lammpstrj element x y z
 dump_modify        2 element guestAtoms mofAtoms
 run                10000000
 undump             2

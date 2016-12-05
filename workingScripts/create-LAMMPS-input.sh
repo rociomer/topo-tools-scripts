@@ -12,21 +12,21 @@ elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
   fixstyle="rigid\/nvt molecule"
 fi
-for metal in Mg
+for metal in Zn
 #for metal in Mg Ni Zn
 do
   framework=$(echo "${metal}-MOF-74")
   echo "Framework: $framework"
-  for pressure in 50000
+  for pressure in 50000 100000 150000 200000 250000 300000 350000 400000 450000 500000
   #for pressure in $(seq 50000 50000 500000)
   do
     # create .tcl topos script
     if [ $guest = "CH4" ]; then
-      cp toposcript-${metal}MOF74-uncharged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+      cp topoScripts/toposcript-${metal}MOF74-uncharged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
     elif [ $guest = "CO2" ]; then
-      cp toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+      cp topoScripts/toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
     elif [ $guest = "H2O" ]; then
-      cp toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
+      cp topoScripts/toposcript-${metal}MOF74-charged.tcl toposcript-${metal}MOF74-Pressure${pressure}.tcl
     fi
     # find the molecules/uc at a particular pressure (read GCMC output)
     echo "Pressure: $pressure"
@@ -45,18 +45,18 @@ do
     cp template.in ${metal}MOF74-Pressure${pressure}.in
     # create force fields parameter files
     if [ $guest = "CH4" ]; then
-      cp forceFieldParams-MgMOF74-uncharged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      cp forceFieldParamsTemplates/forceFieldParams-${metal}MOF74-uncharged-template ${metal}MOF74-Pressure${pressure}.in.settings
       sed -i "s/kspace_style       pppm\/disp 1.0e-6/#kspace_style       pppm\/disp 1.0e-6/g" ${metal}MOF74-Pressure${pressure}.in
       sed -i "s/fix                5/#fix                5/g" ${metal}MOF74-Pressure${pressure}.in
     elif [ $guest = "CO2" ]; then
-      cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      cp forceFieldParamsTemplates/forceFieldParams-${metal}MOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
       #sed -i "s/compute            ChunkGuest/#compute            ChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
       #sed -i "s/compute            comChunkGuest/#compute            comChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
       #sed -i "s/fix                3/#fix                3/g" ${metal}MOF74-Pressure${pressure}.in
       #sed -i "s/fix                4/#fix                4/g" ${metal}MOF74-Pressure${pressure}.in
       sed -i "s/dump               3/#dump               3/g" ${metal}MOF74-Pressure${pressure}.in
     elif [ $guest = "H2O" ]; then
-      cp forceFieldParams-MgMOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
+      cp forceFieldParamsTemplates/forceFieldParams-${metal}MOF74-charged-template ${metal}MOF74-Pressure${pressure}.in.settings
       #sed -i "s/compute            ChunkGuest/#compute            ChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
       #sed -i "s/compute            comChunkGuest/#compute            comChunkGuest/g" ${metal}MOF74-Pressure${pressure}.in
       #sed -i "s/fix                3/#fix                3/g" ${metal}MOF74-Pressure${pressure}.in
