@@ -2,6 +2,9 @@
 
 guest="CH4"
 temp="313.0"
+metalFrameworksList="Mg Ni Zn"
+pressureList="50000 100000 150000 200000 250000 300000 350000 400000 450000 500000"
+
 if [ $guest = "CH4" ]; then
   atomsPerGuest=1
   fixstyle="nvt"
@@ -12,13 +15,12 @@ elif [ $guest = "H2O" ]; then
   atomsPerGuest=4
   fixstyle="rigid\/nvt molecule"
 fi
-for metal in Ni
+for metal in $metalFrameworksList
 #for metal in Mg Ni Zn
 do
   framework=$(echo "${metal}-MOF-74")
   echo "Framework: $framework"
-  for pressure in 50000 100000 150000 200000 250000 300000 350000 400000 450000 500000
-  #for pressure in $(seq 50000 50000 500000)
+  for pressure in $pressureList  #for pressure in $(seq 50000 50000 500000)
   do
     # create .tcl topos script
     if [ $guest = "CH4" ]; then
