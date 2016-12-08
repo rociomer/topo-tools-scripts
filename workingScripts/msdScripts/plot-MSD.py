@@ -19,8 +19,9 @@ matplotlib.rc('figure', figsize=(3.25,2.95))
 LEGENDSIZE=6
 
 colors=['b', 'g', 'r', 'c', 'm', 'y', 'black', 'grey']
-indexToStartCounting=36
-lastIndicesToIgnore=1
+timeToStartFit=10 #ps
+timeToStopFit=90 #ps
+
 
 def getMSD(file, rowsToSkip, timeColumn, msdColumn, dimension):
     data = np.genfromtxt(file, skiprows=rowsToSkip)
@@ -78,15 +79,28 @@ def plotSettingsLinLin(inputArray, filename):
     plt.tight_layout()
     plt.savefig(filename + '_linlin.png', format='png', dpi=300)
 
+def plotSettingsLinLinZoom(inputArray, filename):
+    xlim = [0.0001, max(inputArray[0][indexToStartCounting:finalIndex])*1.1]
+    ylim = [0.0001, max(inputArray[1][indexToStartCounting:finalIndex])*1.1]
+    plt.xlabel('Time (ps)')
+    plt.ylabel('Mean squared displacement ($\AA^2$)' )
+    plt.grid()
+    plt.xscale('linear') 
+    plt.yscale('linear') 
+    plt.xlim(xlim)
+    plt.ylim(ylim)
+    plt.tight_layout()
+    plt.savefig(filename + '_linlin_zoom.png', format='png', dpi=300)
+
 def getDiffusionCoeff(inputArray, dimension):
-    # check if in the diffusive regime
-    finalIndex=len(inputArray[0])-1-lastIndicesToIgnore
+    # check if in the diffusive regime -- if so slope should be 1
     XLOG = inputArray[2][indexToStartCounting:finalIndex]
     YLOG = inputArray[3][indexToStartCounting:finalIndex]
     fit = np.polyfit(XLOG, YLOG, deg=1)
     slopeLog = float(fit[0])
     yInterceptLog = float(fit[1])
     print('Best fit line to log-log data has form ' + str(slopeLog) + 'x + ' + str(yInterceptLog))
+    # actually fit data
     X = inputArray[0][indexToStartCounting:finalIndex]
     Y = inputArray[1][indexToStartCounting:finalIndex]
     results  = sm.OLS(Y,sm.add_constant(X)).fit()
@@ -104,13 +118,24 @@ def plotBestFit(slope, yIntercept, colorToPlot):
     plt.plot(x, y, color=colorToPlot)
 
 outputArray, dimension = getMSD("./msd_total_self.dat", 2, 0, 4, 3)
+
+indexToStartCounting = outputArray[0].index(timeToStartFit)
+finalIndex = outputArray[0].index(timeToStopFit)
+slope, yIntercept, D = getDiffusionCoeff(outputArray, dimension)
+
 plt.figure()
 plotMSD(outputArray, 'b')
 plotSettingsLogLog(outputArray, 'plotMSD')
 plt.close()
+
 plt.figure()
 plotMSD(outputArray, 'b')
-slope, yIntercept, D = getDiffusionCoeff(outputArray, dimension)
 plotBestFit(slope, yIntercept, 'black')
 plotSettingsLinLin(outputArray, 'plotMSD')
+plt.close()
+
+plt.figure()
+plotMSD(outputArray, 'b')
+plotBestFit(slope, yIntercept, 'black')
+plotSettingsLinLinZoom(outputArray, 'plotMSD')
 plt.close()

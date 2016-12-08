@@ -1,8 +1,15 @@
 #!/bin/bash
 
-for i in */Pressure*/
+for i in Mg Zn Ni
+do
+  scp -r rocio@clean.cchem.berkeley.edu:~/diffusion/${i}-MOF-74-CH4-313K/ .
+done
+
+for i in *K/Pressure*/
 do 
   cd ${i}
+
+  echo "Changing into ${i}"
 
   cp ../../msdScripts/create-InputMSD.sh .
   cp ../../msdScripts/input_template.msd .
@@ -15,6 +22,13 @@ do
   echo "Diffusion coefficients calculated for ${i}"   
  
   cd ../../
+done
+
+for i in *K/Pressure*/
+do 
+  diffCoeff=$(grep "Diffusion coefficient:" ${i}plot-MSD-output)
+  echo "For structure ${i%/Pressure*}:"
+  echo "For pressure ${i#*313K/}, the ${diffCoeff}"
 done
 
 echo "Program complete."

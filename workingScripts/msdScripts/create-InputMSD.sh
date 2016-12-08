@@ -15,9 +15,19 @@ cat traj.GUEST.10.dump >> traj.GUEST.10.dump.dat
 sed -i '/ITEM\: NUMBER OF ATOMS/i newline' traj.GUEST.10.dump.dat
 sed -i '/ITEM\: BOX BOUNDS/,+3d' traj.GUEST.10.dump.dat
 sed -i '/ITEM/d' traj.GUEST.10.dump.dat
-sed -i ':a;N;$!ba;s/\nnewline\n/ /g' traj.GUEST.10.dump.dat
-echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
-echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
-echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
-cat traj.GUEST.10.dump.dat >> traj.GUEST.10.dump.dat.copy
+lengthOfTraj=$(cat traj.GUEST.10.dump.dat | wc -l)
+echo $lengthOfTraj
+if [ $lengthOfTraj -gt 50000000 ]; then
+  split -l 50000000 traj.GUEST.10.dump.dat
+  sed -i ':a;N;$!ba;s/\nnewline\n/ /g' xa*
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  cat xa* >> traj.GUEST.10.dump.dat.copy
+else sed -i ':a;N;$!ba;s/\nnewline\n/ /g' traj.GUEST.10.dump.dat
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
+  cat traj.GUEST.10.dump.dat >> traj.GUEST.10.dump.dat.copy
+fi
 mv traj.GUEST.10.dump.dat.copy traj.GUEST.10.dump.dat
