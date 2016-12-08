@@ -15,7 +15,7 @@ cat traj.GUEST.10.dump >> traj.GUEST.10.dump.dat
 sed -i '/ITEM\: NUMBER OF ATOMS/i newline' traj.GUEST.10.dump.dat
 sed -i '/ITEM\: BOX BOUNDS/,+3d' traj.GUEST.10.dump.dat
 sed -i '/ITEM/d' traj.GUEST.10.dump.dat
-perl -i -pe 'BEGIN{undef $/;} s/\nnewline\n/ /smg' traj.GUEST.10.dump.dat
+sed -i ':a;N;$!ba;s/\nnewline\n/ /g' traj.GUEST.10.dump.dat
 echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
 echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
 echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
