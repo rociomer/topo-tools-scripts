@@ -15,7 +15,7 @@ do
   cp ../../msdScripts/input_template.msd .
   cp ../../msdScripts/plot-MSD.py .
 
-  bash create-InputMSD.sh
+  bash create-InputMSD.sh >> create-InputMSD-output
   /home/rocio/Dropbox\ \(LSMO\)/Research/corrmsd/bin/corrfunc input.msd >> corrmsd-output
   python plot-MSD.py >> plot-MSD-output
  
@@ -24,11 +24,14 @@ do
   cd ../../
 done
 
-for i in *K/Pressure*/
-do 
-  diffCoeff=$(grep "Diffusion coefficient:" ${i}plot-MSD-output)
-  echo "For structure ${i%/Pressure*}:"
-  echo "For pressure ${i#*313K/}, the ${diffCoeff}"
-done
+#for i in *K/Pressure*/
+#do 
+#  diffCoeff=$(grep "Diffusion coefficient:" ${i}plot-MSD-output)
+#  echo "For structure ${i%/Pressure*}:"
+#  echo "For pressure ${i#*313K/}, the ${diffCoeff}"
+#done
+
+bash showAndCollectResults.sh
+bash createDocumentTex.sh
 
 echo "Program complete."

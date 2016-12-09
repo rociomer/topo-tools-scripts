@@ -24,6 +24,7 @@ if [ $lengthOfTraj -gt 50000000 ]; then
   echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
   echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
   cat xa* >> traj.GUEST.10.dump.dat.copy
+  rm xa*
 else sed -i ':a;N;$!ba;s/\nnewline\n/ /g' traj.GUEST.10.dump.dat
   echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
   echo "# this line is a comment" >> traj.GUEST.10.dump.dat.copy
