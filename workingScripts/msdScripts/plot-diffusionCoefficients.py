@@ -21,7 +21,7 @@ LEGENDSIZE=6
 colors=['b', 'g', 'r', 'c', 'm', 'y', 'black', 'grey']
 
 def getCoefficients(file, rowsToSkip, pressureColumn, coefficientColumn):
-    data = np.genfromtxt(file, skiprows=rowsToSkip)
+    data = np.genfromtxt(file, skip_header=rowsToSkip)
     data = list(zip(*data))
     pressure = []
     coefficient = []

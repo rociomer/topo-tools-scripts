@@ -24,7 +24,7 @@ timeToStopFit=90 #ps
 
 
 def getMSD(file, rowsToSkip, timeColumn, msdColumn, dimension):
-    data = np.genfromtxt(file, skiprows=rowsToSkip)
+    data = np.genfromtxt(file, skip_header=rowsToSkip)
     data = list(zip(*data))
     time = []
     timeLog = []

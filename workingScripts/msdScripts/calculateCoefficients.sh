@@ -32,6 +32,6 @@ done
 #done
 
 bash showAndCollectResults.sh
-bash createDocumentTex.sh
+echo "Q" | bash createDocumentTex.sh #will be prompted to type Q, so this does not require my input anymore
 
-echo "Program complete."
+echo "Program complete. Note: some MSD fits may not have been in the diffusive regime. Go back and check all pressures, and modify range in plot-MSD.py as necessary, until slope of log-log data is 1."
