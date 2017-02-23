@@ -27,7 +27,7 @@ compute comG GUEST com
 compute comM MOF com
 
 # settings
-timestep           0.1
+timestep           1
 thermo             200
 thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
 restart            2000000 sim.restart
@@ -40,7 +40,7 @@ write_data         data_changebox.data
 run                0
 velocity           GUEST create TEMP 1738
 fix                1 GUEST FIXSTYLE temp TEMP TEMP 1.0 tchain 3
-compute            allTemp all temp
+compute            allTemp GUEST temp
 fix_modify         1 temp allTemp
 neigh_modify       exclude molecule MOF
 neigh_modify       exclude molecule GUEST
@@ -64,7 +64,7 @@ neigh_modify       exclude molecule GUEST
 include "system.in.settings"
 
 # specify new quantities to output
-thermo_style       custom step temp epair evdwl ecoul elong etail emol pe ke etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
+thermo_style       custom step temp c_allTemp epair evdwl ecoul elong etail emol pe ke etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
 
 # compute center of mass of each guest molecule
 #compute            chunkGuest GUEST chunk/atom molecule
