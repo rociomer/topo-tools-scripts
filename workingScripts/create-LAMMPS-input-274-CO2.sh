@@ -39,7 +39,7 @@ do
     echo "Pressure: $pressure"
     uptake=($(awk '$1 == "'"$pressure"'"' IsothermData-274/${metal}_${guest}_${tempInt}_absolute.txt))
     echo "Uptake in molec/UC: ${uptake[1]}"
-    replicasGuest=$(echo "(${uptake[1]} * 4)/1" | bc )
+    replicasGuest=$(echo "(${uptake[1]} * 16)/1" | bc )
     echo "Replicas of guest per supercell at this pressure: $replicasGuest"
     # replace important parameters in the topos script
     sed -i "s/GUESTFILE/${guest}.xyz/g" toposcript-${metal}MOF274-Pressure${pressure}.tcl
