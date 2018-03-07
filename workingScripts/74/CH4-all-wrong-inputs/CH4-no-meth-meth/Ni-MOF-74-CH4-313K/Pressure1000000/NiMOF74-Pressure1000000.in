@@ -1,0 +1,88 @@
+
+# ----------------- Init Section -----------------
+
+units real
+processors * * *
+newton off
+atom_style full
+atom_modify sort 0 10.0
+
+# ----------------- Atom Definition Section -----------------
+
+read_data "NiMOF74-Pressure1000000.data"
+
+# ----------------- Settings Section -----------------
+
+#include "NiMOF74-Pressure1000000.in.settings"
+
+# ----------------- Run Section -----------------
+
+# define groups
+group GUEST type 1
+group MOF type 2 3 4 5 6 7 8 9 10 
+
+# define computes
+compute comT all com
+compute comG GUEST com
+compute comM MOF com
+
+# settings
+timestep           1
+thermo             200
+thermo_style       custom step temp epair emol etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
+restart            2000000 sim.restart
+
+# reset box to start at 0
+change_box         all x delta $(-xlo) $(-xlo) y delta $(-ylo) $(-ylo) z delta $(-zlo) $(-zlo) remap units box
+write_data         data_changebox.data
+
+# get rid of overlapping atoms
+run                0
+velocity           GUEST create 313.0 1738
+fix                1 GUEST nvt temp 313.0 313.0 100.0 tchain 3
+compute            allTemp GUEST temp
+fix_modify         1 temp allTemp
+neigh_modify       exclude molecule MOF
+neigh_modify       exclude molecule GUEST
+pair_style         soft 5.0
+pair_coeff         * * 0.0 5.0
+kspace_style       none
+variable           prefactor equal ramp(1.0,20.0)
+fix                2 all adapt 1 pair soft a * * v_prefactor
+dump               1 all custom 500 dump-1.lammpstrj element x y z
+dump_modify        1 element 1 2 3 4 5 6 7 8 9 10 
+run                100000
+undump             1
+unfix              2
+write_data         data_overlap.data
+
+# reset force field parameters
+#kspace_style       pppm/disp 1.0e-6
+neigh_modify       delay 0 every 1 check yes
+neigh_modify       exclude molecule MOF
+neigh_modify       exclude molecule GUEST
+include "NiMOF74-Pressure1000000.in.settings"
+
+# specify new quantities to output
+thermo_style       custom step temp c_allTemp epair evdwl ecoul elong etail emol pe ke etotal c_comT[1] c_comT[2] c_comT[3] c_comG[1] c_comG[2] c_comG[3] c_comM[1] c_comM[2] c_comM[3]
+
+# compute center of mass of each guest molecule
+#compute            chunkGuest GUEST chunk/atom molecule
+#compute            comChunkGuest GUEST com/chunk chunkGuest
+
+# equilibration
+dump               2 all custom 5000 dump-2.lammpstrj element x y z
+dump_modify        2 element 1 2 3 4 5 6 7 8 9 10 
+run                1000000
+undump             2
+write_data         data_nvt_eq.data
+
+# data collection
+reset_timestep     0
+#fix                3 GUEST ave/time 1 1 10 c_comChunkGuest[*] file traj.COMGUEST mode vector
+#fix                4 GUEST ave/time 1 1 10 c_comM[*] file traj.COMMOF mode vector
+#fix                5 GUEST ave/time 1 1 10 f_1[1] f_1[2] f_1[3] f_1[13] f_1[14] f_1[15] file traj.CofMs mode vector
+dump               3 GUEST custom 10 traj.GUEST.10.dump id x y z ix iy iz
+dump_modify        3 sort 1
+run                10000000
+write_data         data_nvt.data

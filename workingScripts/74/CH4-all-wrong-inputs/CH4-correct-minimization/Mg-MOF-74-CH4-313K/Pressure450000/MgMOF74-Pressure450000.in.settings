@@ -1,0 +1,24 @@
+# UFF parameters for all atoms not defined by force field
+pair_style         hybrid lj/cut 12.8 buck 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff         7 7 lj/cut 0.1111 2.691 
+pair_coeff         2 2 lj/cut 0.1051 3.431 
+pair_coeff         3 3 lj/cut 0.1051 3.431 
+pair_coeff         4 4 lj/cut 0.1051 3.431 
+pair_coeff         5 5 lj/cut 0.1051 3.431 
+pair_coeff         6 6 lj/cut 0.0440 2.571 
+pair_coeff         8 8 lj/cut 0.0601 3.118 
+pair_coeff         9 9 lj/cut 0.0601 3.118 
+pair_coeff         10 10 lj/cut 0.0601 3.118 
+pair_coeff         1 1 lj/cut 0.2941 3.730 
+# Lennard-Jones parameters from force field
+pair_coeff         1 6 lj/cut 0.1138 3.15 
+# Buckingham parameters from force field
+pair_coeff         1 7 buck 503735.46 0.2035 869.75957
+pair_coeff         1 8 buck 36618.413 0.3373 943.43844
+pair_coeff         1 9 buck 40336.705 0.3063 943.43844
+pair_coeff         1 10 buck 20010.424 0.3584 943.43844
+pair_coeff         1 2 buck 151480.54 0.2503 1627.7890
+pair_coeff         1 3 buck 70571.228 0.3049 1627.7890
+pair_coeff         1 4 buck 460219.42 0.2288 1627.7890
+pair_coeff         1 5 buck 5085.8640 0.4322 1627.7890

@@ -1,0 +1,34 @@
+# UFF parameters for all atoms not defined by force field
+pair_style         hybrid lj/cut/coul/long 12.8 buck/coul/long 12.8
+pair_modify        mix arithmetic shift yes
+pair_coeff         11 11 lj/cut/coul/long 0.1241 2.46155 
+pair_coeff         1 1 lj/cut/coul/long 0.1051 3.431 
+pair_coeff         2 2 lj/cut/coul/long 0.1051 3.431 
+pair_coeff         3 3 lj/cut/coul/long 0.1051 3.431 
+pair_coeff         4 4 lj/cut/coul/long 0.1051 3.431 
+pair_coeff         6 6 lj/cut/coul/long 0.0440 2.571 
+pair_coeff         7 7 lj/cut/coul/long 0.0601 3.118 
+pair_coeff         8 8 lj/cut/coul/long 0.0601 3.118 
+pair_coeff         9 9 lj/cut/coul/long 0.0601 3.118 
+pair_coeff         5 5 lj/cut/coul/long 0.0559 2.757 
+pair_coeff         10 10 lj/cut/coul/long 0.1600 3.033 
+# Lennard-Jones parameters from force field
+pair_coeff         6 10 lj/cut/coul/long 0.1131 2.343 
+pair_coeff         5 11 lj/cut/coul/long 0.3465 3.014 
+pair_coeff         5 7 lj/cut/coul/long 0.1390 2.794 
+pair_coeff         5 8 lj/cut/coul/long 0.1390 2.794 
+pair_coeff         5 9 lj/cut/coul/long 0.1390 2.794 
+pair_coeff         1 5 lj/cut/coul/long 0.1744 2.904 
+pair_coeff         2 5 lj/cut/coul/long 0.1744 2.904 
+pair_coeff         3 5 lj/cut/coul/long 0.1744 2.904 
+pair_coeff         4 5 lj/cut/coul/long 0.1744 2.904 
+pair_coeff         5 6 lj/cut/coul/long 0.1358 2.453 
+# Buckingham parameters from force field
+pair_coeff         10 11 buck/coul/long 13667.835 0.3263 1117.2088
+pair_coeff         7 10 buck/coul/long 67143.006 0.2628 284.42775
+pair_coeff         8 10 buck/coul/long 53213.733 0.2646 284.42775
+pair_coeff         9 10 buck/coul/long 52348.500 0.2700 284.42775
+pair_coeff         1 10 buck/coul/long 54945.273 0.2604 449.71976
+pair_coeff         2 10 buck/coul/long 42691.600 0.2845 449.71976
+pair_coeff         3 10 buck/coul/long 59459.481 0.2604 449.71976
+pair_coeff         4 10 buck/coul/long 26125.204 0.3017 449.71976
