@@ -1,3 +1,0 @@
-create-LAMMPS-input.sh is the main script to run. Creates .tcl script for a specific number of guest molecules in a framework by reading isotherm data in isothermData-*/, then runs .tcl script using vmd to generate .data, .in, and .in.settings files (LAMMPS input).
-
-The .tcl script reads a template.in file, .pdb structures for frameworks, .xyz structures for guest molecules, and force field parameters from forceFieldParamsTemplates/. A different force field template file is read if the molecule is charged or uncharged. Furthermore, the .in file generated will be different if your guest molecule is just a single atom or contains many atoms.

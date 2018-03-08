@@ -66,7 +66,7 @@ isothermData-274/${metal}_${guest}_${tempInt}_absolute.txt))
 
     echo "Replicas of guest per supercell at this pressure: $replicasGuest"
 
-    # replace key substrings in template tcl script with
+    # replace key substrings in template .tcl script with
     #    important parameters
     sed -i "s/GUESTFILE/${guest}.xyz/g" ${toposcript}
     sed -i "s/ATOMSPERGUEST/${atomsPerGuest}/g" ${toposcript}
@@ -122,7 +122,6 @@ $(echo "3 + 3 * ($bondNumber - 1)" | bc -l)" \
       # corresponding to each guest
       sed -i "s/0 bonds/$twiceBondNumber bonds/" ${dataFile}
       sed -i "s/0 bond types/1 bond types/" ${dataFile}
-
 
       # add the correct bond coefficients
       echo " " >> ${dataFile}
