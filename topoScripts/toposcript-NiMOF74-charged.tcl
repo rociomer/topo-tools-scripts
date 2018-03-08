@@ -2,8 +2,8 @@
 # To run from terminal: vmd -dispdev text -e SCRIPT.tcl
 
 # my variables
-set structure Ni-MOF-74.pdb
-set guest GUESTFILE
+set structure frameworkStructures/Ni-MOF-74.pdb
+set guest adsorbateStructures/GUESTFILE
 set atomsPerMOF 324
 set atomsPerGuest ATOMSPERGUEST
 set latticeVectorA 26.0172

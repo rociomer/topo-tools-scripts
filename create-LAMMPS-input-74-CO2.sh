@@ -37,7 +37,7 @@ do
     fi
     # find the molecules/uc at a particular pressure (read GCMC output)
     echo "Pressure: $pressure"
-    uptake=($(awk '$1 == "'"$pressure"'"' IsothermData-74/${metal}_${guest}_${tempInt}_absolute.txt))
+    uptake=($(awk '$1 == "'"$pressure"'"' isothermData-74/${metal}_${guest}_${tempInt}_absolute.txt))
     echo "Uptake in molec/UC: ${uptake[1]}"
     replicasGuest=$(echo "(${uptake[1]} * 4)/1" | bc )
     echo "Replicas of guest per supercell at this pressure: $replicasGuest"
@@ -168,3 +168,9 @@ do
     mv ${metal}MOF74-Pressure${pressure}.in.settings.tmp ${metal}MOF74-Pressure${pressure}.in.settings
   done
 done
+
+# clean up the working directory by moving all the created input                
+#   to its own directory                                                        
+mkdir MOF-74-CO2-input-files/                                                   
+mv *Pressure* MOF-74-CO2-input-files/                                           
+echo "Done! Input files can be found in MOF-74-CO2-input-files/"
