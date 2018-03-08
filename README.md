@@ -1,4 +1,4 @@
-# topo-tools
+# topo-tools-scripts
 
 ### Description
 A collection of scripts for generating LAMMPS input 
