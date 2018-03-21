@@ -1,6 +1,8 @@
 #!/bin/bash
 
-##### SET VARIABLES HERE #####
+############################################################################### 
+                         ### SET VARIABLES HERE ###                             
+############################################################################### 
 # adsorbate molecule to insert
 guest="CH4"
 # temperature, in Kelvin
@@ -8,10 +10,10 @@ temp="313.0"
 # "list" of frameworks to create input files for
 frameworksList="Mg Ni Zn"
 # "list" of pressures to create input files for
-pressureList="10000 25000 50000 100000 150000 200000 \
-250000 300000 350000 400000 450000 500000 1000000 1500000 \
-2000000 2500000 3000000 3500000 4000000 4500000 5000000 10000000"
-##############################
+pressureList="10000 25000 50000 100000 150000 200000 250000 300000 350000 \
+400000 450000 500000 1000000 1500000 2000000 2500000 3000000 3500000 4000000 \
+4500000 5000000 10000000"
+############################################################################### 
 
 tempInt=${temp%.*} # integer value of temperature
 
@@ -28,14 +30,12 @@ elif [ $guest = "H2O" ]; then
 fi
 
 # loop over all frameworks/pressures for which to create LAMMPS input
-for metal in $frameworksList
-do
+for metal in $frameworksList; do
   framework=$(echo "${metal}-MOF-74")
 
   echo "Framework: $framework"
 
-  for pressure in $pressureList 
-  do
+  for pressure in $pressureList; do
     # define toposcript file
     toposcript="toposcript-${metal}MOF74-Pressure${pressure}.tcl"
 
@@ -92,8 +92,7 @@ isothermData-74/${metal}_${guest}_${tempInt}_absolute.txt))
 
       count=1 # dummy count
 
-      for bondNumber in $(seq 1 $replicasGuest)
-      do
+      for bondNumber in $(seq 1 $replicasGuest); do
         if [ $bondNumber -eq 1 ]; then
           echo "$count 1 1 2" >> ${dataFile}
           count=$(echo "$count + 1" | bc -l) # increase dummy count
@@ -227,8 +226,7 @@ tr " " "\n" | sort -g | tr "\n" " " )
     # delete unnecessary force field parameters and insert force field 
     #   parameters into *.in file in place of FORCEFIELDPARAMS
     sed -i '/guestAtom/d' ${settingsFile}
-    cat ${settingsFile} | while read line;
-    do
+    cat ${settingsFile} | while read line; do
       lineArr=($line)
       if [ ${lineArr[0]} = "pair_coeff" ]; then
         echo "${lineArr[0]}         $(echo "${lineArr[1]} ${lineArr[2]}" | \
