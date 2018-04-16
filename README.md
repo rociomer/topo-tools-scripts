@@ -37,6 +37,10 @@ The analogous scripts can be used to generate input files for simulations of
 carbon dioxide adsorbed in MOF-274 frameworks, or for methane adsorbed in 
 MOF-74.
 
+### Comments
+TODO: clean-up the *create-LAMMPS-input-{74-CO2, 74-CH4, 274-CO2}.sh* scripts;
+ they are functional but messy
+
 ### Author
 Rocío Mercado
 
