@@ -166,7 +166,12 @@ ${settingsFile}
         sed -i "s/dump               3/#dump               3/g" ${inFile}
         sed -i "s/dump_modify        3/#dump_modify        3/g" ${inFile}
       fi
-  
+
+      # if single gas atom in framework, comment out "velocity" command
+      if [ $frameworkReplicas = "4" ]; then
+        sed -i "s/velocity/#velocity/g" ${inFile}
+      fi 
+
       # set guest atoms
       if [ $guest = "CH4" ]; then
         guestAtomCH4=($(grep "\s\sCH4" ${dataFile} | head -1))

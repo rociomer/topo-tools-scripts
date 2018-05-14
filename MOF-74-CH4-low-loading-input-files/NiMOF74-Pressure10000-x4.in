@@ -37,7 +37,7 @@ write_data         data_changebox.data
 
 # get rid of overlapping atoms
 run                0
-velocity           GUEST create 313.0 1738
+#velocity           GUEST create 313.0 1738
 fix                1 GUEST nvt temp 313.0 313.0 100.0
 compute            allTemp GUEST temp
 fix_modify         1 temp allTemp
