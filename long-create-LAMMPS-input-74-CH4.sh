@@ -133,7 +133,14 @@ $(echo "3 + 3 * ($bondNumber - 1)" | bc -l)" \
       elif [ $guest = "H2O" ]; then
         :
       fi
-  
+
+      # replace the coordinates for the guest atoms to be all along the z-axis
+      sed -i "s/1 1 1 0.000000.*/1 1 1 0.000000 0.0 0.0 1.0 # CH4/" ${dataFile}
+      sed -i "s/2 2 1 0.000000.*/2 2 1 0.000000 0.0 0.0 2.0 # CH4/" ${dataFile}
+      sed -i "s/3 3 1 0.000000.*/3 3 1 0.000000 0.0 0.0 3.0 # CH4/" ${dataFile}
+      sed -i "s/4 4 1 0.000000.*/4 4 1 0.000000 0.0 0.0 4.0 # CH4/" ${dataFile}
+      sed -i "s/5 5 1 0.000000.*/5 5 1 0.000000 0.0 0.0 5.0 # CH4/" ${dataFile}
+
       # prepare .in file
       cp template-long.in ${inFile}
   
