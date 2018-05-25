@@ -42,7 +42,7 @@ for frameworkReplicas in $frameworkReplicasList; do
   
       # create .tcl topos script
       if [ $guest = "CH4" ]; then
-        cp topoScripts/toposcript-${metal}MOF74-uncharged.tcl ${toposcript}
+        cp topoScripts/toposcript-${metal}MOF74-uncharged-long.tcl ${toposcript}
         cp topoScripts/toposcript-assign-molecules.py .
       elif [ $guest = "CO2" ]; then
         cp topoScripts/toposcript-${metal}MOF74-charged.tcl ${toposcript}
