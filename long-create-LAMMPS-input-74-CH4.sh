@@ -11,7 +11,7 @@ temp="313.0"
 frameworksList="Mg Ni Zn"
 # "list" of pressures to create input files for
 pressureList="10000" # artificial
-frameworkReplicasList="4 8 12 16 20" # min is 4 because of PBCs
+frameworkReplicasList="4 8 12 16 20 24 28 32 36 40" # min is 4 because of PBCs
 ############################################################################### 
 
 tempInt=${temp%.*} # integer value of temperature
@@ -33,8 +33,6 @@ for frameworkReplicas in $frameworkReplicasList; do
   # loop over all frameworks/pressures for which to create LAMMPS input
   for metal in $frameworksList; do
     framework=$(echo "${metal}-MOF-74")
-  
-    echo "Framework: $framework"
   
     for pressure in $pressureList; do
       # define toposcript file
@@ -63,7 +61,14 @@ isothermData-74/${metal}_${guest}_${tempInt}_absolute.txt))
   
       # replicate the number of guests based on the number of unit cells 
       #   in supercell to keep the density the same as 1 molec per 4 uc
-      replicasGuest=$(echo "($frameworkReplicas)/4" | bc )
+      if [ $metal = "Mg" ]; then
+        replicasGuest=$(echo "($frameworkReplicas)/4 * 6" | bc )
+      elif [ $metal = "Ni" ]; then
+        replicasGuest=$(echo "($frameworkReplicas)/4 * 6" | bc )
+      elif [ $metal = "Zn" ]; then
+        replicasGuest=$(echo "($frameworkReplicas)/2 * 6" | bc )
+      fi
+     
   
       echo "Replicas of guest per supercell at this pressure: $replicasGuest"
   
@@ -134,13 +139,43 @@ $(echo "3 + 3 * ($bondNumber - 1)" | bc -l)" \
         :
       fi
 
-      # replace the coordinates for the guest atoms to be all along the z-axis
-      sed -i "s/1 1 1 0.000000.*/1 1 1 0.000000 0.0 0.0 1.0 # CH4/" ${dataFile}
-      sed -i "s/2 2 1 0.000000.*/2 2 1 0.000000 0.0 0.0 2.0 # CH4/" ${dataFile}
-      sed -i "s/3 3 1 0.000000.*/3 3 1 0.000000 0.0 0.0 3.0 # CH4/" ${dataFile}
-      sed -i "s/4 4 1 0.000000.*/4 4 1 0.000000 0.0 0.0 4.0 # CH4/" ${dataFile}
-      sed -i "s/5 5 1 0.000000.*/5 5 1 0.000000 0.0 0.0 5.0 # CH4/" ${dataFile}
-
+      # replace the coordinates for the guest atoms to be spread out throughout the pores
+      #  (at least one in each pore)
+      cycles=$(echo "($frameworkReplicas)/4" | bc )
+      if [ $metal = "Mg" ]; then
+        for number in $(seq 1 $cycles); do 
+          sed -i "s/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000.*/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000 2.0 44.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000.*/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000 2.0 30.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000.*/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000 2.0 15.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000.*/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000 13.0 37.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000.*/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000 13.0 22.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000.*/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000 13.0 7.0 ${number}.0 # CH4/" ${dataFile}
+        done
+      elif [ $metal = "Ni" ]; then
+        for number in $(seq 1 $cycles); do 
+          sed -i "s/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000.*/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000 2.0 44.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000.*/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000 2.0 30.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000.*/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000 2.0 15.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000.*/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000 13.0 37.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000.*/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000 13.0 22.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000.*/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000 13.0 7.0 ${number}.0 # CH4/" ${dataFile}
+        done
+      elif [ $metal = "Zn" ]; then
+        for number in $(seq 1 $cycles); do 
+          sed -i "s/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000.*/$((1 + (number - 1)*6)) $((1 + (number - 1)*6)) 1 0.000000 2.0 44.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000.*/$((2 + (number - 1)*6)) $((2 + (number - 1)*6)) 1 0.000000 2.0 30.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000.*/$((3 + (number - 1)*6)) $((3 + (number - 1)*6)) 1 0.000000 2.0 15.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000.*/$((4 + (number - 1)*6)) $((4 + (number - 1)*6)) 1 0.000000 12.0 37.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000.*/$((5 + (number - 1)*6)) $((5 + (number - 1)*6)) 1 0.000000 12.0 22.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000.*/$((6 + (number - 1)*6)) $((6 + (number - 1)*6)) 1 0.000000 12.0 7.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((7 + (number - 1)*6)) $((7 + (number - 1)*6)) 1 0.000000.*/$((7 + (number - 1)*6)) $((7 + (number - 1)*6)) 1 0.000000 25.0 44.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((8 + (number - 1)*6)) $((8 + (number - 1)*6)) 1 0.000000.*/$((8 + (number - 1)*6)) $((8 + (number - 1)*6)) 1 0.000000 25.0 30.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((9 + (number - 1)*6)) $((9 + (number - 1)*6)) 1 0.000000.*/$((9 + (number - 1)*6)) $((9 + (number - 1)*6)) 1 0.000000 25.0 15.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((10 + (number - 1)*6)) $((10 + (number - 1)*6)) 1 0.000000.*/$((10 + (number - 1)*6)) $((10 + (number - 1)*6)) 1 0.000000 38.0 37.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((11 + (number - 1)*6)) $((11 + (number - 1)*6)) 1 0.000000.*/$((11 + (number - 1)*6)) $((11 + (number - 1)*6)) 1 0.000000 38.0 22.0 ${number}.0 # CH4/" ${dataFile}
+          sed -i "s/$((12 + (number - 1)*6)) $((12 + (number - 1)*6)) 1 0.000000.*/$((12 + (number - 1)*6)) $((12 + (number - 1)*6)) 1 0.000000 38.0 7.0 ${number}.0 # CH4/" ${dataFile}
+        done
+      fi
       # prepare .in file
       cp template-long.in ${inFile}
   
