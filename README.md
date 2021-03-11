@@ -5,15 +5,15 @@ This repo contains a collection of scripts for generating LAMMPS input (topology
 
 ### Overview
 The way the main scripts in this repo (which are titled *create-LAMMPS-input-\*.sh*) are intended to be used is to create, for each set of simulation conditions specified, a *.tcl* script for putting a specific number of guest molecules in a simulation box by reading isotherm data in [isothermData-74/](./isothermData-74/). This *.tcl* script is then run using vmd to generate:
-* *.data*
-* *.in*
-* and *.in.settings* files. 
+* *\*.data*
+* *\*.in*
+* and *\*.in.settings* files. 
  
 The script works by reading:
 * a *template.in* file
 * PDB structures for frameworks (located in [frameworkStructures/](./frameworkStructures/))
 * XYZ structures for guest molecules (located in [adsorbateStructures/](./adsorbateStructures/))
-* and force field parameters (defined in [forceFieldParamsTemplates/](./forceFieldParamsTemplates). 
+* and force field parameters (defined in [forceFieldParamsTemplates/](./forceFieldParamsTemplates)). 
  
 A different set of force field template files are read depending on if the adsorbate molecule is charged or uncharged. 
 
